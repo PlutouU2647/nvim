@@ -26,7 +26,7 @@ noremap <LEADER><CR> :nohlsearch<CR>
 
 
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'ervandew/supertab'
   Plug 'vim-airline/vim-airline'
   Plug 'ervandew/supertab'
@@ -40,7 +40,7 @@ call plug#begin('~/.vim/plugged')
   "color
   Plug 'kaicataldo/material.vim', { 'branch': 'main' }
   "Plug 'arcticicestudio/nord-vim'
-  Plug 'joshdick/onedark.vim'
+  "Plug 'joshdick/onedark.vim'
   "Plug 'ghifarit53/tokyonight-vim'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'morhetz/gruvbox'
