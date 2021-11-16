@@ -28,3 +28,6 @@ $MYVIMRC
 ```shell
 /root/.vim/plugged
 ```
+
+
+githubsshkey
