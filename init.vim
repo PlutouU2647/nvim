@@ -1,7 +1,10 @@
 set notermguicolors
+set encoding=utf-8
 let mapleader = " "
 syntax on
-set nonumber
+set number relativenumber
+set noswapfile
+set scrolloff=6
 set wrap
 set wildmenu
 set hlsearch
@@ -12,6 +15,11 @@ set nocompatible
 set tabstop=4 softtabstop=4
 " set shiftwidth=4
 set nu
+
+" python
+set softtabstop=4 shiftwidth=4 expandtab
+set autoindent
+set fileformat=unix
 
 
 
@@ -27,27 +35,30 @@ noremap <LEADER><CR> :nohlsearch<CR>
 
 
 call plug#begin('$HOME/.config/nvim/plugged')
-  Plug 'ervandew/supertab'
-  Plug 'vim-airline/vim-airline'
-  Plug 'ervandew/supertab'
-  Plug 'scrooloose/nerdtree'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'christoomey/vim-tmux-navigator'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-telescope/telescope-fzy-native.nvim'
-  Plug 'sheerun/vim-polyglot'
-  "color
-  Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-  "Plug 'arcticicestudio/nord-vim'
-  "Plug 'joshdick/onedark.vim'
-  "Plug 'ghifarit53/tokyonight-vim'
-  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-  Plug 'morhetz/gruvbox'
+    Plug 'ervandew/supertab'
+    Plug 'vim-airline/vim-airline'
+    Plug 'ervandew/supertab'
+    Plug 'scrooloose/nerdtree'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'christoomey/vim-tmux-navigator'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
+    Plug 'sheerun/vim-polyglot'
+    "color
+    Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+    "Plug 'arcticicestudio/nord-vim'
+    "Plug 'joshdick/onedark.vim'
+    "Plug 'ghifarit53/tokyonight-vim'
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+    Plug 'morhetz/gruvbox'
+  
+    "theme
+    Plug 'EdenEast/nightfox.nvim'
 
-  Plug 'EdenEast/nightfox.nvim'
+    Plug 'preservim/nerdcommenter'
 call plug#end()
-
+    
 
 
 
@@ -92,5 +103,16 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+" python
+nmap <C-_> <Plug>NERDCommenterToggle
+"vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
+"
+" Tabs
+nmap <leader>1 gT
+nmap <leader>2 gt
+nmap <C-w> :bd<CR>
+
+
 
 
