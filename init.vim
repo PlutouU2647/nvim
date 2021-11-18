@@ -25,6 +25,7 @@ set fileformat=unix
 
 imap jk <C-[>
 " nmap <space> :
+nmap \ :
 map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
