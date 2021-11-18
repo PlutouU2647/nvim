@@ -58,6 +58,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'EdenEast/nightfox.nvim'
 
     Plug 'preservim/nerdcommenter'
+    Plug 'voldikss/vim-floaterm'
+
 call plug#end()
     
 
