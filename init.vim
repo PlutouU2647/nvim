@@ -117,5 +117,12 @@ nmap <leader>2 gt
 nmap <C-w> :bd<CR>
 
 
+"floaterm
+nnoremap <C-a> :FloatermNew<CR>
+nnoremap <C-s> :FloatermNew ranger<CR>
 
+
+"let g:floaterm_keymap_new = '<Leader>ft'
+"nnoremap <leader>ft <cmd>FloatermNew<cr>
+"nnoremap <leader>fs <cmd>FloatermKill<cr>
 
