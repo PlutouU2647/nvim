@@ -141,7 +141,7 @@ nnoremap <C-s> :FloatermNew ranger<CR>
 " whichkey
 set timeoutlen=100
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-
+source $HOME/.config/nvim/keys/which-key.vim
 
 " F5 to run sh/python3
 "map <F5> :call CompileRunGcc()<CR>
