@@ -139,6 +139,20 @@ nnoremap <C-s> :FloatermNew ranger<CR>
 "nnoremap <leader>fs <cmd>FloatermKill<cr>
 
 " whichkey
-set timeoutlen=200
+set timeoutlen=100
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
+
+" F5 to run sh/python3
+"map <F5> :call CompileRunGcc()<CR>
+map <C-p> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+    exec "w"
+    if &filetype == 'sh'
+        :!time bash %
+    elseif &filetype == 'python'
+        exec "!time python %"
+    elseif &filetype == 'go'
+        exec "!time go run %"
+    endif
+endfunc
