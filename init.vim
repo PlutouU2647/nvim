@@ -1,3 +1,13 @@
+" __  __        __     ___                    
+"|  \/  |_   _  \ \   / (_)_ __ ___  _ __ ___ 
+"| |\/| | | | |  \ \ / /| | '_ ` _ \| '__/ __|
+"| |  | | |_| |   \ V / | | | | | | | | | (__ 
+"|_|  |_|\__, |    \_/  |_|_| |_| |_|_|  \___|
+"        |___/                                
+"
+"
+
+
 set notermguicolors
 set encoding=utf-8
 let mapleader = " "
@@ -8,7 +18,7 @@ set scrolloff=6
 set wrap
 set wildmenu
 set hlsearch
-exec "nohlsearch"
+"exec "nohlsearch"
 set ignorecase
 set smartcase
 set nocompatible
@@ -57,9 +67,11 @@ call plug#begin('$HOME/.config/nvim/plugged')
     "theme
     Plug 'EdenEast/nightfox.nvim'
 
+    Plug 'github/copilot.vim'
     Plug 'preservim/nerdcommenter'
     Plug 'voldikss/vim-floaterm'
 
+    Plug 'liuchengxu/vim-which-key'
 call plug#end()
     
 
@@ -125,4 +137,8 @@ nnoremap <C-s> :FloatermNew ranger<CR>
 "let g:floaterm_keymap_new = '<Leader>ft'
 "nnoremap <leader>ft <cmd>FloatermNew<cr>
 "nnoremap <leader>fs <cmd>FloatermKill<cr>
+
+" whichkey
+set timeoutlen=200
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
