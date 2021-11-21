@@ -133,15 +133,13 @@ nmap <C-_> <Plug>NERDCommenterToggle
 "vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 "
 " Tabs
-nmap <leader>1 gT
-nmap <leader>2 gt
+nmap <TAB> gt
+nmap <S-TAB> gT
 nmap <C-w> :bd<CR>
 
 
 "floaterm
-nnoremap <C-a> :FloatermNew<CR>
-nnoremap <C-s> :FloatermNew ranger<CR>
-
+source $HOME/.config/nvim/plug-config/floaterm.vim
 
 "let g:floaterm_keymap_new = '<Leader>ft'
 "nnoremap <leader>ft <cmd>FloatermNew<cr>
@@ -165,3 +163,11 @@ func! CompileRunGcc()
         exec "!time go run %"
     endif
 endfunc
+
+
+
+au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
