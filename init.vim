@@ -189,7 +189,8 @@ let g:indentLine_color_gui = '#333333'
 "autocmd WinEnter * silent! unmap <leader>ig
 autocmd TermOpen * IndentLinesDisabl
 
-
+"fzf
+noremap <C-f> :FZF<CR>
 
 "FZF（Fuzzy Finder）：又快速又方便的文件查找工具
 "https://github.com/junegunn/fzf
