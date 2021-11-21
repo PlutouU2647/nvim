@@ -78,6 +78,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
     " Undo Tree
     Plug 'mbbill/undotree/'
 
+    " vim-startify
+    Plug 'mhinz/vim-startify'
+
 call plug#end()
     
 
