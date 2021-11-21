@@ -177,7 +177,13 @@ vnoremap > >gv
 " startify
 source $HOME/.config/nvim/plug-config/start-screen.vim
 
-
-" indent line
+"===
+"=== indent line
+"===
 let g:indentLine_char_list = ['|']
+let g:indentLine_color_term = 238
+let g:indentLine_color_gui = '#333333'
+"silent! unmap <leader>ig
+"autocmd WinEnter * silent! unmap <leader>ig
+autocmd TermOpen * IndentLinesDisabl
 
