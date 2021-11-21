@@ -83,6 +83,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
     " indent line
     Plug 'Yggdroot/indentLine'
+    " fzf
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
     
 
@@ -187,3 +189,11 @@ let g:indentLine_color_gui = '#333333'
 "autocmd WinEnter * silent! unmap <leader>ig
 autocmd TermOpen * IndentLinesDisabl
 
+
+
+"FZF（Fuzzy Finder）：又快速又方便的文件查找工具
+"https://github.com/junegunn/fzf
+"FZF的Vim插件：https://github.com/junegunn/fzf.vim
+"我的Vim配置：https://github.com/theniceboy/nvim
+"我的配置文件夹：https://github.com/theniceboy/.config
+"（zsh和ranger两个文件夹里有fzf的配置）
