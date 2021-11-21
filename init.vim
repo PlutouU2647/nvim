@@ -171,3 +171,6 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
+
+" startify
+source $HOME/.config/nvim/plug-config/start-screen.vim
