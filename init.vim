@@ -43,6 +43,9 @@ noremap J 5j
 noremap K 5k
 noremap <LEADER><CR> :nohlsearch<CR>
 
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
 
 
 call plug#begin('$HOME/.config/nvim/plugged')
@@ -72,6 +75,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'voldikss/vim-floaterm'
 
     Plug 'liuchengxu/vim-which-key'
+    " Undo Tree
+    Plug 'mbbill/undotree/'
+
 call plug#end()
     
 
