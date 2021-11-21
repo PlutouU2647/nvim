@@ -81,6 +81,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
     " vim-startify
     Plug 'mhinz/vim-startify'
 
+    " indent line
+    Plug 'Yggdroot/indentLine'
 call plug#end()
     
 
@@ -174,3 +176,8 @@ vnoremap > >gv
 
 " startify
 source $HOME/.config/nvim/plug-config/start-screen.vim
+
+
+" indent line
+let g:indentLine_char_list = ['|']
+
