@@ -18,6 +18,7 @@ set noswapfile
 set scrolloff=6
 set wrap
 set wildmenu
+"set wildmode=list:longest
 set hlsearch
 "exec "nohlsearch"
 set ignorecase
@@ -206,7 +207,7 @@ command! -bang -nargs=* LoadVimSpectorJsonTemplate call fzf#run({
 			\   'down': 20,
 			\   'sink': function('<sid>read_template_into_buffer')
 			\ })
- noremap <leader>vs :tabe .vimspector.json<CR>:LoadVimSpectorJsonTemplate<CR>
+noremap <leader>vs :tabe .vimspector.json<CR>:LoadVimSpectorJsonTemplate<CR>
 sign define vimspectorBP text=☛ texthl=Normal
 sign define vimspectorBPDisabled text=☞ texthl=Normal
 sign define vimspectorPC text=🔶 texthl=SpellBad
