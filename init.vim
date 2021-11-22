@@ -16,7 +16,7 @@ syntax on
 set number relativenumber
 set noswapfile
 set scrolloff=6
-set wrap
+"set wrap
 set wildmenu
 "set wildmode=list:longest
 set hlsearch
@@ -211,3 +211,5 @@ noremap <leader>vs :tabe .vimspector.json<CR>:LoadVimSpectorJsonTemplate<CR>
 sign define vimspectorBP text=☛ texthl=Normal
 sign define vimspectorBPDisabled text=☞ texthl=Normal
 sign define vimspectorPC text=🔶 texthl=SpellBad
+
+
