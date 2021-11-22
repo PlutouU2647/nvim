@@ -74,7 +74,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'mhinz/vim-startify'  " vim-startify
     Plug 'Yggdroot/indentLine'  "indent line
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " fzf
-    Plug 'puremouning/vimspector.nvim'  " vimspector
+    Plug 'puremourning/vimspector'  " vimspector
 call plug#end()
     
 
