@@ -65,26 +65,16 @@ call plug#begin('$HOME/.config/nvim/plugged')
     "Plug 'joshdick/onedark.vim'
     "Plug 'ghifarit53/tokyonight-vim'
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-    Plug 'morhetz/gruvbox'
-  
-    "theme
-    Plug 'EdenEast/nightfox.nvim'
-
+    Plug 'EdenEast/nightfox.nvim'  "theme
     Plug 'github/copilot.vim'
     Plug 'preservim/nerdcommenter'
     Plug 'voldikss/vim-floaterm'
-
     Plug 'liuchengxu/vim-which-key'
-    " Undo Tree
-    Plug 'mbbill/undotree/'
-
-    " vim-startify
-    Plug 'mhinz/vim-startify'
-
-    " indent line
-    Plug 'Yggdroot/indentLine'
-    " fzf
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'mbbill/undotree/'  " Undo Tree
+    Plug 'mhinz/vim-startify'  " vim-startify
+    Plug 'Yggdroot/indentLine'  "indent line
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " fzf
+    Plug 'puremouning/vimspector.nvim'  " vimspector
 call plug#end()
     
 
