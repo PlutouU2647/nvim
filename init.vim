@@ -239,3 +239,9 @@ noremap <C-p> :PymodeRun<CR>
 "let g:pymode_rope_goto_definition_bind = <C-]>
 "
 
+"===
+"=== undo tree
+"===
+
+let g:undotree_DiffAutoOpen = 0
+map L :UndotreeToggle<CR>
