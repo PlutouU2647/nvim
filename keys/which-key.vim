@@ -26,7 +26,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
-let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
+"let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
@@ -76,5 +76,21 @@ let g:which_key_map.t = {
       \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
       \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }
+let g:which_key_map.f = {
+      \ 'name' : 'Telescope' ,
+      \ 'f' : [':Telescope find_files'                                     , 'telescope'],
+      \ 'g' : [':Telescope live_grep'                                     , 'telescope'],
+      \ 'b' : [':Telescope buffers'                                     , 'telescope'],
+      \ 'h' : [':Telescope help_tags'                                     , 'telescope'],
+      \ }
+"ff <cmd>Telescope find_files<cr>
+"fg <cmd>Telescope live_grep<cr>
+"fb <cmd>Telescope buffers<cr>         }
+"fh <cmd>Telescope help_tags<cr> " Find files using Telescope command-line sugar.
+
+"nnoremap <leader>ff <cmd>Telescope find_files<cr>
+"nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+"nnoremap <leader>fb <cmd>Telescope buffers<cr>
+"nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

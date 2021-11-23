@@ -28,7 +28,7 @@ set tabstop=4 softtabstop=4
 " set shiftwidth=4
 set nu
 
-" python
+"python
 set softtabstop=4 shiftwidth=4 expandtab
 set autoindent
 set fileformat=unix
@@ -74,24 +74,28 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'liuchengxu/vim-which-key'
     Plug 'mbbill/undotree/'  " Undo Tree
     Plug 'mhinz/vim-startify'  " vim-startify
-    Plug 'Yggdroot/indentLine'  "indent line
+    "Plug 'Yggdroot/indentLine'  "indent line
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " fzf
     Plug 'puremourning/vimspector',{ 'do': '.install_gabdet.py --enable-python' }  " vimspector
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+    "Plug 'nathanaelkane/vim-indent-guides'  " indent guides
 call plug#end()
     
 
-
+"===
+"=== indent guides
+"===
+let g:indent_guides_enable_on_vim_startup = 1
 
 
 " NERDTree快捷键
 map <silent> <C-e> :NERDTreeToggle<CR>
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+"nnoremap <leader>ff <cmd>Telescope find_files<cr>
+"nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+"nnoremap <leader>fb <cmd>Telescope buffers<cr>
+"nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 "colorscheme onedark
@@ -171,17 +175,10 @@ vnoremap > >gv
 " startify
 source $HOME/.config/nvim/plug-config/start-screen.vim
 
-"===
-"=== indent line
-"===
-let g:indentLine_char_list = ['|']
-let g:indentLine_color_term = 238
-let g:indentLine_color_gui = '#333333'
-"silent! unmap <leader>ig
-"autocmd WinEnter * silent! unmap <leader>ig
-autocmd TermOpen * IndentLinesDisabl
 
-"fzf
+"===
+"===fzf
+"===
 noremap <C-f> :FZF<CR>
 
 "FZF（Fuzzy Finder）：又快速又方便的文件查找工具
