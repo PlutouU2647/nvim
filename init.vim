@@ -245,3 +245,4 @@ noremap <C-p> :PymodeRun<CR>
 
 let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
+
