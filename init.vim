@@ -41,14 +41,21 @@ nmap \ :
 map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
-noremap J 5j
-noremap K 5k
+"noremap J 5j
+"noremap K 5k
 noremap <LEADER><CR> :nohlsearch<CR>
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
 
+"number 1: moving text 
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv 
+inoremap <C-J> <esc>: m .+1<CR>== 
+inoremap <C-k> <esc>: m .-2<CR>==
+nnoremap <Leader>k :m .-2<CR>==
+nnoremap <Leader>j :m .+1<CR>==
 
 call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'ervandew/supertab'
@@ -243,5 +250,7 @@ noremap <C-p> :PymodeRun<CR>
 "=== undo tree
 "===
 
-let g:undotree_DiffAutoOpen = 0
+let g:undotree_DiffAutoOpen = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_ShortIndent = 1
 map L :UndotreeToggle<CR>
