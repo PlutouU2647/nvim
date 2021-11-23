@@ -72,7 +72,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'preservim/nerdcommenter'
     Plug 'voldikss/vim-floaterm'
     Plug 'liuchengxu/vim-which-key'
-    Plug 'mbbill/undotree/'  " Undo Tree
+    Plug 'mbbill/undotree'  " Undo Tree
     Plug 'mhinz/vim-startify'  " vim-startify
     "Plug 'Yggdroot/indentLine'  "indent line
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " fzf
@@ -80,7 +80,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
     "Plug 'nathanaelkane/vim-indent-guides'  " indent guides
 call plug#end()
-    
+"https://github.com/skywind3000/asyncrun.git 
+"https://github.com/skywind3000/asyncrun.vim
 
 "===
 "=== indent guides
@@ -236,3 +237,5 @@ noremap <C-p> :PymodeRun<CR>
 "===python mode
 "===
 "let g:pymode_rope_goto_definition_bind = <C-]>
+"
+
