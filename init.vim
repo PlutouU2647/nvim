@@ -149,7 +149,7 @@ source $HOME/.config/nvim/keys/which-key.vim
 
 " F5 to run sh/python3
 "map <F5> :call CompileRunGcc()<CR>
-map <C-p> :call CompileRunGcc()<CR>
+"map <C-p> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
     exec "w"
     if &filetype == 'sh'
@@ -215,8 +215,12 @@ sign define vimspectorPC text=🔶 texthl=SpellBad
 "===
 "===python mode
 "===
+":help pymode
 
-let g:pymode_run_bind = '<leader>r'
+noremap <C-p> :PymodeRun<CR>
+"noremap <C-p> :pymode_run_bind<CR>
+"map <C-p> :call CompileRunGcc()<CR>
+"let g:pymode_run_bind = '<leader>r'
 "2.7 Run code
     "|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |pymode-run
 
