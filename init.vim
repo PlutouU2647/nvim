@@ -231,3 +231,8 @@ noremap <C-p> :PymodeRun<CR>
 
     "let g:pymode_run_bind = '<leader>r'
 
+
+"===
+"===python mode
+"===
+"let g:pymode_rope_goto_definition_bind = <C-]>
