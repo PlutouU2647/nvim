@@ -223,17 +223,10 @@ sign define vimspectorPC text=🔶 texthl=SpellBad
 "===
 ":help pymode
 
-<<<<<<< HEAD
 noremap <C-p> :PymodeRun<CR>
 "let g:pymode_rope_map_space = 0
 "let g:pymode_doc = 0
 "let g:pymode_doc_bind = ''
-=======
-"noremap <C-p> :PymodeRun<CR>
-"let g:pymode_rope_map_space = 0
-"let g:pymode_doc = 0
-let g:pymode_doc_bind = ''
->>>>>>> 23f8d548ff0c05c54ce65b4150a92dd2d10410ed
 "noremap <C-p> :pymode_run_bind<CR>
 "map <C-p> :call CompileRunGcc()<CR>
 "let g:pymode_run_bind = '<leader>r'
