@@ -1,5 +1,6 @@
-packadd! foo
-lua require('plugins')
+--packadd! foo
+--lua require('plugins')
+require('plugins')
 
 
 
