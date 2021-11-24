@@ -41,8 +41,8 @@ nmap \ :
 map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
-"noremap J 5j
-"noremap K 5k
+noremap J 5j
+noremap K 5k
 noremap <LEADER><CR> :nohlsearch<CR>
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -50,12 +50,12 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 
 "number 1: moving text 
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap J :m '>+1<CR>gv=gv 
-inoremap <C-J> <esc>: m .+1<CR>== 
-inoremap <C-k> <esc>: m .-2<CR>==
-nnoremap <Leader>k :m .-2<CR>==
-nnoremap <Leader>j :m .+1<CR>==
+"vnoremap K :m '<-2<CR>gv=gv
+"vnoremap J :m '>+1<CR>gv=gv 
+"inoremap <C-J> <esc>: m .+1<CR>== 
+"inoremap <C-K> <esc>: m .-2<CR>==
+"nnoremap <Leader>k :m .-2<CR>==
+"nnoremap <Leader>j :m .+1<CR>==
 
 call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'ervandew/supertab'
@@ -87,6 +87,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
     "Plug 'nathanaelkane/vim-indent-guides'  " indent guides
 call plug#end()
+
 "https://github.com/skywind3000/asyncrun.git 
 "https://github.com/skywind3000/asyncrun.vim
 
@@ -138,7 +139,7 @@ if exists('+termguicolors')
 endif
 
 " python
-nmap <C-_> <Plug>NERDCommenterToggle
+"nmap <C-_> <Plug>NERDCommenterToggle
 "vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 "
 " Tabs
@@ -161,7 +162,7 @@ source $HOME/.config/nvim/keys/which-key.vim
 
 " F5 to run sh/python3
 "map <F5> :call CompileRunGcc()<CR>
-"map <C-p> :call CompileRunGcc()<CR>
+map <C-p> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
     exec "w"
     if &filetype == 'sh'
@@ -222,10 +223,17 @@ sign define vimspectorPC text=🔶 texthl=SpellBad
 "===
 ":help pymode
 
+<<<<<<< HEAD
 noremap <C-p> :PymodeRun<CR>
 "let g:pymode_rope_map_space = 0
 "let g:pymode_doc = 0
 "let g:pymode_doc_bind = ''
+=======
+"noremap <C-p> :PymodeRun<CR>
+"let g:pymode_rope_map_space = 0
+"let g:pymode_doc = 0
+let g:pymode_doc_bind = ''
+>>>>>>> 23f8d548ff0c05c54ce65b4150a92dd2d10410ed
 "noremap <C-p> :pymode_run_bind<CR>
 "map <C-p> :call CompileRunGcc()<CR>
 "let g:pymode_run_bind = '<leader>r'
