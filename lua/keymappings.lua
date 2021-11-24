@@ -19,3 +19,19 @@ map('n','R',':source $MYVIMRC<CR>',opt)
 
 -- Insert
 map('i','jk','<C-[>',opt)
+
+
+
+-- better indenting
+map('v', '<', '<gv', opt)
+map('v', '>', '>gv', opt)
+
+-- Tab switch 
+map('n', '<TAB>', ':bnext<CR>', opt)
+map('n', '<S-TAB>', ':bprevious<CR>', opt)
+
+
+-- move selected lines
+map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
+map('x', 'J', ':move \'>+1<CR>gv-gv\'' , opt)
+

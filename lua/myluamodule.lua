@@ -1,2 +1,0 @@
---w
-print('hello')
