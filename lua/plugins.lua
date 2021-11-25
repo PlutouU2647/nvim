@@ -24,6 +24,8 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-compe'
   use {'nvim-lualine/lualine.nvim',requires = {'kyazdani42/nvim-web-devicons', opt = true}}
   use 'EdenEast/nightfox.nvim'
+  use 'christoomey/vim-tmux-navigator'  
+  --tmux
 end)
 
 
