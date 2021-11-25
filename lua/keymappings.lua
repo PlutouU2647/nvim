@@ -26,10 +26,10 @@ map('i','jk','<C-[>',opt)
 
 
 -- better window movement
-map('n','<C-h>','<C-w>h',opt)
-map('n','<C-j>','<C-w>j',opt)
-map('n','<C-k>','<C-w>k',opt)
-map('n','<C-l>','<C-w>l',opt)
+map('n','<C-h>','<C-w>h', { silent = true })
+map('n','<C-j>','<C-w>j', { silent = true })
+map('n','<C-k>','<C-w>k', { silent = true })
+map('n','<C-l>','<C-w>l', { silent = true })
 
 
 -- better indenting
@@ -42,6 +42,6 @@ map('n', '<S-TAB>', ':bprevious<CR>', opt)
 
 
 -- move selected lines
-map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
 map('x', 'J', ':move \'>+1<CR>gv-gv\'' , opt)
+map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
 
