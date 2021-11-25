@@ -21,6 +21,12 @@ map('n','R',':source $MYVIMRC<CR>',opt)
 map('i','jk','<C-[>',opt)
 
 
+-- window move
+map('n','<C-h>','<C-w>h',opt)
+map('n','<C-j>','<C-w>j',opt)
+map('n','<C-k>','<C-w>k',opt)
+map('n','<C-l>','<C-w>l',opt)
+
 
 -- better indenting
 map('v', '<', '<gv', opt)
