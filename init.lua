@@ -1,20 +1,9 @@
-require('lua/plugins')
-require('lua/keymappings')
+require('plugins')
+require('keymappings')
 require('nv-compe')
 
 -- airline
 require'lualine'.setup()
-
--- command spell
-require('cmp').setup {
-  sources = {
-    { name = 'spell' }
-  }
-}
-
-vim.opt.spell = true
-vim.opt.spelllang = { 'en_us' }
-
 
 
 
