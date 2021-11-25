@@ -2,6 +2,7 @@ require('plugins')
 require('keymappings')
 require('nv-compe')
 
+
 -- airline
 require'lualine'.setup()
 
