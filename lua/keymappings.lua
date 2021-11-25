@@ -17,11 +17,15 @@ map('n','Q',':q<CR>',opt)
 map('n','R',':source $MYVIMRC<CR>',opt)
 
 
+-- explorer
+map('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
+
+
 -- Insert
 map('i','jk','<C-[>',opt)
 
 
--- window move
+-- better window movement
 map('n','<C-h>','<C-w>h',opt)
 map('n','<C-j>','<C-w>j',opt)
 map('n','<C-k>','<C-w>k',opt)
