@@ -11,7 +11,7 @@ vim.g.mapleader = ' '
 -- Normal
 map('n', '<Leader>h', ':set hlsearch!<CR>', opt)
 map('n', '<Space>', '<NOP>', opt)
--- map('n','<\>',':',opt)
+map('n','\\',':',opt)
 map('n','S',':w<CR>',opt)
 map('n','Q',':q<CR>',opt)
 map('n','R',':source $MYVIMRC<CR>',opt)
@@ -39,6 +39,7 @@ map('v', '>', '>gv', opt)
 -- Tab switch 
 map('n', '<TAB>', ':bnext<CR>', opt)
 map('n', '<S-TAB>', ':bprevious<CR>', opt)
+map('n', '<C-w>', ':bd<CR>', opt)
 
 
 -- move selected lines
