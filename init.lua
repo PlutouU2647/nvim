@@ -1,6 +1,8 @@
 require('plugins')
 require('keymappings')
 require('nv-compe')
+require('nvim-tree-config')
+require('setting')
 vim.cmd('colorscheme nord')
 
 -- airline
@@ -39,4 +41,3 @@ require'lualine'.setup {
   extensions = {}
 }
 
-m.g.nvim_tree_auto_open = 1
