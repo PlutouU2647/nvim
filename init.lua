@@ -1,7 +1,7 @@
 require('plugins')
 require('keymappings')
 require('nv-compe')
-
+require('treesitter-config')
 
 -- airline
 require'lualine'.setup()
