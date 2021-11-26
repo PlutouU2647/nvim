@@ -1,7 +1,7 @@
 require('plugins')
 require('keymappings')
 require('nv-compe')
-require('treesitter-config')
+-- require('treesitter-config')
 
 -- airline
 require'lualine'.setup()
@@ -39,3 +39,5 @@ require'lualine'.setup {
   extensions = {}
 }
 
+
+-- plugin config where to put
