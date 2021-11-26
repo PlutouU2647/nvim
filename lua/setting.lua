@@ -17,5 +17,12 @@ vim.o.signcolumn = 'yes'
 vim.o.wildmenu = true  -- wildmenu
 vim.o.wildignorecase = true  -- wildignorecase
 vim.o.relativenumber = true  -- relative number
+vim.o.guifont = 'MesloLGS NF:h14'  -- font
+vim.o.incsearch = true  -- incsearch
 
+vim.o.tabstop = 4  -- tabstop
+vim.o.softtabstop = 4  -- softtabstop
+vim.o.expandtab = true  -- expandtab
+vim.o.smarttab = true  -- smarttab
+vim.o.shiftwidth = 4  -- shiftwidth
 

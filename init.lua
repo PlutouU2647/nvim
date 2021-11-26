@@ -1,9 +1,13 @@
 require('plugins')
 require('keymappings')
-require('nv-compe')
-require('nvim-tree-config')
 require('setting')
 require('colorscheme')
+
+
+-- plugins
+require('nv-compe')
+require('nv-colorizer')
+require('nvim-tree-config')
 
 
 -- airline

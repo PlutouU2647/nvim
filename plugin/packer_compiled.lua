@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim",
     url = "https://github.com/ChristianChiarulli/nvcode-color-schemes.vim"
   },
+  ["nvim-bufferline"] = {
+    loaded = true,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvim-bufferline",
+    url = "https://github.com/akinsho/nvim-bufferline"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
