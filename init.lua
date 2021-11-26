@@ -8,13 +8,13 @@
 
 -- guide
     --'https://github.com/glepnir/nvim-lua-guide-zh'
+    --'https://github.com/rockerBOO/awesome-neovim'
 -- goal
     --'https://github.com/ayamir/nvimdots'
 
 
 
-
-
+--#725
 
 require('plugins')
 require('keymappings')
@@ -27,7 +27,7 @@ require('nv-colorizer')
 require('nv-nvimtree')
 require('nv-bufferline')
 require('nv-gitsigns')
-
+require('nv-dashboard')
 
 -- airline
 require'lualine'.setup()

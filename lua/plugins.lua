@@ -29,4 +29,5 @@ return require('packer').startup(function()
     use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
     use {'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'}
     use 'sainnhe/edge'  --eva colorscheme
+    use 'glepnir/dashboard-nvim'
 end)
