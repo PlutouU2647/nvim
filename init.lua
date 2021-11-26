@@ -3,7 +3,8 @@ require('keymappings')
 require('nv-compe')
 require('nvim-tree-config')
 require('setting')
-vim.cmd('colorscheme nord')
+require('colorscheme')
+
 
 -- airline
 require'lualine'.setup()
