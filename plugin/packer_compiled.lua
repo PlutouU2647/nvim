@@ -89,6 +89,16 @@ _G.packer_plugins = {
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
+  ["nvcode-color-schemes.vim"] = {
+    loaded = true,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim",
+    url = "https://github.com/ChristianChiarulli/nvcode-color-schemes.vim"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-compe"] = {
     loaded = true,
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvim-compe",
@@ -99,8 +109,13 @@ _G.packer_plugins = {
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-lua-guide-zh"] = {
+    loaded = true,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvim-lua-guide-zh",
+    url = "https://github.com/glepnir/nvim-lua-guide-zh"
+  },
   ["nvim-tree.lua"] = {
-    config = { "\27LJ\2\nM\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\18open_on_setup\2\nsetup\14nvim-tree\frequire\0" },
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0" },
     loaded = true,
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
@@ -130,6 +145,11 @@ _G.packer_plugins = {
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["quick-scope"] = {
+    loaded = true,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/quick-scope",
+    url = "https://github.com/unblevable/quick-scope"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -150,7 +170,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\nM\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\18open_on_setup\2\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
 if should_profile then save_profiles() end
 
