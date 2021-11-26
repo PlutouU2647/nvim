@@ -96,7 +96,7 @@ _G.packer_plugins = {
   },
   ["nvim-bufferline"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nvim-bufferline",
+    path = "/root/.local/share/nvim/site/pack/packer/start/nvim-bufferline",
     url = "https://github.com/akinsho/nvim-bufferline"
   },
   ["nvim-colorizer.lua"] = {
