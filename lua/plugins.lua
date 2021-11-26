@@ -26,5 +26,5 @@ return require('packer').startup(function()
   use 'ChristianChiarulli/nvcode-color-schemes.vim'
   use 'norcalli/nvim-colorizer.lua'  -- colorizer
   use 'unblevable/quick-scope'
+  use 'akinsho/nvim-bufferline'
 end)
-

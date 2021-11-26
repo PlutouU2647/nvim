@@ -1,9 +1,14 @@
 require('plugins')
 require('keymappings')
-require('nv-compe')
-require('nvim-tree-config')
 require('setting')
-vim.cmd('colorscheme nord')
+require('colorscheme')
+
+
+-- plugins
+require('nv-compe')
+require('nv-colorizer')
+require('nvim-tree-config')
+
 
 -- airline
 require'lualine'.setup()
