@@ -71,7 +71,7 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["bufferline.nvim"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    path = "/root/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["copilot.vim"] = {
@@ -81,17 +81,17 @@ _G.packer_plugins = {
   },
   ["dashboard-nvim"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    path = "/root/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
   edge = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/edge",
+    path = "/root/.local/share/nvim/site/pack/packer/start/edge",
     url = "https://github.com/sainnhe/edge"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/root/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["lualine.nvim"] = {
@@ -113,11 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim",
     url = "https://github.com/ChristianChiarulli/nvcode-color-schemes.vim"
-  },
-  ["nvim-bufferline"] = {
-    loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/nvim-bufferline",
-    url = "https://github.com/akinsho/nvim-bufferline"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
