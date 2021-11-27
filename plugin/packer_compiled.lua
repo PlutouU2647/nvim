@@ -185,6 +185,11 @@ _G.packer_plugins = {
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/vim-cursorword",
     url = "https://github.com/itchyny/vim-cursorword"
   },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
