@@ -8,6 +8,7 @@ vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
 require("indent_blankline").setup {
     -- for example, context is off by default, use this to turn it on
+    --space_char_blankline = " ",
     space_char_blankline = " ",
     buftype_exclude = {'terminal'},
     filetype_exclude = {'dashboard','NvimTree','packer'},
@@ -29,3 +30,4 @@ require("indent_blankline").setup {
 
 
 
+-- 
