@@ -29,4 +29,5 @@ return require('packer').startup(function()
     use 'glepnir/dashboard-nvim'
     use 'folke/which-key.nvim'
     use 'preservim/nerdcommenter'
+    use 'voldikss/vim-floaterm'
 end)
