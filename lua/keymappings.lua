@@ -1,3 +1,4 @@
+-- silent = true means don't print a message when the key is bound
 -- 保存本地变量
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true }
@@ -11,7 +12,7 @@ vim.g.mapleader = ' '
 -- Normal
 map('n', '<Leader>h', ':set hlsearch!<CR>', opt)
 map('n', '<Space>', '<NOP>', opt)
-map('n','\\',':',opt)
+map('n',"<leader>\\",':',opt)
 map('n','S',':w<CR>',opt)
 map('n','Q',':q<CR>',opt)
 map('n','R',':source $MYVIMRC<CR>',opt)
@@ -46,3 +47,4 @@ map('n', '<C-w>', ':bd<CR>', opt)
 map('x', 'J', ':move \'>+1<CR>gv-gv\'' , opt)
 map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
 
+map('n','<leader>/',':lua<CR>',opt)

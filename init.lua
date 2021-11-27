@@ -28,13 +28,14 @@ require('nv-nvimtree')
 require('nv-bufferline')
 require('nv-gitsigns')
 require('nv-dashboard')
-
+require('nv-whichkey')
+require('nv-nerdcommenter')
+require('nv-telescope')
 -- airline
 require'lualine'.setup()
 
 -- theme
 require('theme-edge')
-
 
 require'lualine'.setup {
   options = {

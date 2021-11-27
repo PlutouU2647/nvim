@@ -30,5 +30,6 @@ return require('packer').startup(function()
     use {'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'}
     use 'sainnhe/edge'  --eva colorscheme
     use 'glepnir/dashboard-nvim'
-    use 'folkeh/which-key.nvim'
+    use 'folke/which-key.nvim'
+    use 'preservim/nerdcommenter'
 end)
