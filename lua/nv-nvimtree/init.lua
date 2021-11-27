@@ -38,4 +38,4 @@ vim.g.nvim_tree_bindings = {
 }
 
 
--- https://github.com/kyazdani42/nvim-tree.lua
+-- 'https://github.com/kyazdani42/nvim-tree.lua'
