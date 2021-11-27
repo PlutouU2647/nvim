@@ -5,9 +5,10 @@ local mappings = {
     a = {'<Plug>Nerdcommenter Toggle','toggle comment'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
     f = {
-        name = 'hi I did it!!!!!!!!!!!!!!',
+        name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Open Recent File'},
         c = {'<cmd>Telescope colorscheme<cr>', 'change theme'},
+        f = {'<cmd>Telescope find_files<cr>', 'change theme'},
     },
     t = {
         name = 'floaterm',

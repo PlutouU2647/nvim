@@ -31,6 +31,9 @@ require('nv-whichkey')
 require('nv-nerdcommenter')
 require('nv-telescope')
 require('nv-floaterm')
+require('nv-indentline')
+require('nv-telescope')
+require('nv-treesitter')
 -- airline
 require'lualine'.setup()
 

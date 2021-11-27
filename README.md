@@ -9,3 +9,5 @@ hello this my lua config
 
 ## colorscheme
 https://github.com/sainnhe/edge
+
+

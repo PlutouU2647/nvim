@@ -31,4 +31,5 @@ return require('packer').startup(function()
     use 'preservim/nerdcommenter'
     use 'voldikss/vim-floaterm'
     use 'mbbill/undotree'  -- undo tree
+    use "lukas-reineke/indent-blankline.nvim"
 end)
