@@ -39,15 +39,10 @@ vim.g.nvim_tree_bindings = {
     ["g?"]        = tree_cb("toggle_help")
 }
 
----- config
---require'nvim-tree'.setup {
---    auto_close = true,
---    view = {
---    width = 50,
-----    height = 30,
---    side = 'right',
---    }
---}
+-- config
+require'nvim-tree'.setup {
+    auto_close = true,
+}
 -- 'https://github.com/kyazdani42/nvim-tree.lua'
 -- help 
 -- 'https://github.com/kyazdani42/nvim-tree.lua'
