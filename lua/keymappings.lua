@@ -55,3 +55,10 @@ map('x', 'J', ':move \'>+1<CR>gv-gv\'' , opt)
 map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
 
 map('n','<leader>/',':lua<CR>',opt)
+
+
+
+
+
+--plug
+map('n', 'L', ':UndotreeToggle<CR>' , opt)

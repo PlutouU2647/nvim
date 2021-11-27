@@ -30,4 +30,5 @@ return require('packer').startup(function()
     use 'folke/which-key.nvim'
     use 'preservim/nerdcommenter'
     use 'voldikss/vim-floaterm'
+    use 'mbbill/undotree'  -- undo tree
 end)

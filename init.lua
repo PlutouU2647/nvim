@@ -13,7 +13,6 @@
     --'https://github.com/ayamir/nvimdots'
 
 
-
 --#725
 
 require('plugins')
@@ -31,6 +30,7 @@ require('nv-dashboard')
 require('nv-whichkey')
 require('nv-nerdcommenter')
 require('nv-telescope')
+require('nv-floaterm')
 -- airline
 require'lualine'.setup()
 

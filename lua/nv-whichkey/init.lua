@@ -32,10 +32,17 @@ vim.o.timeoutlen = 250
 
 
 
+-- let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
+-- vim.cmd
+-- vim.g.which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
+
+
+--let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
+vim.cmd([[
+map <leader>/ <Plug>NERDCommenterToggle
+]])
 
 
 
-
-
--- :help which-key
--- 'https://github.com/folke/which-key.nvim'
+--:help which-key
+--'https://github.com/folke/which-key.nvim'
