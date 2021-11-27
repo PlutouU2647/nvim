@@ -7,6 +7,13 @@ local opt = {noremap = true, silent = true }
 
 -- vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true })
 
+
+vim.cmd([[
+nmap \ :
+]])
+
+
+
 vim.g.mapleader = ' '
 
 -- Normal

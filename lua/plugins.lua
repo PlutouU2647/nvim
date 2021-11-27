@@ -1,6 +1,3 @@
-local execute = vim.api.nvim_command
-local fn = vim.fn
-
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'glepnir/nvim-lua-guide-zh'
