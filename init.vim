@@ -17,7 +17,7 @@ set number relativenumber
 set noswapfile
 set scrolloff=6
 "set wrap
-set wildmenu
+"set wildmenu
 "set wildmode=list:longest
 set hlsearch
 "exec "nohlsearch"
@@ -86,6 +86,17 @@ call plug#begin('$HOME/.config/nvim/plugged')
     Plug 'puremourning/vimspector',{ 'do': '.install_gabdet.py --enable-python' }  " vimspector
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
     "Plug 'nathanaelkane/vim-indent-guides'  " indent guides
+    Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+    if has('nvim')
+        Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+        Plug 'gelguy/wilder.nvim'
+        " To use Python remote plugin features in Vim, can be skipped
+endif
+
+
 call plug#end()
 
 "https://github.com/skywind3000/asyncrun.git 
@@ -258,4 +269,34 @@ let g:undotree_DiffAutoOpen = 1
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_ShortIndent = 1
 map L :UndotreeToggle<CR>
+
+
+" wilder
+" Key bindings can be changed, see below
+call wilder#setup({'modes': [':', '/', '?']})
+" 'file_command' : for ripgrep : ['rg', '--files']
+"                : for fd      : ['fd', '-tf']
+" 'dir_command'  : for fd      : ['fd', '-td']
+" 'filters'      : use ['cpsm_filter'] for performance, requires cpsm vim plugin
+"                  found at https://github.com/nixprime/cpsm
+call wilder#set_option('pipeline', [
+      \   wilder#branch(
+      \     wilder#python_file_finder_pipeline({
+      \       'file_command': ['find', '.', '-type', 'f', '-printf', '%P\n'],
+      \       'dir_command': ['find', '.', '-type', 'd', '-printf', '%P\n'],
+      \       'filters': ['fuzzy_filter', 'difflib_sorter'],
+      \     }),
+      \     wilder#cmdline_pipeline(),
+      \     wilder#python_search_pipeline(),
+      \   ),
+      \ ])
+call wilder#set_option('renderer', wilder#popupmenu_renderer({
+      \ 'highlighter': wilder#basic_highlighter(),
+      \ 'left': [
+      \   ' ', wilder#popupmenu_devicons(),
+      \ ],
+      \ 'right': [
+      \   ' ', wilder#popupmenu_scrollbar(),
+      \ ],
+      \ }))
 
