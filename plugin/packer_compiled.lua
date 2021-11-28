@@ -71,7 +71,7 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["auto-pairs"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    path = "/root/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
   ["bufferline.nvim"] = {
@@ -96,7 +96,7 @@ _G.packer_plugins = {
   },
   ["fzy-lua-native"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/fzy-lua-native",
+    path = "/root/.local/share/nvim/site/pack/packer/start/fzy-lua-native",
     url = "https://github.com/romgrk/fzy-lua-native"
   },
   ["gitsigns.nvim"] = {
@@ -232,7 +232,7 @@ _G.packer_plugins = {
   },
   ["wilder.nvim"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/wilder.nvim",
+    path = "/root/.local/share/nvim/site/pack/packer/start/wilder.nvim",
     url = "https://github.com/gelguy/wilder.nvim"
   }
 }
