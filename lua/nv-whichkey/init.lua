@@ -4,6 +4,7 @@ local mappings = {
     w = {':w<CR>','save'},
     a = {'<Plug>Nerdcommenter Toggle','toggle comment'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
+    r = {':!python3 %<CR>','runcode'},
     f = {
         name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Recent File'},

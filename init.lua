@@ -12,8 +12,19 @@
 -- goal
     --'https://github.com/ayamir/nvimdots'
 
-
-
+-- issue how to run python
+--  slime?
+--  python mode? 
+-- 'https://github.com/jpalardy/vim-slime'
+--
+--
+-- vim-easy-align 
+-- 'https://github.com/junegunn/vim-easy-align'
+--
+-- vimsurround
+-- 
+-- highlight word
+-- 'https://github.com/lfv89/vim-interestingwords'
 --#725
 
 require('plugins')
@@ -37,6 +48,7 @@ require('nv-telescope')
 require('nv-treesitter')
 require('nv-toggleterm')
 require('nv-nvimdap')
+require('nv-wilder')
 -- airline
 require'lualine'.setup()
 
@@ -75,3 +87,11 @@ require'lualine'.setup {
 
 
 -- plugin config where to put
+--
+--
+--
+--
+--
+--
+--
+

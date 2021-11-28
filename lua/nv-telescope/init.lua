@@ -1,3 +1,7 @@
+-- todo
+-- add costomize search
+-- like vim config
+-- course file quant/
 local actions = require('telescope.actions')
 require('telescope').setup {
     defaults = {
