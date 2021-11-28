@@ -35,4 +35,7 @@ return require('packer').startup(function()
     use "lukas-reineke/indent-blankline.nvim"
     use 'akinsho/toggleterm.nvim'
     use 'mfussenegger/nvim-dap'
+    use 'jiangmiao/auto-pairs'
+    use 'gelguy/wilder.nvim'
+    use 'romgrk/fzy-lua-native'
 end)

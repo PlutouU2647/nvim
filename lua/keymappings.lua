@@ -62,3 +62,5 @@ map('n','<leader>/',':lua<CR>',opt)
 
 --plug
 map('n', 'L', ':UndotreeToggle<CR>' , opt)
+
+
