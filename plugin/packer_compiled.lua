@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/edge",
     url = "https://github.com/sainnhe/edge"
   },
+  ["fzy-lua-native"] = {
+    loaded = true,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/fzy-lua-native",
+    url = "https://github.com/romgrk/fzy-lua-native"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",

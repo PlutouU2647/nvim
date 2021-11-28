@@ -37,4 +37,5 @@ return require('packer').startup(function()
     use 'mfussenegger/nvim-dap'
     use 'jiangmiao/auto-pairs'
     use 'gelguy/wilder.nvim'
+    use 'romgrk/fzy-lua-native'
 end)

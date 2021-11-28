@@ -87,11 +87,3 @@ require'lualine'.setup {
 
 
 -- plugin config where to put
---
---
---
---
---
---
---
-
