@@ -1,4 +1,15 @@
 -- '~/.local/share/nvim/site/pack/packer
+--
+--
+require('packer').init{
+    opt_default = true,  -- default packer is opt
+    display = {
+        open_fn = require('packer.util').float,
+        prompt_broder = 'double',
+
+    }
+}
+
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'glepnir/nvim-lua-guide-zh'
@@ -39,3 +50,5 @@ return require('packer').startup(function()
     use 'gelguy/wilder.nvim'
     use 'romgrk/fzy-lua-native'
 end)
+
+-- 'https://github.com/wbthomason/packer.nvim'
