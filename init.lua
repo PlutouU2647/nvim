@@ -35,6 +35,8 @@ require('nv-floaterm')
 require('nv-indentline')
 require('nv-telescope')
 require('nv-treesitter')
+require('nv-toggleterm')
+require('nv-nvimdap')
 -- airline
 require'lualine'.setup()
 

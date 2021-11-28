@@ -1,3 +1,4 @@
+vim.g.nvim_tree_width = 25
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
@@ -41,7 +42,8 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 
 -- config
 require'nvim-tree'.setup {
-    auto_close = true,
+    auto_close = 1,
+    gitignore = 1,
 }
 -- 'https://github.com/kyazdani42/nvim-tree.lua'
 -- help 

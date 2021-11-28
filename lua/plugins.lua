@@ -1,3 +1,4 @@
+-- '~/.local/share/nvim/site/pack/packer
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'glepnir/nvim-lua-guide-zh'
@@ -32,4 +33,6 @@ return require('packer').startup(function()
     use 'voldikss/vim-floaterm'
     use 'mbbill/undotree'  -- undo tree
     use "lukas-reineke/indent-blankline.nvim"
+    use 'akinsho/toggleterm.nvim'
+    use 'mfussenegger/nvim-dap'
 end)
