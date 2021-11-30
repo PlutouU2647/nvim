@@ -39,13 +39,9 @@ vim.o.shiftwidth = 4  -- shiftwidth
 vim.o.splitbelow = true  -- splitbelow
 vim.o.splitright = true  -- splitright
 
-
-
-
-
-
-
-
-
-
-
+vim.cmd([[
+augroup highlightYankedText
+    autocmd!
+    autocmd TextYankPost *  silent! lua require'vim.highlight'.on_yank()
+augroup END
+]])
