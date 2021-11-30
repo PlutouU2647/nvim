@@ -45,6 +45,17 @@ return require('packer').startup({function()
     use 'romgrk/fzy-lua-native'
     -- terminal
     use 'akinsho/toggleterm.nvim'
+    use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+    }
+
+
+
+
+
     if packer_bootstrap then
         require('packer').sync()
     end

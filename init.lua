@@ -49,6 +49,9 @@ require('nv-toggleterm')
 require('nv-nvimdap')
 require('nv-wilder')
 require('nv-lualine')
+-- comment
+require('nv-comment')
+
 
 -- theme
 require('theme-edge')

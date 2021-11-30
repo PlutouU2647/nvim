@@ -19,7 +19,7 @@ vim.g.mapleader = ' '
 -- Normal
 map('n', '<Leader>h', ':set hlsearch!<CR>', opt)
 map('n', '<Space>', '<NOP>', opt)
-map('n',"<leader>\\",':',opt)
+--map('n',"<leader>\",':',opt)
 map('n','S',':w<CR>',opt)
 map('n','Q',':q<CR>',opt)
 map('n','R',':source $MYVIMRC<CR>',opt)

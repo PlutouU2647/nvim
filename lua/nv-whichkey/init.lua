@@ -8,12 +8,21 @@ local toggle_lazygit = function()
     local lazygit = Terminal:new({cmd = 'lazygit', direction= 'float'})
     return lazygit:toggle()
 end
+local toggle_ipython = function()
+    local ipython = Terminal:new({cmd = 'ipython', direction= 'float'})
+    return ipython:toggle()
+end
+local toggle_ranger= function()
+    local ranger = Terminal:new({cmd = 'ranger', direction= 'float'})
+    return ranger:toggle()
+end
 local mappings = {
+    --['/'] = {'<Plug>NERDCommenterToggle', 'NERDCommenter'},
     q = {':q<CR>','quit'},
     w = {':w<CR>','save'},
     a = {'<Plug>Nerdcommenter Toggle','toggle comment'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
-    r = {':!python3 %<CR>','runcode'},
+    r = {':!python %<CR>','runcode'},
     f = {
         name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Recent File'},
@@ -30,11 +39,13 @@ local mappings = {
         --f = {toggle_float,'Floating Terminal'},
         f = {toggle_float,'Floating Terminal'},
         l = {toggle_lazygit,'LazyGit'},
+        p = {toggle_ipython,'ipython'},
+        r = {toggle_ranger,'ranger'},
     }
     --t = {
         --name = 'floaterm',
         --r = {'<cmd>Telescope oldfiles<cr>'                    , 'Open Recent File'},
-      ----t = {'<cmd>FloatermNew --wintype=popup --height=6<CR>'        , 'terminal'},
+        --t = {'<cmd>FloatermNew --wintype=popup --height=6<CR>'        , 'terminal'},
         --f = {'<cmd>FloatermNew fzf<CR>'                               , 'fzf'},
         --g = {'<cmd>FloatermNew lazygit<CR>'                           , 'git'},
         --d = {'<cmd>FloatermNew lazydocker<CR>'                        , 'docker'},
