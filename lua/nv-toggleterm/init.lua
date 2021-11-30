@@ -6,5 +6,6 @@ require'toggleterm'.setup{
     shading_factor = 1,
     start_in_insert_mode = true,
     presist_size = true,
-    direction = 'horizontal',
+    --direction = 'horizontal',
+    direction = 'float',
 }

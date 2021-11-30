@@ -1,4 +1,4 @@
---'~/.local/share/nvim/site/pack/packer
+--'~/.local/share/nvim/site/pack/packer'
 
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -44,7 +44,6 @@ return require('packer').startup({function()
     use 'gelguy/wilder.nvim'
     use 'romgrk/fzy-lua-native'
     -- terminal
-    use 'voldikss/vim-floaterm'
     use 'akinsho/toggleterm.nvim'
     if packer_bootstrap then
         require('packer').sync()

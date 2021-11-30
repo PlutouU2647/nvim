@@ -27,6 +27,7 @@ local mappings = {
     },
     t = {
         t = {':ToggleTerm<cr>','Split Below'},
+        --f = {toggle_float,'Floating Terminal'},
         f = {toggle_float,'Floating Terminal'},
         l = {toggle_lazygit,'LazyGit'},
     }
