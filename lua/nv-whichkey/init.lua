@@ -1,4 +1,13 @@
 local wk = require("which-key")
+local Terminal = require('toggleterm.terminal').Terminal
+local toggle_float = function()
+    local float = Terminal:new({direction = 'float'})
+    return float:toggle()
+end
+local toggle_lazygit = function()
+    local lazygit = Terminal:new({cmd = 'lazygit', direction= 'float'})
+    return lazygit:toggle()
+end
 local mappings = {
     q = {':q<CR>','quit'},
     w = {':w<CR>','save'},
@@ -17,20 +26,26 @@ local mappings = {
 
     },
     t = {
-        name = 'floaterm',
-        r = {'<cmd>Telescope oldfiles<cr>'                    , 'Open Recent File'},
-      --t = {'<cmd>FloatermNew --wintype=popup --height=6<CR>'        , 'terminal'},
-        f = {'<cmd>FloatermNew fzf<CR>'                               , 'fzf'},
-        g = {'<cmd>FloatermNew lazygit<CR>'                           , 'git'},
-        d = {'<cmd>FloatermNew lazydocker<CR>'                        , 'docker'},
-        n = {'<cmd>FloatermNew node<CR>'                              , 'node'},
-        N = {'<cmd>FloatermNew nnn<CR>'                               , 'nnn'},
-        p = {'<cmd>FloatermNew ipython<CR>'                           , 'ipython'},
-        r = {'<cmd>FloatermNew ranger<CR>'                            , 'ranger'},
-        t = {'<cmd>FloatermToggle<CR>'                                , 'toggle'},
-        y = {'<cmd>FloatermNew ytop<CR>'                              , 'ytop'},
-        s = {'<cmd>FloatermNew ncdu<CR>'                              , 'ncdu'},
-     },
+        t = {':ToggleTerm<cr>','Split Below'},
+        --f = {toggle_float,'Floating Terminal'},
+        f = {toggle_float,'Floating Terminal'},
+        l = {toggle_lazygit,'LazyGit'},
+    }
+    --t = {
+        --name = 'floaterm',
+        --r = {'<cmd>Telescope oldfiles<cr>'                    , 'Open Recent File'},
+      ----t = {'<cmd>FloatermNew --wintype=popup --height=6<CR>'        , 'terminal'},
+        --f = {'<cmd>FloatermNew fzf<CR>'                               , 'fzf'},
+        --g = {'<cmd>FloatermNew lazygit<CR>'                           , 'git'},
+        --d = {'<cmd>FloatermNew lazydocker<CR>'                        , 'docker'},
+        --n = {'<cmd>FloatermNew node<CR>'                              , 'node'},
+        --N = {'<cmd>FloatermNew nnn<CR>'                               , 'nnn'},
+        --p = {'<cmd>FloatermNew ipython<CR>'                           , 'ipython'},
+        --r = {'<cmd>FloatermNew ranger<CR>'                            , 'ranger'},
+        --t = {'<cmd>FloatermToggle<CR>'                                , 'toggle'},
+        --y = {'<cmd>FloatermNew ytop<CR>'                              , 'ytop'},
+        --s = {'<cmd>FloatermNew ncdu<CR>'                              , 'ncdu'},
+     --},
 
 }
 local opts = {prefix = '<leader>'}
