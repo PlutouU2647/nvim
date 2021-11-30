@@ -37,14 +37,15 @@ return require('packer').startup({function()
     use 'glepnir/dashboard-nvim'
     use 'folke/which-key.nvim'
     use 'preservim/nerdcommenter'
-    use 'voldikss/vim-floaterm'
     use 'mbbill/undotree'  -- undo tree
     use "lukas-reineke/indent-blankline.nvim"
-    use 'akinsho/toggleterm.nvim'
     use 'mfussenegger/nvim-dap'
     use 'jiangmiao/auto-pairs'
     use 'gelguy/wilder.nvim'
     use 'romgrk/fzy-lua-native'
+    -- terminal
+    use 'voldikss/vim-floaterm'
+    use 'akinsho/toggleterm.nvim'
     if packer_bootstrap then
         require('packer').sync()
     end
