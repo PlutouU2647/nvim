@@ -17,12 +17,10 @@ local toggle_ranger= function()
     return ranger:toggle()
 end
 local mappings = {
-    --['/'] = {'<Plug>NERDCommenterToggle', 'NERDCommenter'},
     q = {':q<CR>','quit'},
     w = {':w<CR>','save'},
-    a = {'<Plug>Nerdcommenter Toggle','toggle comment'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
-    r = {':!python %<CR>','runcode'},
+    r = {':w<CR> :!python %<CR>','Run Code'},
     f = {
         name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Recent File'},
@@ -64,16 +62,6 @@ wk.register(mappings, opts)
 vim.o.timeoutlen = 250
 
 
-
--- let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
--- vim.cmd
--- vim.g.which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
-
-
---let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
-vim.cmd([[
-map <leader>/ <Plug>NERDCommenterToggle
-]])
 
 
 
