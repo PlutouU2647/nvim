@@ -51,16 +51,22 @@ map('n', '<C-w>', ':bd<CR>', opt)
 
 
 -- move selected lines
-map('x', 'J', ':move \'>+1<CR>gv-gv\'' , opt)
-map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
+--map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
+--map('x', 'J', ':move \'>+1<CR>gv-gv\'' , opt)
+map('v', 'J', ':m \'>+1<CR>gv=gv\'' , opt)
+map('v', 'K', ':m \'<-2<CR>gv=gv\'' , opt)
+map('i', '<c-k>', '<esc>:m .-2<CR>==i' , opt)
+map('i', '<c-j>', '<esc>:m .+1<CR>==i' , opt)
+map('n', '<leader>j', ':m .+1<CR>==' , opt)
+map('n', '<leader>k', ':m .-2<CR>==' , opt)
 
-map('n','<leader>/',':lua<CR>',opt)
-
-
+-- comment
+map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 
 
 
 --plug
 map('n', 'L', ':UndotreeToggle<CR>' , opt)
+
 
 
