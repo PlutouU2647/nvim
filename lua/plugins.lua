@@ -25,9 +25,11 @@ return require('packer').startup({function()
     use 'shaunsingh/nord.nvim'  -- colorscheme
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     -- snippets
+    -- telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-lua/telescope.nvim'
+    use 'nvim-telescope/telescope-fzy-native.nvim'
     use 'ChristianChiarulli/nvcode-color-schemes.vim'
     use 'norcalli/nvim-colorizer.lua'  -- colorizer
     use 'unblevable/quick-scope'
