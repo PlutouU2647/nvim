@@ -26,13 +26,14 @@ vim.o.autoindent = true  -- autoindent
 
 
 
-
 -- tab
 vim.o.tabstop = 4  -- tabstop
 vim.o.softtabstop = 4  -- softtabstop
 vim.o.expandtab = true  -- expandtab
 vim.o.smarttab = true  -- smarttab
+vim.o.smartindent = true  -- smartindent
 vim.o.shiftwidth = 4  -- shiftwidth
+
 
 
 -- window 
@@ -45,3 +46,8 @@ augroup highlightYankedText
     autocmd TextYankPost *  silent! lua require'vim.highlight'.on_yank()
 augroup END
 ]])
+
+
+
+
+

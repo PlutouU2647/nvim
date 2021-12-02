@@ -48,6 +48,9 @@ return require('packer').startup({function()
     -- terminal
     use 'akinsho/toggleterm.nvim'
 
+    -- file manager
+    use 'mcchrish/nnn.vim'
+
 
 
 
