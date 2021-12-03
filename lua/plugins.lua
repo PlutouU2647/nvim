@@ -30,6 +30,9 @@ return require('packer').startup({function()
     use 'nvim-lua/plenary.nvim'
     use 'nvim-lua/telescope.nvim'
     use 'nvim-telescope/telescope-fzy-native.nvim'
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+
     use 'ChristianChiarulli/nvcode-color-schemes.vim'
     use 'norcalli/nvim-colorizer.lua'  -- colorizer
     use 'unblevable/quick-scope'
@@ -47,6 +50,9 @@ return require('packer').startup({function()
     use 'romgrk/fzy-lua-native'
     -- terminal
     use 'akinsho/toggleterm.nvim'
+
+    -- file manager
+    use 'mcchrish/nnn.vim'
 
 
 
