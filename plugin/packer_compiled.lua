@@ -197,7 +197,7 @@ _G.packer_plugins = {
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
+    path = "/root/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzy-native.nvim"
   },
   ["telescope.nvim"] = {
@@ -219,11 +219,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/vim-cursorword",
     url = "https://github.com/itchyny/vim-cursorword"
-  },
-  ["vim-floaterm"] = {
-    loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/vim-floaterm",
-    url = "https://github.com/voldikss/vim-floaterm"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
