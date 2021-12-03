@@ -126,7 +126,7 @@ _G.packer_plugins = {
   },
   ["nnn.vim"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nnn.vim",
+    path = "/root/.local/share/nvim/site/pack/packer/start/nnn.vim",
     url = "https://github.com/mcchrish/nnn.vim"
   },
   ["nord.nvim"] = {
@@ -202,7 +202,7 @@ _G.packer_plugins = {
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    path = "/root/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope-fzy-native.nvim"] = {
