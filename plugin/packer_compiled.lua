@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/root/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
-  ["nnn.vim"] = {
-    loaded = true,
-    path = "/root/.local/share/nvim/site/pack/packer/start/nnn.vim",
-    url = "https://github.com/mcchrish/nnn.vim"
-  },
   ["nord.nvim"] = {
     loaded = true,
     path = "/root/.local/share/nvim/site/pack/packer/start/nord.nvim",
