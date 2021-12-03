@@ -62,6 +62,7 @@ map('n', '<leader>k', ':m .-2<CR>==' , opt)
 
 -- comment
 map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
+map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 
 
 
