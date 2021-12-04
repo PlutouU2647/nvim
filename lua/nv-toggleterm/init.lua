@@ -1,3 +1,31 @@
+Terminal = require('toggleterm.terminal').Terminal
+toggle_float = function()
+    float = Terminal:new({direction = 'float'})
+    float:toggle()
+end
+toggle_lazygit = function()
+    lazygit = Terminal:new({
+        cmd = 'lazygit',
+        direction= 'float'})
+    return lazygit:toggle()
+end
+toggle_ipython = function()
+    ipython = Terminal:new({
+        cmd = 'ipython', 
+        --direction= 'float'})
+        direction= 'float'})
+    return ipython:toggle()
+end
+toggle_ranger= function()
+    ranger = Terminal:new({
+        cmd = 'ranger',
+        direction= 'float'})
+    return ranger:toggle()
+end
+
+
+
+
 require'toggleterm'.setup{
     size = 13,
     open_mapping = [[<c-p>]],
@@ -7,13 +35,14 @@ require'toggleterm'.setup{
     start_in_insert_mode = true,
     presist_size = true,
     --direction = 'horizontal',
+    --direction = 'vertical',
     direction = 'float',
 }
 
 
 
 
-
+--[Get_the_name_of_the_current_file](https://vim.fandom.com/wiki/Get_the_name_of_the_current_file)
 -- 'https://github.com/akinsho/toggleterm.nvim'
 -- todo
 -- toggle open current path
