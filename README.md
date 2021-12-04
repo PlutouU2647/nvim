@@ -1,4 +1,6 @@
-hello this my lua config
+## hello this my lua config
+install
+[neovim](https://github.com/neovim/neovim)
 ## plugin manage
 [packer](https://github.com/wbthomason/packer.nvim)
 
