@@ -11,7 +11,7 @@ install
 
 ## colorscheme
 https://github.com/sainnhe/edge
-
+-- [theme_github](https://github.com/rafi/awesome-vim-colorschemes)
 
 ## tutorio
 [nvim-lua-guide-zh](https://github.com/glepnir/nvim-lua-guide-zh)

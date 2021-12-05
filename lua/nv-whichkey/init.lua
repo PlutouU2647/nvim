@@ -17,10 +17,14 @@ local wk = require("which-key")
     --return ranger:toggle()
 --end
 local mappings = {
-    q = {':q<CR>','quit'},
+    i = {'<Plug>SlimeRegionSend','Slime Run Selected code',mode = "v"},
+    o = {'<Plug>SlimeParagraphSend','Slime Run Paragraph code'},
+    b = {'<Plug>SlimeConfig','Slime config'},
+    --q = {':q<CR>','quit'},
     w = {':w<CR>','save'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
     r = {':w<CR> :!python %<CR>','Run Code'},
+
     f = {
         name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Recent File'},
@@ -66,6 +70,6 @@ vim.o.timeoutlen = 250
 
 
 
---:help which-key
 --'https://github.com/folke/which-key.nvim'
+--:help which-key
 

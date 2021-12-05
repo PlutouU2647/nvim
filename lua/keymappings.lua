@@ -1,4 +1,4 @@
--- silent = true means don't print a message when the key is bound
+-- silent true means do not print a message when the key is bound
 -- 保存本地变量
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true }
@@ -21,7 +21,7 @@ map('n', '<Leader>h', ':set hlsearch!<CR>', opt)
 map('n', '<Space>', '<NOP>', opt)
 --map('n',"<leader>\",':',opt)
 --map('n','S',':w<CR>',opt)
-map('n','S',':up<CR>',opt)
+map('n','S',':up<CR>',{noremap = true, silent = false })
 map('n','Q',':q<CR>',opt)
 map('n','R',':source $MYVIMRC<CR>',opt)
 
@@ -66,6 +66,18 @@ map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = tru
 map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 
 
+
+--map('x','<leader>ii', '<Plug>SlimeRegionSend', {noremap = false, silent = false })
+--map('n','<leader>io', '<Plug>SlimeParagraphSend', {noremap = false, silent = false })
+--map('n','<leader>/',  '<Plug>SlimeConfig', {noremap = false, silent = false })
+--xmap <c-c><c-c> <Plug>SlimeRegionSend
+--nmap <c-c><c-c> <Plug>SlimeParagraphSend
+--nmap <c-c>v     <Plug>SlimeConfig
+
+
+-- sourcefile
+--map('n','<leader>r', ':source $MYVIMRC<cr>', {silent = false })
+--map('n','<leader>r', ':source %<cr>', {silent = false })
 
 --plug
 map('n', 'L', ':UndotreeToggle<CR>' , opt)

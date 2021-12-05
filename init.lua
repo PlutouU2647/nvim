@@ -25,6 +25,8 @@
 -- 
 -- highlight word
 -- 'https://github.com/lfv89/vim-interestingwords'
+-- theme
+-- [theme_github](https://github.com/rafi/awesome-vim-colorschemes)
 --#725
 
 require('plugins')
@@ -52,6 +54,12 @@ require('nv-lualine')
 -- comment
 
 
+-- ide
+require('nv-slime')
 -- theme
 require('theme-edge')
+--require('theme-nightfox')
+
+--vim.g.nvim_tree_indent_markers = 1 
+
 -- plugin config where to put

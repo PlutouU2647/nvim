@@ -8,7 +8,6 @@ end
 
 return require('packer').startup({function()
     -- Packer can manage itself
-    use 'glepnir/nvim-lua-guide-zh'
     use 'wbthomason/packer.nvim'
     use {
       'kyazdani42/nvim-tree.lua',
@@ -19,7 +18,6 @@ return require('packer').startup({function()
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-compe'
     use {'nvim-lualine/lualine.nvim',requires = {'kyazdani42/nvim-web-devicons', opt = true}}
-    use 'EdenEast/nightfox.nvim'  -- colorscheme
     use 'christoomey/vim-tmux-navigator'  -- tmux-navigator
     use 'itchyny/vim-cursorword'
     use 'shaunsingh/nord.nvim'  -- colorscheme
@@ -32,7 +30,10 @@ return require('packer').startup({function()
     use 'nvim-telescope/telescope-fzy-native.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
-
+    -- colorscheme
+    use 'EdenEast/nightfox.nvim'  -- colorscheme
+    use 'folke/tokyonight.nvim'
+    
     use 'ChristianChiarulli/nvcode-color-schemes.vim'
     use 'norcalli/nvim-colorizer.lua'  -- colorizer
     use 'unblevable/quick-scope'
@@ -51,6 +52,8 @@ return require('packer').startup({function()
     -- terminal
     use 'akinsho/toggleterm.nvim'
 
+    -- ide
+    use 'jpalardy/vim-slime'
 
 
     if packer_bootstrap then
