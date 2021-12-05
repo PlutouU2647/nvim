@@ -63,3 +63,6 @@ require('theme-edge')
 --vim.g.nvim_tree_indent_markers = 1 
 
 -- plugin config where to put
+--
+-- copilot
+-- 'https://github.com/github/feedback/discussions?discussions_q=vim'
