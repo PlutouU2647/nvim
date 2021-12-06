@@ -1,9 +1,19 @@
+-- tmux mode
 vim.cmd([[
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name":"default", "target_pane":"{right-of}"}
 let g:slime_python_ipython = 1
+let g:slime_dont_ask_default = 1
 ]])
 
+
+
+---- vim mode
+--vim.cmd([[
+--let g:slime_target = "neovim"
+--let g:slime_cell_delimiter = "###"
+--let b:slime_config = {}
+--]])
 
 
 --xmap <c-c><c-c> <Plug>SlimeRegionSend

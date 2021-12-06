@@ -1,21 +1,21 @@
 local wk = require("which-key")
---local Terminal = require('toggleterm.terminal').Terminal
---local toggle_float = function()
-    --local float = Terminal:new({direction = 'float'})
-    --return float:toggle()
---end
---local toggle_lazygit = function()
-    --local lazygit = Terminal:new({cmd = 'lazygit', direction= 'float'})
-    --return lazygit:toggle()
---end
---local toggle_ipython = function()
-    --local ipython = Terminal:new({cmd = 'ipython', direction= 'float'})
-    --return ipython:toggle()
---end
---local toggle_ranger= function()
-    --local ranger = Terminal:new({cmd = 'ranger', direction= 'float'})
-    --return ranger:toggle()
---end
+local Terminal = require('toggleterm.terminal').Terminal
+local toggle_float = function()
+    local float = Terminal:new({direction = 'float'})
+    return float:toggle()
+end
+local toggle_lazygit = function()
+    local lazygit = Terminal:new({cmd = 'lazygit', direction= 'float'})
+    return lazygit:toggle()
+end
+local toggle_ipython = function()
+    local ipython = Terminal:new({cmd = 'ipython', direction= 'float'})
+    return ipython:toggle()
+end
+local toggle_ranger= function()
+    local ranger = Terminal:new({cmd = 'ranger', direction= 'float'})
+    return ranger:toggle()
+end
 local mappings = {
     i = {'<Plug>SlimeRegionSend','Slime Run Selected code',mode = "v"},
     o = {'<Plug>SlimeParagraphSend','Slime Run Paragraph code'},

@@ -1,27 +1,26 @@
 Terminal = require('toggleterm.terminal').Terminal
-toggle_float = function()
-    float = Terminal:new({direction = 'float'})
-    float:toggle()
-end
-toggle_lazygit = function()
-    lazygit = Terminal:new({
-        cmd = 'lazygit',
-        direction= 'float'})
-    return lazygit:toggle()
-end
-toggle_ipython = function()
-    ipython = Terminal:new({
-        cmd = 'ipython', 
+--toggle_float = function()
+    --float = Terminal:new({direction = 'float'})
+    --float:toggle()
+--end
+--toggle_lazygit = function()
+    --lazygit = Terminal:new({
+        --cmd = 'lazygit',
         --direction= 'float'})
-        direction= 'float'})
-    return ipython:toggle()
-end
-toggle_ranger= function()
-    ranger = Terminal:new({
-        cmd = 'ranger',
-        direction= 'float'})
-    return ranger:toggle()
-end
+    --return lazygit:toggle()
+--end
+--toggle_ipython = function()
+    --ipython = Terminal:new({
+        --cmd = 'ipython', 
+        --direction= 'float'})
+    --return ipython:toggle()
+--end
+--toggle_ranger= function()
+    --ranger = Terminal:new({
+        --cmd = 'ranger',
+        --direction= 'float'})
+    --return ranger:toggle()
+--end
 
 
 
