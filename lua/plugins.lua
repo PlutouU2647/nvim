@@ -23,6 +23,7 @@ return require('packer').startup({function()
     use 'shaunsingh/nord.nvim'  -- colorscheme
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     -- snippets
+    use 'hrsh7th/vim-vsnip'
     -- telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'

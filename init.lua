@@ -51,6 +51,7 @@ require('nv-toggleterm')
 require('nv-nvimdap')
 require('nv-wilder')
 require('nv-lualine')
+require('nv-vsnip')
 -- comment
 
 
@@ -66,3 +67,7 @@ require('theme-edge')
 --
 -- copilot
 -- 'https://github.com/github/feedback/discussions?discussions_q=vim'
+--
+--
+--
+--
