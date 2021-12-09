@@ -8,10 +8,9 @@ local opt = {noremap = true, silent = true }
 -- vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true })
 
 
-vim.cmd([[
-nmap \ :
-]])
-
+--local map = function(mode, key, commandt)
+  --vim.api.nvim_set_keymap(mode, key, command, opt)
+--end
 
 
 vim.g.mapleader = ' '
@@ -23,8 +22,8 @@ map('n', '<Space>', '<NOP>', opt)
 --map('n','S',':w<CR>',opt)
 map('n','S',':up<CR>',{noremap = true, silent = false })
 map('n','Q',':q<CR>',opt)
-map('n','R',':source $MYVIMRC<CR>',opt)
-
+map('n', ';', ':', opt)
+map('n', ':', ';', opt)
 
 -- explorer
 map('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
