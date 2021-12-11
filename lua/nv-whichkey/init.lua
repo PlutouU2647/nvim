@@ -20,6 +20,7 @@ local mappings = {
     i = {'<Plug>SlimeRegionSend','Slime Run Selected code',mode = "v"},
     s = {':%s/','Search and replace',mode = "n",silent = false},
     o = {'<Plug>SlimeParagraphSend','Slime Run Paragraph code'},
+    --g = {':SlimeSendCurrentLine<cr>','Slime Run Paragraph code'},
     b = {'<Plug>SlimeConfig','Slime config'},
     --q = {':q<CR>','quit'},
     w = {':w<CR>','save'},
