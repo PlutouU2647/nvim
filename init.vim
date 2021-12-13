@@ -97,7 +97,6 @@ map <silent> <C-e> :NERDTreeToggle<CR>
 "let g:material_terminal_italics = 1
 "
 
-colorscheme duskfox
 "set background=dark
 "set t_Co=256
 
