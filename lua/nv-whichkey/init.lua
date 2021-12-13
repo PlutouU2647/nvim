@@ -26,8 +26,7 @@ local mappings = {
     w = {':w<CR>','save'},
     q = {':q<CR>','quit'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
-    r = {':w<CR> :!python %<CR>','Run Code'},
-
+    r = {':!python %<CR>','Run Code'},
     f = {
         name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Recent File'},

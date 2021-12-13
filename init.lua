@@ -29,13 +29,14 @@
 -- [theme_github](https://github.com/rafi/awesome-vim-colorschemes)
 --#725
 
+
 require('plugins')
 require('keymappings')
 require('setting')
 require('colorscheme')
 
 -- plugins
-require('nv-compe')
+--require('nv-cmp')
 require('nv-colorizer')
 require('nv-nvimtree')
 require('nv-bufferline')
@@ -60,6 +61,7 @@ require('nv-slime')
 -- theme
 require('theme-edge')
 --require('theme-nightfox')
+--require('theme-nvim')
 
 --vim.g.nvim_tree_indent_markers = 1 
 
@@ -67,6 +69,7 @@ require('theme-edge')
 --
 -- copilot
 -- 'https://github.com/github/feedback/discussions?discussions_q=vim'
+--
 --
 --
 --

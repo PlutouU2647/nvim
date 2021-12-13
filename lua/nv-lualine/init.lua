@@ -11,7 +11,8 @@ require'lualine'.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch',
-                  {'diagnostics', sources={'nvim_lsp', 'coc'}}},
+                  {'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
+                  --{'diagnostics', sources={'nvim_lsp', 'coc'}}},
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'filetype'},
     lualine_y = {'progress'},

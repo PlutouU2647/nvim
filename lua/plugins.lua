@@ -15,15 +15,10 @@ return require('packer').startup({function()
       config = function() require'nvim-tree'.setup {} end
     }
     use 'github/copilot.vim'
-    use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/nvim-compe'
     use {'nvim-lualine/lualine.nvim',requires = {'kyazdani42/nvim-web-devicons', opt = true}}
     use 'christoomey/vim-tmux-navigator'  -- tmux-navigator
-    use 'itchyny/vim-cursorword'
-    use 'shaunsingh/nord.nvim'  -- colorscheme
+    use 'itchyny/vim-cursorword' use 'shaunsingh/nord.nvim'  -- colorscheme
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    -- snippets
-    use 'hrsh7th/vim-vsnip'
     -- telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
@@ -33,7 +28,11 @@ return require('packer').startup({function()
 
     -- colorscheme
     use 'EdenEast/nightfox.nvim'  -- colorscheme
-    use 'folke/tokyonight.nvim'
+    --use({
+    --'rose-pine/neovim',
+    ----as = 'rose-pine',
+    --tag = 'v0.1.0', -- Optional tag release
+    --})  -- rose-pine
     
     use 'ChristianChiarulli/nvcode-color-schemes.vim'
     use 'norcalli/nvim-colorizer.lua'  -- colorizer
@@ -55,6 +54,14 @@ return require('packer').startup({function()
 
     -- ide
     use 'jpalardy/vim-slime'
+    use {'neovim/nvim-lspconfig'}
+    use {'hrsh7th/cmp-nvim-lsp'}
+    use {'hrsh7th/cmp-buffer'}
+    use {'hrsh7th/cmp-path'}
+    use {'hrsh7th/cmp-cmdline'}
+    use {'hrsh7th/nvim-cmp'}
+    use {'hrsh7th/vim-vsnip'}
+    use {'hrsh7th/cmp-vsnip'}
 
 
     if packer_bootstrap then
