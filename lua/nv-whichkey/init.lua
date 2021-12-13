@@ -24,6 +24,7 @@ local mappings = {
     b = {'<Plug>SlimeConfig','Slime config'},
     --q = {':q<CR>','quit'},
     w = {':w<CR>','save'},
+    q = {':q<CR>','quit'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
     r = {':w<CR> :!python %<CR>','Run Code'},
 

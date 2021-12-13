@@ -22,8 +22,8 @@ map('n', '<Space>', '<NOP>', opt)
 --map('n','S',':w<CR>',opt)
 map('n','S',':up<CR>',{noremap = true, silent = false })
 map('n','Q',':q<CR>',opt)
-map('n', ';', ':', opt)
-map('n', ':', ';', opt)
+--map('n', ';', ':', opt)
+--map('n', ':', ';', opt)
 
 -- explorer
 map('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
@@ -81,5 +81,8 @@ map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = tru
 --plug
 map('n', 'L', ':UndotreeToggle<CR>' , opt)
 
+vim.cmd([[
+nmap \ :
+]])
 
 
