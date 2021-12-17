@@ -62,6 +62,8 @@ return require('packer').startup({function()
     use {'hrsh7th/nvim-cmp'}
     use {'hrsh7th/vim-vsnip'}
     use {'hrsh7th/cmp-vsnip'}
+    -- 输入法
+    use 'lyokha/vim-xkbswitch'
 
 
     if packer_bootstrap then

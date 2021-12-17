@@ -260,6 +260,11 @@ _G.packer_plugins = {
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
   },
+  ["vim-xkbswitch"] = {
+    loaded = true,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/vim-xkbswitch",
+    url = "https://github.com/lyokha/vim-xkbswitch"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/which-key.nvim",

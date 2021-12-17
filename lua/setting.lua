@@ -47,7 +47,3 @@ augroup highlightYankedText
 augroup END
 ]])
 
-
-
-
-

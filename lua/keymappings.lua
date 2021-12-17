@@ -39,6 +39,9 @@ map('n','<C-j>','<C-w>j', { silent = true })
 map('n','<C-k>','<C-w>k', { silent = true })
 map('n','<C-l>','<C-w>l', { silent = true })
 
+-- better edit mode movement
+map('n', 'H', '^', opt)
+map('n', 'L', '$', opt)
 
 -- better indenting
 map('v', '<', '<gv', opt)
@@ -79,7 +82,7 @@ map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = tru
 --map('n','<leader>r', ':source %<cr>', {silent = false })
 
 --plug
-map('n', 'L', ':UndotreeToggle<CR>' , opt)
+--map('n', 'L', ':UndotreeToggle<CR>' , opt)
 
 vim.cmd([[
 nmap \ :

@@ -53,6 +53,7 @@ require('nv-nvimdap')
 require('nv-wilder')
 require('nv-lualine')
 require('nv-vsnip')
+require('nv-xkbswitch')
 -- comment
 
 
