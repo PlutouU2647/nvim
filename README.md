@@ -16,3 +16,7 @@ https://github.com/sainnhe/edge
 ## tutorio
 [nvim-lua-guide-zh](https://github.com/glepnir/nvim-lua-guide-zh)
 [awesome-neovim](https://github.com/rockerBOO/awesome-neovim)
+
+
+## todo
+better ranger
