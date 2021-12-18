@@ -20,3 +20,16 @@ https://github.com/sainnhe/edge
 
 ## todo
 better ranger
+better esc
+
+
+## LSP
+
+- python
+```
+npm i -g pyright
+```
+
+```
+pip install 'python-lsp-server[all]'
+```

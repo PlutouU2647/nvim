@@ -45,6 +45,9 @@ local mappings = {
         p = {toggle_ipython,'ipython'},
         r = {toggle_ranger,'ranger'},
     }
+    --l = {
+        --name = 'LSP',
+    --}
     --t = {
         --name = 'floaterm',
         --r = {'<cmd>Telescope oldfiles<cr>'                    , 'Open Recent File'},

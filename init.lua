@@ -8,8 +8,8 @@
 
 -- guide
     --'https://github.com/glepnir/nvim-lua-guide-zh'
-    --'https://github.com/rockerBOO/awesome-neovim'
 -- goal
+--'https://github.com/rockerBOO/awesome-neovim'
     --'https://github.com/ayamir/nvimdots'
 
 -- issue how to run python
@@ -27,50 +27,52 @@
 -- 'https://github.com/lfv89/vim-interestingwords'
 -- theme
 -- [theme_github](https://github.com/rafi/awesome-vim-colorschemes)
+
 --#725
 
-require('plugins')
+--#780
+
+
+
+-- system setting
+require('plugin')
 require('keymappings')
 require('setting')
 require('colorscheme')
 
 -- plugins
---require('nv-cmp')
-require('nv-colorizer')
-require('nv-nvimtree')
-require('nv-bufferline')
-require('nv-gitsigns')
-require('nv-dashboard')
-require('nv-whichkey')
-require('nv-nerdcommenter')
-require('nv-telescope')
-require('nv-indentline')
-require('nv-telescope')
-require('nv-treesitter')
-require('nv-toggleterm')
-require('nv-nvimdap')
-require('nv-wilder')
-require('nv-lualine')
-require('nv-vsnip')
-require('nv-xkbswitch')
--- comment
+require('plugins/nv-colorizer')
+require('plugins/nv-nvimtree')
+require('plugins/nv-bufferline')
+require('plugins/nv-gitsigns')
+require('plugins/nv-dashboard')
+require('plugins/nv-whichkey')
+require('plugins/nv-nerdcommenter')
+require('plugins/nv-telescope')
+require('plugins/nv-indentline')
+require('plugins/nv-telescope')
+require('plugins/nv-treesitter')
+require('plugins/nv-toggleterm')
+require('plugins/nv-nvimdap')
+--require('plugins/nv-wilder')
+require('plugins/nv-lualine')
+require('plugins/nv-vsnip')
+require('plugins/nv-xkbswitch')
 
 
 -- ide
-require('nv-slime')
+require('plugins/nv-slime')
 -- theme
-require('theme-edge')
---require('theme-nightfox')
---require('theme-nvim')
+--require('plugins/theme-edge')
+require('plugins/theme-nightfox')
+--require('theme-rose')
 
---vim.g.nvim_tree_indent_markers = 1 
+-- cmp
+require('plugins/nv-cmp')
 
--- plugin config where to put
---
+-- lsp
+require('plugins/nv-lsp')
+require('plugins/nv-lsp-sign')
+
 -- copilot
 -- 'https://github.com/github/feedback/discussions?discussions_q=vim'
---
---
---
---
---

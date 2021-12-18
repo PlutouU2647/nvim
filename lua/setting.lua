@@ -19,10 +19,12 @@ vim.o.signcolumn = 'yes'
 vim.o.wildmenu = true  -- wildmenu
 vim.o.wildignorecase = true  -- wildignorecase
 vim.o.relativenumber = true  -- relative number
-vim.o.guifont = 'MesloLGS NF:h13'  -- font
 vim.o.incsearch = true  -- incsearch
 vim.o.ignorecase = true  -- ignorecase also in cmd mode auto complete
 vim.o.autoindent = true  -- autoindent
+
+-- font
+vim.o.guifont = 'MesloLGS NF:h14'  -- font
 
 
 

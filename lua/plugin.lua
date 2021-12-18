@@ -21,9 +21,8 @@ packer.init {
   },
 }
 
---return require('packer').startup({function()
+-- plugins
 return packer.startup(function(use)
-    -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {
       'kyazdani42/nvim-tree.lua',
@@ -59,22 +58,23 @@ return packer.startup(function(use)
     use 'glepnir/dashboard-nvim'
     use 'folke/which-key.nvim'
     use 'preservim/nerdcommenter'
-    use 'mbbill/undotree'  -- undo tree
+    --use 'mbbill/undotree'  -- undo tree
     use "lukas-reineke/indent-blankline.nvim"
     use 'mfussenegger/nvim-dap'
     use 'jiangmiao/auto-pairs'
-    use 'gelguy/wilder.nvim'
+    --use 'gelguy/wilder.nvim'
     use 'romgrk/fzy-lua-native'
     -- terminal
     use 'akinsho/toggleterm.nvim'
 
     -- ide
     use 'jpalardy/vim-slime'
+
+    -- lsp
     use {'neovim/nvim-lspconfig'}
     use {'hrsh7th/cmp-nvim-lsp'}
 
-
-    -- cmp
+    -- completion
     use {'hrsh7th/nvim-cmp'}
     use {'hrsh7th/cmp-buffer'}
     use {'hrsh7th/cmp-path'}
@@ -82,7 +82,7 @@ return packer.startup(function(use)
     use {'hrsh7th/vim-vsnip'}
     use {'hrsh7th/cmp-vsnip'}
 
-    -- 输入法
+    -- chinese
     use 'lyokha/vim-xkbswitch'
 
 
