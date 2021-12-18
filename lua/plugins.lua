@@ -6,7 +6,23 @@ if fn.empty(fn.glob(install_path)) > 0 then
     packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
-return require('packer').startup({function()
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+-- Have packer use a popup window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
+
+--return require('packer').startup({function()
+return packer.startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {
@@ -56,12 +72,16 @@ return require('packer').startup({function()
     use 'jpalardy/vim-slime'
     use {'neovim/nvim-lspconfig'}
     use {'hrsh7th/cmp-nvim-lsp'}
+
+
+    -- cmp
+    use {'hrsh7th/nvim-cmp'}
     use {'hrsh7th/cmp-buffer'}
     use {'hrsh7th/cmp-path'}
     use {'hrsh7th/cmp-cmdline'}
-    use {'hrsh7th/nvim-cmp'}
     use {'hrsh7th/vim-vsnip'}
     use {'hrsh7th/cmp-vsnip'}
+
     -- 输入法
     use 'lyokha/vim-xkbswitch'
 
@@ -69,14 +89,7 @@ return require('packer').startup({function()
     if packer_bootstrap then
         require('packer').sync()
     end
-end,
-config = {
-  display = {
-    open_fn = function()
-      return require('packer.util').float({ border = 'single' })
-    end
-  }
-}})
+end)
 
 
 -- 'https://github.com/wbthomason/packer.nvim'

@@ -29,7 +29,6 @@
 -- [theme_github](https://github.com/rafi/awesome-vim-colorschemes)
 --#725
 
-
 require('plugins')
 require('keymappings')
 require('setting')
