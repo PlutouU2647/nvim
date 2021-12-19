@@ -33,3 +33,5 @@ npm i -g pyright
 ```
 pip install 'python-lsp-server[all]'
 ```
+## IDE
+[用 Vim 写 Python 的最佳实践是什么？](https://www.zhihu.com/question/19655689)
