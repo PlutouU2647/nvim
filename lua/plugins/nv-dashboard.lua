@@ -1,10 +1,10 @@
 vim.g.dashboard_default_executive ='telecsope'
 
 vim.g.dashboard_custom_section = {
-    a = {description = {'  Find File          '}, command = 'Telescope find_files'},
-    d = {description = {'  Search Text        '}, command = 'Telescope live_grep'},
-    b = {description = {'  Recent Files       '}, command = 'Telescope oldfiles'},
-    e = {description = {'  Config             '}, command = 'edit ~/.config/nvim/init.lua'},
+    a = {description = {'  Recent Files       '}, command = 'Telescope oldfiles'},
+    b = {description = {'  Find File          '}, command = 'Telescope find_files'},
+    c = {description = {'  Search Text        '}, command = 'Telescope live_grep'},
+    d = {description = {'  Config             '}, command = 'edit ~/.config/nvim/init.lua'},
 }
 vim.g.dashboard_custom_footer = {"You're perfect!"}
 

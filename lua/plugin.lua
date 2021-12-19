@@ -84,7 +84,6 @@ return packer.startup(function(use)
 
     -- chinese
     use 'lyokha/vim-xkbswitch'
-    use 'skywind3000/asynctasks.vim'
     use 'skywind3000/asyncrun.vim'
 
     if packer_bootstrap then
