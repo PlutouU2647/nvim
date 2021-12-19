@@ -71,5 +71,8 @@ require('plugins/nv-cmp')
 require('plugins/nv-lsp')
 require('plugins/nv-lsp-sign')
 
+require('plugins/asynctasks')
+
+
 -- copilot
 -- 'https://github.com/github/feedback/discussions?discussions_q=vim'
