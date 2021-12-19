@@ -67,7 +67,11 @@ map('n', '<leader>k', ':m .-2<CR>==' , opt)
 map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 
-
+-- 改变窗口大小
+map('n','<up>', ':res +5<CR>', opt)
+map('n','<down>', ':res -5<CR>', opt)
+map('n','<left>', ':vertical resize-5<CR>', opt)
+map('n','<right>', ':vertical resize+5<CR>', opt)
 
 --map('x','<leader>ii', '<Plug>SlimeRegionSend', {noremap = false, silent = false })
 --map('n','<leader>io', '<Plug>SlimeParagraphSend', {noremap = false, silent = false })

@@ -6,7 +6,7 @@
 --        |___/                                
 --
 
--- guide
+--guide
     --'https://github.com/glepnir/nvim-lua-guide-zh'
 -- goal
 --'https://github.com/rockerBOO/awesome-neovim'
@@ -31,11 +31,7 @@
 --#725
 
 --#780
-
-
-
--- system setting
-require('plugin')
+-- system setting require('plugin')
 require('keymappings')
 require('setting')
 require('colorscheme')
