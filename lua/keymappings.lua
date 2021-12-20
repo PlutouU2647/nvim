@@ -31,6 +31,7 @@ map('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
 
 -- Insert
 map('i','jk','<C-[>',opt)
+map('i',';','<C-[>',opt)
 
 
 -- better window movement
@@ -70,19 +71,20 @@ map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = tru
 map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 
 -- 改变窗口大小
-map('n','<up>', ':res +5<CR>', opt)
-map('n','<down>', ':res -5<CR>', opt)
-map('n','<left>', ':vertical resize-5<CR>', opt)
-map('n','<right>', ':vertical resize+5<CR>', opt)
+map('n','<up>', ':res -2<CR>', opt)
+map('n','<down>', ':res +2<CR>', opt)
+map('n','<left>', ':vertical resize -2<CR>', opt)
+map('n','<right>', ':vertical resize +2<CR>', opt)
 
 --map('x','<leader>ii', '<Plug>SlimeRegionSend', {noremap = false, silent = false })
 --map('n','<leader>io', '<Plug>SlimeParagraphSend', {noremap = false, silent = false })
 --map('n','<leader>/',  '<Plug>SlimeConfig', {noremap = false, silent = false })
 --xmap <c-c><c-c> <Plug>SlimeRegionSend
 --nmap <c-c><c-c> <Plug>SlimeParagraphSend
---nmap <c-c>v     <Plug>SlimeConfig
+--nmap <c-c>v     <Plug> SlimeConfig
 
-
+-- better paste
+--map('v', 'p', '"_dP', opt)
 -- sourcefile
 --map('n','<leader>r', ':source $MYVIMRC<cr>', {silent = false })
 --map('n','<leader>r', ':source %<cr>', {silent = false })

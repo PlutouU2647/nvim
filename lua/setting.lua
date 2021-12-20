@@ -28,7 +28,6 @@ vim.o.autoindent = true  -- autoindent
 vim.o.guifont = 'MesloLGS NF:h14'  -- font
 
 
-
 -- tab
 vim.o.tabstop = 4  -- tabstop
 vim.o.softtabstop = 4  -- softtabstop

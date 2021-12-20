@@ -128,6 +128,8 @@ return packer.startup(function(use)
     -- chinese
     use {'lyokha/vim-xkbswitch'}
     use {'skywind3000/asyncrun.vim', config = "require('plugins/nv-asyncrun')", event = 'BufRead'}
+    use {'kevinhwang91/rnvimr', config = "require('plugins/nv-rnvimr')", event = 'BufRead'}
+
 
     if packer_bootstrap then
         require('packer').sync()

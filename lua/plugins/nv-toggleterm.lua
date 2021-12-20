@@ -39,8 +39,6 @@ require'toggleterm'.setup{
 }
 
 
-
-
 --[Get_the_name_of_the_current_file](https://vim.fandom.com/wiki/Get_the_name_of_the_current_file)
 -- 'https://github.com/akinsho/toggleterm.nvim'
 -- todo
