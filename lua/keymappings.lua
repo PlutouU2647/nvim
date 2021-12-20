@@ -42,6 +42,8 @@ map('n','<C-l>','<C-w>l', { silent = true })
 -- better edit mode movement
 map('n', 'H', '^', opt)
 map('n', 'L', '$', opt)
+map('v', 'H', '^', opt)
+map('v', 'L', '$', opt)
 
 -- better indenting
 map('v', '<', '<gv', opt)

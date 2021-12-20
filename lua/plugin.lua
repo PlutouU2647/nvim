@@ -32,7 +32,8 @@ return packer.startup(function(use)
     }
     use {
         'github/copilot.vim',
-        event = 'BufWinEnter',
+        event = 'BufRead',
+        --event = 'insertEnter',
     }
     use {
         'nvim-lualine/lualine.nvim',
@@ -77,7 +78,7 @@ return packer.startup(function(use)
         config = "require('plugins/nv-bufferline')"
     }
     use {'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'}
-    use {'glepnir/dashboard-nvim', config = "require('plugins/nv-dashboard')"}
+    use {'glepnir/dashboard-nvim', event = 'BufWinEnter', config = "require('plugins/nv-dashboard')"}
     use {
         'folke/which-key.nvim',
         event = 'BufWinEnter',
@@ -86,7 +87,7 @@ return packer.startup(function(use)
     }
     use 'preservim/nerdcommenter'
     --use 'mbbill/undotree'  -- undo tree
-    use {"lukas-reineke/indent-blankline.nvim", config = "require('plugins/nv-indentline')"}
+    use {"lukas-reineke/indent-blankline.nvim", config = "require('plugins/nv-indentline')", event = 'BufRead'}
     use {
         'windwp/nvim-autopairs', 
         event = 'insertEnter', 
@@ -115,9 +116,8 @@ return packer.startup(function(use)
     -- completion
     use {
         'hrsh7th/nvim-cmp',
-        --event = 'B',
+        --event = 'BufRead',
         config = "require('plugins/nv-cmp')",
-        after = 'nvim-lspconfig'
     }
     use {'hrsh7th/cmp-buffer'}
     use {'hrsh7th/cmp-path'}
@@ -126,7 +126,7 @@ return packer.startup(function(use)
     use {'hrsh7th/cmp-vsnip', event = 'InsertEnter'} 
 
     -- chinese
-    use 'lyokha/vim-xkbswitch'
+    use {'lyokha/vim-xkbswitch'}
     use {'skywind3000/asyncrun.vim', config = "require('plugins/nv-asyncrun')", event = 'BufRead'}
 
     if packer_bootstrap then
