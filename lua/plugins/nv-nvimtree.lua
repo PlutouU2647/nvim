@@ -1,6 +1,3 @@
-local present, nvimtree = pcall(require, "nvim-tree")
-
-
 local g = vim.g
 
 g.nvim_tree_add_trailing = 0 -- append a trailing slash to folder names
@@ -42,8 +39,7 @@ g.nvim_tree_icons = {
       symlink_open = "",
    },
 }
-
-nvimtree.setup {
+require'nvim-tree'.setup {
    filters = {
       dotfiles = false,
    },

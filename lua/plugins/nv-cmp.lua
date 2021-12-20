@@ -1,6 +1,5 @@
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 local cmp = require'cmp'
-
 cmp.setup({
     snippet = {
     expand = function(args)

@@ -38,21 +38,20 @@ require('setting')
 require('colorscheme')
 
 -- plugins
-require('plugins/nv-colorizer')
-require('plugins/nv-nvimtree')
-require('plugins/nv-bufferline')
+--require('plugins/nv-colorizer')
+--require('plugins/nv-nvimtree')
+--require('plugins/nv-bufferline')
 require('plugins/nv-gitsigns')
-require('plugins/nv-dashboard')
-require('plugins/nv-whichkey')
+--require('plugins/nv-dashboard')
+--require('plugins/nv-whichkey')
 require('plugins/nv-nerdcommenter')
-require('plugins/nv-telescope')
 require('plugins/nv-indentline')
-require('plugins/nv-telescope')
-require('plugins/nv-treesitter')
+--require('plugins/nv-telescope')
+--require('plugins/nv-treesitter')
 require('plugins/nv-toggleterm')
-require('plugins/nv-nvimdap')
+--require('plugins/nv-nvimdap')
 --require('plugins/nv-wilder')
-require('plugins/nv-lualine')
+--require('plugins/nv-lualine')
 require('plugins/nv-vsnip')
 require('plugins/nv-xkbswitch')
 
@@ -65,13 +64,14 @@ require('plugins/theme-nightfox')
 --require('theme-rose')
 
 -- cmp
-require('plugins/nv-cmp')
+--require('plugins/nv-cmp')
 
 -- lsp
-require('plugins/nv-lsp')
+--require('plugins/nv-lsp')
 require('plugins/nv-lsp-sign')
 
-require('plugins/asynctasks')
+--require('plugins/asynctasks')
+--require('plugins/nv-a
 
 
 -- copilot
