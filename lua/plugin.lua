@@ -85,7 +85,7 @@ return packer.startup(function(use)
         config = "require('plugins/nv-whichkey')"
 
     }
-    use 'preservim/nerdcommenter'
+    use {'preservim/nerdcommenter', config = "require('plugins/nv-nerdcommenter')", event = 'BufRead'}
     --use 'mbbill/undotree'  -- undo tree
     use {"lukas-reineke/indent-blankline.nvim", config = "require('plugins/nv-indentline')", event = 'BufRead'}
     use {

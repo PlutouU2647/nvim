@@ -155,8 +155,11 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   nerdcommenter = {
-    loaded = true,
-    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/start/nerdcommenter",
+    config = { "require('plugins/nv-nerdcommenter')" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/lawrence/.local/share/nvim/site/pack/packer/opt/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
   ["nightfox.nvim"] = {
@@ -330,10 +333,10 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-colorizer.lua', 'copilot.vim', 'indent-blankline.nvim', 'asyncrun.vim'}, { event = "BufRead *" }, _G.packer_plugins)]]
-vim.cmd [[au insertEnter * ++once lua require("packer.load")({'nvim-autopairs'}, { event = "insertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'lualine.nvim', 'which-key.nvim', 'nvim-treesitter', 'bufferline.nvim', 'dashboard-nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'vim-vsnip', 'cmp-vsnip'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au insertEnter * ++once lua require("packer.load")({'nvim-autopairs'}, { event = "insertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'indent-blankline.nvim', 'nerdcommenter', 'nvim-colorizer.lua', 'copilot.vim', 'asyncrun.vim'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'lualine.nvim', 'which-key.nvim', 'nvim-treesitter', 'bufferline.nvim', 'dashboard-nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
