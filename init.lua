@@ -13,8 +13,7 @@
     --'https://github.com/ayamir/nvimdots'
 
 -- issue how to run python
---  slime?
---  python mode? 
+--  slime? python mode? 
 -- 'https://github.com/jpalardy/vim-slime'
 --
 --
@@ -68,7 +67,7 @@ require('plugins/theme-nightfox')
 
 -- lsp
 --require('plugins/nv-lsp')
-require('plugins/nv-lsp-sign')
+require('plugins/lsp')
 
 --require('plugins/asynctasks')
 --require('plugins/nv-a

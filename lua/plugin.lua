@@ -68,7 +68,9 @@ return packer.startup(function(use)
         config = "require('plugins/nv-telescope')"
     }
     use 'nvim-telescope/telescope-fzy-native.nvim'
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use {
+        'nvim-telescope/telescope-fzf-native.nvim', run = 'make'    
+    }
 
     -- colorscheme
     use {'EdenEast/nightfox.nvim', config = "vim.cmd('colorscheme duskfox')"}  -- colorscheme
@@ -78,7 +80,9 @@ return packer.startup(function(use)
     --tag = 'v0.1.0', -- Optional tag release
     --})  -- rose-pine
     
-    use {'norcalli/nvim-colorizer.lua', event = 'BufRead', config = "require('plugins/nv-colorizer')"}  -- colorizer
+    use {
+        'norcalli/nvim-colorizer.lua', event = 'BufRead', config = "require('plugins/nv-colorizer')"    
+    }  -- colorizer
     use 'unblevable/quick-scope'
     use {
         'akinsho/bufferline.nvim',
@@ -86,23 +90,30 @@ return packer.startup(function(use)
         event = 'BufWinEnter',
         config = "require('plugins/nv-bufferline')"
     }
-    use {'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'}
-    use {'glepnir/dashboard-nvim', event = 'BufWinEnter', config = "require('plugins/nv-dashboard')"}
+    use {
+        'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'   
+    }
+    use {
+        'glepnir/dashboard-nvim', event = 'BufWinEnter', config = "require('plugins/nv-dashboard')" 
+    }
     use {
         'folke/which-key.nvim',
         event = 'BufWinEnter',
         config = "require('plugins/nv-whichkey')"
 
     }
-    use {'preservim/nerdcommenter', config = "require('plugins/nv-nerdcommenter')", event = 'BufRead'}
+    use {
+        'preservim/nerdcommenter', config = "require('plugins/nv-nerdcommenter')", event = 'BufRead'    
+    }
     --use 'mbbill/undotree'  -- undo tree
-    use {"lukas-reineke/indent-blankline.nvim", config = "require('plugins/nv-indentline')", event = 'BufRead'}
+    use {
+        "lukas-reineke/indent-blankline.nvim", config = "require('plugins/nv-indentline')", event = 'BufRead'   
+    }
     use {
         'windwp/nvim-autopairs', 
         event = 'insertEnter', 
         config = "require('plugins/nv-auto-pairs')"
     }
-    --use 'gelguy/wilder.nvim'
     use 'romgrk/fzy-lua-native'
     -- terminal
     use 'akinsho/toggleterm.nvim'
@@ -117,26 +128,50 @@ return packer.startup(function(use)
         --event = 'BufWinEnter',
         config = "require('plugins/nv-lsp')"
     }
+    use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+
     use {
         'hrsh7th/cmp-nvim-lsp',
         --after = 'nvim-cmp'
     }
 
     -- completion
+    -- cmp 
     use {
-        'hrsh7th/nvim-cmp',
+        'hrsh7th/nvim-cmp',  -- completion
         --event = 'BufRead',
         config = "require('plugins/nv-cmp')",
     }
-    use {'hrsh7th/cmp-buffer'}
-    use {'hrsh7th/cmp-path'}
-    use {'hrsh7th/cmp-cmdline'}
-    use {'hrsh7th/vim-vsnip', event = 'InsertEnter'}
-    use {'hrsh7th/cmp-vsnip', event = 'InsertEnter'} 
-
-    -- chinese
-    use {'lyokha/vim-xkbswitch'}
-    use {'skywind3000/asyncrun.vim', config = "require('plugins/nv-asyncrun')", event = 'BufRead'}
+    use {
+        'hrsh7th/cmp-buffer',  -- buffer completion
+    } 
+    use {
+        'hrsh7th/cmp-path',  -- path completion
+    }
+    use {
+        'hrsh7th/cmp-cmdline',  -- cmdline completion
+    }
+    use {
+        'hrsh7th/vim-vsnip',  -- snippet
+        event = 'InsertEnter',  
+    }
+    use {
+        'hrsh7th/cmp-vsnip',  -- snippet
+        event = 'InsertEnter',
+    } 
+    use {
+        'L3MON4D3/LuaSnip' --snippet engine
+        --event = 'InsertLeave',
+    }
+    use {
+        "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+        --event = 'InsertLeave',
+    }
+    use {
+        'skywind3000/asyncrun.vim',
+        config = "require('plugins/nv-asyncrun')",
+        event = 'BufRead'
+    }
     --use {'kevinhwang91/rnvimr', config = "require('plugins/nv-rnvimr')", event = 'BufRead'}
 
 
