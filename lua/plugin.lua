@@ -34,6 +34,7 @@ return packer.startup(function(use)
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {'kyazdani42/nvim-web-devicons'}, 
+        opt = true,
         cmd = 'NvimTreeToggle',
         config = "require('plugins/nv-nvimtree')"
     }
@@ -62,6 +63,7 @@ return packer.startup(function(use)
     use {
         'nvim-lua/telescope.nvim',
         requires = {'nvim-lua/plenary'},
+        opt = true,
         cmd = 'Telescope',
         config = "require('plugins/nv-telescope')"
     }
@@ -135,7 +137,7 @@ return packer.startup(function(use)
     -- chinese
     use {'lyokha/vim-xkbswitch'}
     use {'skywind3000/asyncrun.vim', config = "require('plugins/nv-asyncrun')", event = 'BufRead'}
-    use {'kevinhwang91/rnvimr', config = "require('plugins/nv-rnvimr')", event = 'BufRead'}
+    --use {'kevinhwang91/rnvimr', config = "require('plugins/nv-rnvimr')", event = 'BufRead'}
 
 
     if packer_bootstrap then
