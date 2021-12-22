@@ -127,7 +127,7 @@ return packer.startup(function(use)
         --after = 'nvim-cmp',
         --event = 'BufWinEnter',
     }
-    use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+    use 'williamboman/nvim-lsp-installer'  -- simple to use language server installer
 
     use {
         'hrsh7th/cmp-nvim-lsp',
