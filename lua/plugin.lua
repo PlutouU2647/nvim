@@ -126,7 +126,6 @@ return packer.startup(function(use)
         'neovim/nvim-lspconfig',
         --after = 'nvim-cmp',
         --event = 'BufWinEnter',
-        config = "require('plugins/nv-lsp')"
     }
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
