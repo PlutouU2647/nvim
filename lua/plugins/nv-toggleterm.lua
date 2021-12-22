@@ -27,7 +27,7 @@ Terminal = require('toggleterm.terminal').Terminal
 
 require'toggleterm'.setup{
     size = 13,
-    open_mapping = [[<c-p>]],
+    open_mapping = [[<C-\>]],
     shade_filetype = {},
     shade_terminals = true,
     shading_factor = 1,

@@ -71,10 +71,19 @@ map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = tru
 map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 
 -- 改变窗口大小
-map('n','<up>', ':res -2<CR>', opt)
-map('n','<down>', ':res +2<CR>', opt)
-map('n','<left>', ':vertical resize -2<CR>', opt)
-map('n','<right>', ':vertical resize +2<CR>', opt)
+--map('n','<up>', ':res -2<CR>', opt)
+--map('n','<down>', ':res +2<CR>', opt)
+--map('n','<left>', ':vertical resize -2<CR>', opt)
+--map('n','<right>', ':vertical resize +2<CR>', opt)
+
+
+
+-- insert edit mode
+map('i','<c-k>', '<up>', opt)
+map('i','<c-j>', '<down>', opt)
+map('i','<c-h>', '<left>', opt)
+map('i','<c-l>', '<right>', opt)
+
 
 --map('x','<leader>ii', '<Plug>SlimeRegionSend', {noremap = false, silent = false })
 --map('n','<leader>io', '<Plug>SlimeParagraphSend', {noremap = false, silent = false })
@@ -96,4 +105,4 @@ vim.cmd([[
 nmap \ :
 ]])
 
-
+-- tmux_navigator

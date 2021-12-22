@@ -49,8 +49,13 @@ return packer.startup(function(use)
         event = 'BufWinEnter', 
         config = "require('plugins/nv-lualine')"
     }
-    use 'christoomey/vim-tmux-navigator'  -- tmux-navigator
-    use 'itchyny/vim-cursorword' use 'shaunsingh/nord.nvim'  -- colorscheme
+    use {
+        'christoomey/vim-tmux-navigator',  -- tmux-navigator
+        config = "require('plugins/nv-tmux-navigator')",
+        }
+
+    use 'itchyny/vim-cursorword'
+    use 'shaunsingh/nord.nvim'  -- colorscheme
     use {
         'nvim-treesitter/nvim-treesitter', 
         run = ':TSUpdate', 
