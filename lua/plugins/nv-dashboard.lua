@@ -7,7 +7,8 @@ vim.g.dashboard_custom_section = {
     d = {description = {'  Config             '}, command = 'edit ~/.config/nvim/init.lua'},
 }
 --vim.g.dashboard_custom_footer = {"You're perfect!"}
-vim.g.dashboard_custom_footer = {"ᑐ ᑌ ᑎ ᕮ"}
+--vim.g.dashboard_custom_footer = {"ᑐ ᑌ ᑎ ᕮ"}
+vim.g.dashboard_custom_footer = {"你背朝太阳,就只能看到自己的影子————纪伯伦"}
 
 vim.g.dashboard_custom_header = {
     [[              ...  .......          ]],
