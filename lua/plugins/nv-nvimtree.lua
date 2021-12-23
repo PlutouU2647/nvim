@@ -1,7 +1,7 @@
 local g = vim.g
 
 g.nvim_tree_add_trailing = 0 -- append a trailing slash to folder names
-g.nvim_tree_git_hl = git_status
+g.nvim_tree_git_hl = 0
 g.nvim_tree_highlight_opened_files = 0
 g.nvim_tree_indent_markers = 1
 g.nvim_tree_quit_on_open = 0 -- closes tree when file's opened
@@ -15,7 +15,7 @@ g.nvim_tree_window_picker_exclude = {
 g.nvim_tree_show_icons = {
    folders = 1,
    files = 1,
-   git = git_status,
+   git = 1,
 }
 
 g.nvim_tree_icons = {
