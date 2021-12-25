@@ -27,7 +27,7 @@ local mappings = {
     q = {':q<CR>','quit'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
     --r = {':w<cr> | :!python %<CR>','Run Code'},
-   r = {':w<cr> | :AsyncRun!python %<CR>','Run Code'},
+   r = {':w<cr>|:AsyncRun!python %<CR>','Run Code'},
     f = {
         name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Recent File'},
@@ -45,10 +45,24 @@ local mappings = {
         l = {toggle_lazygit,'LazyGit'},
         p = {toggle_ipython,'ipython'},
         r = {toggle_ranger,'ranger'},
-    }
-    --l = {
-        --name = 'LSP',
-    --}
+    },
+    l = {
+        name = 'LSP',
+        i = {'<cmd>LspInfo<cr>', 'LSP INFO'},
+        k = {'<cmd>lua vim.lsp.buf.signature_help()<cr>','Signature Help'},
+        K = {'<cmd>lua vim.lsp.buf.hover()<cr>','Hover Info'},
+        w = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>','Add Workspace Folder'},
+        W = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>','remove Workspace Folder'},
+        l = {'<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>','List Workspace Folders'},
+        t = {'<cmd>lua vim.lsp.buf.type_definition()<cr>','Type Definition'},
+        d = {'<cmd>lua vim.lsp.buf.definition()<cr>','Go To Definition'},
+        D = {'<cmd>lua vim.lsp.buf.declaration()<cr>','Go To Declaration'},
+        r = {'<cmd>lua vim.lsp.buf.references()<cr>','References'},
+        R = {'<cmd>lua vim.lsp.buf.rename()<cr>','Rename'},
+        a = {'<cmd>lua vim.lsp.buf.code_action()<cr>','Code Action'},
+        e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<cr>','Show Line Diagnostics'},
+        n = {'<cmd>lua vim.lsp.diagnostic.go_to_next()<cr>','show line diagnostics'},
+    },
     --t = {
         --name = 'floaterm',
         --r = {'<cmd>Telescope oldfiles<cr>'                    , 'Open Recent File'},

@@ -5,11 +5,11 @@ local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
     packer_bootstrap = fn.system({
-        'git', 
-        'clone', 
-        '--depth', 
-        '1', 
-        'https://github.com/wbthomason/packer.nvim', 
+        'git',
+        'clone',
+        '--depth',
+        '1',
+        'https://github.com/wbthomason/packer.nvim',
         install_path})
 end
 
@@ -33,7 +33,7 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use {
         'kyazdani42/nvim-tree.lua',
-        requires = {'kyazdani42/nvim-web-devicons'}, 
+        requires = {'kyazdani42/nvim-web-devicons'},
         opt = true,
         cmd = 'NvimTreeToggle',
         config = "require('plugins/nv-nvimtree')"
@@ -45,8 +45,8 @@ return packer.startup(function(use)
     }
     use {
         'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true}, 
-        event = 'BufWinEnter', 
+        requires = {'kyazdani42/nvim-web-devicons', opt = true},
+        event = 'BufWinEnter',
         config = "require('plugins/nv-lualine')"
     }
     use {
@@ -55,11 +55,10 @@ return packer.startup(function(use)
         }
 
     use 'itchyny/vim-cursorword'
-    use 'shaunsingh/nord.nvim'  -- colorscheme
     use {
-        'nvim-treesitter/nvim-treesitter', 
-        run = ':TSUpdate', 
-        event = 'BufWinEnter', 
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        event = 'BufWinEnter',
         config ="require('plugins/nv-treesitter')"
     }
     -- telescope
@@ -74,7 +73,7 @@ return packer.startup(function(use)
     }
     use 'nvim-telescope/telescope-fzy-native.nvim'
     use {
-        'nvim-telescope/telescope-fzf-native.nvim', run = 'make'    
+        'nvim-telescope/telescope-fzf-native.nvim', run = 'make'
     }
 
     -- colorscheme
@@ -84,11 +83,12 @@ return packer.startup(function(use)
     ----as = 'rose-pine',
     --tag = 'v0.1.0', -- Optional tag release
     --})  -- rose-pine
-    
+
     use {
-        'norcalli/nvim-colorizer.lua', event = 'BufRead', config = "require('plugins/nv-colorizer')"    
-    }  -- colorizer
-    use 'unblevable/quick-scope'
+        'norcalli/nvim-colorizer.lua',  -- colorizer
+        event = 'BufRead',
+        config = "require('plugins/nv-colorizer')"
+    }
     use {
         'akinsho/bufferline.nvim',
         requires = 'kyazdani42/nvim-web-devicons',
@@ -96,10 +96,10 @@ return packer.startup(function(use)
         config = "require('plugins/nv-bufferline')"
     }
     use {
-        'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'   
+        'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'
     }
     use {
-        'glepnir/dashboard-nvim', event = 'BufWinEnter', config = "require('plugins/nv-dashboard')" 
+        'glepnir/dashboard-nvim', event = 'BufWinEnter', config = "require('plugins/nv-dashboard')"
     }
     use {
         'folke/which-key.nvim',
@@ -108,18 +108,19 @@ return packer.startup(function(use)
 
     }
     use {
-        'preservim/nerdcommenter', config = "require('plugins/nv-nerdcommenter')", event = 'BufRead'    
+        'preservim/nerdcommenter', config = "require('plugins/nv-nerdcommenter')", event = 'BufRead'
     }
     --use 'mbbill/undotree'  -- undo tree
     use {
-        "lukas-reineke/indent-blankline.nvim", config = "require('plugins/nv-indentline')", event = 'BufRead'   
+        "lukas-reineke/indent-blankline.nvim", config = "require('plugins/nv-indentline')", event = 'BufRead'
     }
     use {
-        'windwp/nvim-autopairs', 
-        event = 'insertEnter', 
+        'windwp/nvim-autopairs',
+        event = 'insertEnter',
         config = "require('plugins/nv-auto-pairs')"
     }
     use 'romgrk/fzy-lua-native'
+
     -- terminal
     use 'akinsho/toggleterm.nvim'
 
@@ -133,14 +134,13 @@ return packer.startup(function(use)
         --event = 'BufWinEnter',
     }
     use 'williamboman/nvim-lsp-installer'  -- simple to use language server installer
-
     use {
         'hrsh7th/cmp-nvim-lsp',
         --after = 'nvim-cmp'
     }
 
     -- completion
-    -- cmp 
+    -- cmp
     use {
         'hrsh7th/nvim-cmp',  -- completion
         --event = 'BufRead',
@@ -148,7 +148,7 @@ return packer.startup(function(use)
     }
     use {
         'hrsh7th/cmp-buffer',  -- buffer completion
-    } 
+    }
     use {
         'hrsh7th/cmp-path',  -- path completion
     }
@@ -157,12 +157,12 @@ return packer.startup(function(use)
     }
     use {
         'hrsh7th/vim-vsnip',  -- snippet
-        event = 'InsertEnter',  
+        event = 'InsertEnter',
     }
     use {
         'hrsh7th/cmp-vsnip',  -- snippet
         event = 'InsertEnter',
-    } 
+    }
     use {
         'L3MON4D3/LuaSnip' --snippet engine
         --event = 'InsertLeave',
