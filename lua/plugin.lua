@@ -176,8 +176,8 @@ return packer.startup(function(use)
         config = "require('plugins/nv-asyncrun')",
         event = 'BufRead'
     }
-    --use {'kevinhwang91/rnvimr', config = "require('plugins/nv-rnvimr')", event = 'BufRead'}
 
+    use 'mg979/vim-visual-multi'
 
     if packer_bootstrap then
         require('packer').sync()
