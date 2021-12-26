@@ -4,13 +4,14 @@ local fn = vim.fn
 -- Automatically load plugins
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({
+    packer_bootstrap = fn.system{
         'git',
         'clone',
         '--depth',
         '1',
         'https://github.com/wbthomason/packer.nvim',
-        install_path})
+        install_path
+    }
 end
 
 -- Use a protected call so we don't error out on first use
@@ -30,7 +31,11 @@ packer.init {
 
 -- plugins
 return packer.startup(function(use)
+    -- main plugins
     use 'wbthomason/packer.nvim'
+    use 'nvim-lua/popup.nvim'
+    use 'nvim-lua/plenary.nvim'
+
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {'kyazdani42/nvim-web-devicons'},
@@ -62,18 +67,11 @@ return packer.startup(function(use)
         config ="require('plugins/nv-treesitter')"
     }
     -- telescope
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
     use {
-        'nvim-lua/telescope.nvim',
-        requires = {'nvim-lua/plenary'},
-        opt = true,
-        cmd = 'Telescope',
+        'nvim-telescope/telescope.nvim',
+        --opt = true,
+        --cmd = 'Telescope',
         config = "require('plugins/nv-telescope')"
-    }
-    use 'nvim-telescope/telescope-fzy-native.nvim'
-    use {
-        'nvim-telescope/telescope-fzf-native.nvim', run = 'make'
     }
 
     -- colorscheme
@@ -96,7 +94,8 @@ return packer.startup(function(use)
         config = "require('plugins/nv-bufferline')"
     }
     use {
-        'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim'
+        'lewis6991/gitsigns.nvim',
+        config = "require('plugins/nv-gitsigns')"
     }
     use {
         'glepnir/dashboard-nvim', event = 'BufWinEnter', config = "require('plugins/nv-dashboard')"

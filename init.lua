@@ -13,15 +13,15 @@
     --'https://github.com/ayamir/nvimdots'
 
 -- issue how to run python
---  slime? python mode? 
+--  slime? python mode?
 -- 'https://github.com/jpalardy/vim-slime'
 --
 --
--- vim-easy-align 
+-- vim-easy-align
 -- 'https://github.com/junegunn/vim-easy-align'
 --
 -- vimsurround
--- 
+--
 -- highlight word
 -- 'https://github.com/lfv89/vim-interestingwords'
 -- theme
@@ -40,7 +40,7 @@ require('colorscheme')
 --require('plugins/nv-colorizer')
 --require('plugins/nv-nvimtree')
 --require('plugins/nv-bufferline')
-require('plugins/nv-gitsigns')
+--require('plugins/nv-gitsigns')
 --require('plugins/nv-dashboard')
 --require('plugins/nv-whichkey')
 require('plugins/nv-nerdcommenter')
@@ -52,7 +52,6 @@ require('plugins/nv-toggleterm')
 --require('plugins/nv-wilder')
 --require('plugins/nv-lualine')
 require('plugins/nv-vsnip')
-require('plugins/nv-xkbswitch')
 
 
 -- ide

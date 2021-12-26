@@ -37,8 +37,9 @@ vim.o.smartindent = true  -- smartindent
 vim.o.shiftwidth = 4  -- shiftwidth
 
 
+vim.o.fillchars="eob: "
 
--- window 
+-- window
 vim.o.splitbelow = true  -- splitbelow
 vim.o.splitright = true  -- splitright
 
