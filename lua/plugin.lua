@@ -203,7 +203,9 @@ return packer.startup(function(use)
         event = 'BufRead'
     }
 
+    -- multi-cursor
     use 'mg979/vim-visual-multi'
+
 
     if packer_bootstrap then
         require('packer').sync()
