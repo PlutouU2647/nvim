@@ -50,3 +50,13 @@ augroup highlightYankedText
 augroup END
 ]])
 
+vim.cmd([[
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \	execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+]])
+
