@@ -43,6 +43,9 @@ vim.o.fillchars="eob: "
 vim.o.splitbelow = true  -- splitbelow
 vim.o.splitright = true  -- splitright
 
+-- indenting
+--vim.o.foldmethod='indent'
+
 vim.cmd([[
 augroup highlightYankedText
     autocmd!
