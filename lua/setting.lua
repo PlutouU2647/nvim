@@ -59,4 +59,3 @@ augroup line_return
         \ endif
 augroup END
 ]])
-
