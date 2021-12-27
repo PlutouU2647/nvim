@@ -22,11 +22,11 @@ end
 
 -- Have packer use a popup window
 packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
+    display = {
+        open_fn = function()
+          return require("packer.util").float { border = "rounded" }
+        end,
+    },
 }
 
 -- plugins
@@ -37,21 +37,26 @@ return packer.startup(function(use)
     use 'nvim-lua/plenary.nvim'
 
     use {
+        'kyazdani42/nvim-web-devicons',
+        opt = false,
+    }
+
+    use {
         'kyazdani42/nvim-tree.lua',
-        requires = {'kyazdani42/nvim-web-devicons'},
         opt = true,
         cmd = 'NvimTreeToggle',
         config = "require('plugins/nv-nvimtree')"
+        --config = con"require('plugins/nv-nvimtree')"
     }
     use {
         'github/copilot.vim',
         event = 'BufRead',
-        --event = 'insertEnter',
     }
     use {
         'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true},
-        event = 'BufWinEnter',
+        --opt = true,
+        --event = 'BufRead',
+        --event = 'BufWinEnter',
         config = "require('plugins/nv-lualine')"
     }
     use {
@@ -63,14 +68,16 @@ return packer.startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
-        event = 'BufWinEnter',
+        opt = true,
+        --event = 'BufWinEnter',
+        event = "BufRead",
         config ="require('plugins/nv-treesitter')"
     }
     -- telescope
     use {
         'nvim-telescope/telescope.nvim',
-        --opt = true,
-        --cmd = 'Telescope',
+        opt = true,
+        cmd = 'Telescope',
         config = "require('plugins/nv-telescope')"
     }
 
@@ -89,12 +96,14 @@ return packer.startup(function(use)
     }
     use {
         'akinsho/bufferline.nvim',
-        requires = 'kyazdani42/nvim-web-devicons',
-        event = 'BufWinEnter',
+        opt = true,
+        event = "BufRead",
         config = "require('plugins/nv-bufferline')"
     }
     use {
         'lewis6991/gitsigns.nvim',
+        opt = true,
+        event = {"BufRead", "BufNewFile"},
         config = "require('plugins/nv-gitsigns')"
     }
     use {
@@ -102,7 +111,8 @@ return packer.startup(function(use)
     }
     use {
         'folke/which-key.nvim',
-        event = 'BufWinEnter',
+        opt = true,
+        keys = "<leader>",
         config = "require('plugins/nv-whichkey')"
 
     }
@@ -111,7 +121,11 @@ return packer.startup(function(use)
     }
     --use 'mbbill/undotree'  -- undo tree
     use {
-        "lukas-reineke/indent-blankline.nvim", config = "require('plugins/nv-indentline')", event = 'BufRead'
+        "lukas-reineke/indent-blankline.nvim",
+        opt = true,
+        event = 'BufRead',
+        config = "require('plugins/nv-indentline')",
+
     }
     use {
         'windwp/nvim-autopairs',
@@ -121,7 +135,12 @@ return packer.startup(function(use)
     use 'romgrk/fzy-lua-native'
 
     -- terminal
-    use 'akinsho/toggleterm.nvim'
+    use {
+        'akinsho/toggleterm.nvim',
+        --opt = true,
+        --cmd = 'ToggleTerm',
+        --event = 'BufRead',
+    }
 
     -- ide
     use 'jpalardy/vim-slime'
@@ -129,10 +148,17 @@ return packer.startup(function(use)
     -- lsp
     use {
         'neovim/nvim-lspconfig',
-        --after = 'nvim-cmp',
+        config = "require('plugins/lsp')",
+        opt = true,
+        event = "BufReadPre",
         --event = 'BufWinEnter',
     }
-    use 'williamboman/nvim-lsp-installer'  -- simple to use language server installer
+    use {
+        'williamboman/nvim-lsp-installer',  -- simple to use language server installer
+        opt = true,
+        after = 'nvim-lspconfig',
+        config = "require('plugins/lsp/lsp-installer')",
+    }
     use {
         'hrsh7th/cmp-nvim-lsp',
         --after = 'nvim-cmp'
@@ -142,32 +168,33 @@ return packer.startup(function(use)
     -- cmp
     use {
         'hrsh7th/nvim-cmp',  -- completion
-        --event = 'BufRead',
+        --event = "InsertEnter",
         config = "require('plugins/nv-cmp')",
     }
     use {
         'hrsh7th/cmp-buffer',  -- buffer completion
+        --after = 'hrsh7th/nvim-cmp',
     }
     use {
         'hrsh7th/cmp-path',  -- path completion
+        --after = 'hrsh7th/nvim-cmp',
     }
     use {
         'hrsh7th/cmp-cmdline',  -- cmdline completion
-    }
-    use {
-        'hrsh7th/vim-vsnip',  -- snippet
-        event = 'InsertEnter',
+        --after = 'hrsh7th/nvim-cmp',
     }
     use {
         'hrsh7th/cmp-vsnip',  -- snippet
         event = 'InsertEnter',
     }
     use {
-        'L3MON4D3/LuaSnip' --snippet engine
+        'L3MON4D3/LuaSnip', --snippet engine
+        --after = 'hrsh7th/nvim-cmp',
         --event = 'InsertLeave',
     }
     use {
-        "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+        "rafamadriz/friendly-snippets", -- a bunch of snippets to use
+        --after = 'hrsh7th/nvim-cmp',
         --event = 'InsertLeave',
     }
     use {

@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
+vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile", "help", "popup", "quickfix", "quickfix_cmd", "scratch", "term", "help" }
 vim.g.indent_blankline_filetype_exclude = {
 	"help",
 	"startify",
@@ -12,6 +12,14 @@ vim.g.indent_blankline_filetype_exclude = {
 	"neogitstatus",
 	"NvimTree",
 	"Trouble",
+    "NvimTrees",
+    "popup",
+    "quickfix",
+    "quickfix_cmd",
+    "scratch",
+    "term",
+    "help",
+    "telescope",
 }
 vim.g.indentLine_enabled = 1
 -- vim.g.indent_blankline_char = "│"

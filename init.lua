@@ -27,7 +27,7 @@
 -- theme
 -- [theme_github](https://github.com/rafi/awesome-vim-colorschemes)
 
---#725
+--#746
 
 --#780
 -- system setting
@@ -66,7 +66,7 @@ require('plugins/theme-nightfox')
 
 -- lsp
 --require('plugins/nv-lsp')
-require('plugins/lsp')
+--require('plugins/lsp')
 
 --require('plugins/asynctasks')
 --require('plugins/nv-a
