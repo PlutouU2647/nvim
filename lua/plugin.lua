@@ -64,12 +64,15 @@ return packer.startup(function(use)
         config = "require('plugins/nv-tmux-navigator')",
         }
 
-    use 'itchyny/vim-cursorword'
+    use {
+        'itchyny/vim-cursorword',
+        opt = true,
+        event = 'BufRead',
+    }
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         opt = true,
-        --event = 'BufWinEnter',
         event = "BufRead",
         config ="require('plugins/nv-treesitter')"
     }
@@ -143,7 +146,13 @@ return packer.startup(function(use)
     }
 
     -- ide
-    use 'jpalardy/vim-slime'
+    use {
+        'jpalardy/vim-slime',
+        opt = true,
+        event = 'BufRead',
+        config = "require('plugins/nv-slime')"
+    }
+
 
     -- lsp
     use {
@@ -204,7 +213,18 @@ return packer.startup(function(use)
     }
 
     -- multi-cursor
-    use 'mg979/vim-visual-multi'
+    use {
+        'mg979/vim-visual-multi',
+        opt = true,
+        event = 'BufRead',
+    }
+
+
+    use 'psliwka/vim-smoothie'
+    use {
+        'simrat39/symbols-outline.nvim',
+        config = "require('plugins/nv-symbols-outline')",
+    }
 
 
     if packer_bootstrap then

@@ -161,7 +161,7 @@ telescope.setup {
 
 
 
-
+-- Neovim: Customizing Telescope 🔭
 
 
 -- 'https://github.com/nvim-telescope/telescope.nvim'

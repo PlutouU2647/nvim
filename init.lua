@@ -55,7 +55,7 @@ require('plugins/nv-vsnip')
 
 
 -- ide
-require('plugins/nv-slime')
+--require('plugins/nv-slime')
 -- theme
 --require('plugins/theme-edge')
 require('plugins/theme-nightfox')

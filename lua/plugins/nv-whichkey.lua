@@ -26,6 +26,7 @@ local mappings = {
     w = {':w<CR>','save'},
     q = {':q<CR>','quit'},
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
+    m = {':SymbolsOutline<CR>','SymbolsOutline'},
     --r = {':w<cr> | :!python %<CR>','Run Code'},
    r = {':w<cr>|:AsyncRun!python %<CR>','Run Code'},
     f = {
