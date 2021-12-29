@@ -231,6 +231,11 @@ return packer.startup(function(use)
         config = "require('plugins/nv-symbols-outline')",
     }
 
+    use {
+        'karb94/neoscroll.nvim', -- Smooth scrolling for window movement commands (mappings optional): <C-u>, <C-d>, <C-b>, <C-f>, <C-y>, <C-e>, zt, zz, zb.
+    }
+
+
 
     if packer_bootstrap then
         require('packer').sync()
