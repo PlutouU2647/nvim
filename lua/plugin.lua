@@ -44,7 +44,7 @@ return packer.startup(function(use)
     use {
         'kyazdani42/nvim-tree.lua',
         opt = true,
-        cmd = 'NvimTreeToggle',
+        cmd = {"NvimTreeToggle", "NvimTreeOpen"},
         config = "require('plugins/nv-nvimtree')"
         --config = con"require('plugins/nv-nvimtree')"
     }
@@ -58,6 +58,11 @@ return packer.startup(function(use)
         --event = 'BufRead',
         --event = 'BufWinEnter',
         config = "require('plugins/nv-lualine')"
+    }
+    use {
+        "SmiteshP/nvim-gps",
+        requires = "nvim-treesitter/nvim-treesitter",
+        --config = "require('plugins/nv-gps')"
     }
     use {
         'christoomey/vim-tmux-navigator',  -- tmux-navigator
