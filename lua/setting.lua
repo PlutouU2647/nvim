@@ -62,3 +62,27 @@ augroup line_return
         \ endif
 augroup END
 ]])
+
+vim.g.input_toggle = 0
+vim.g.timeoutlen=150
+
+vim.cmd([[
+function! Fcitx2en()
+    let s:input_status = system("fcitx-remote")
+    if s:input_status == 2
+        let g:input_toggle = 1
+        let l:a = system("fcitx-remote -c")
+    endif
+endfunction
+
+function! Fcitx2zh()
+    let s:input_status = system("fcitx-remote")
+    if s:input_status != 2 && g:input_toggle == 1
+        let l:a = system("fcitx-remote -o")
+        let g:input_toggle = 0
+    endif
+endfunction
+autocmd InsertLeave * call Fcitx2en()
+autocmd InsertEnter * call Fcitx2zh()
+]])
+
