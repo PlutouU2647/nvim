@@ -85,7 +85,12 @@ return packer.startup(function(use)
     }
 
     -- colorscheme
-    use {'EdenEast/nightfox.nvim', config = "vim.cmd('colorscheme duskfox')"}  -- colorscheme
+    use {
+        'EdenEast/nightfox.nvim',  -- colorscheme
+        config = "require('plugins/theme-nightfox')",
+        --config = "vim.cmd('colorscheme duskfox')"
+    }
+
     --use({
     --'rose-pine/neovim',
     ----as = 'rose-pine',
