@@ -67,7 +67,8 @@ local mappings = {
     },
     p ={
         name = 'Ipython',
-        p = {':SlimeSend1 ipython --matplotlib<CR>','Ipython init'},
+        --p = {':SlimeSend1 ipython --matplotlib<CR>','Ipython init'},
+        p = {':SlimeSend1 ipython<CR>','Ipython init'},
         k = {':IPythonCellInsertAbove<CR>','Add cell Above'},
         j = {':IPythonCellInsertBelow<CR>','Add cell below'},
         c = {':IPythonCellClose<CR>', 'Close Window'},

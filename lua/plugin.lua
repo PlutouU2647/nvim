@@ -101,7 +101,7 @@ return packer.startup(function(use)
 
     use {
         'norcalli/nvim-colorizer.lua',  -- colorizer
-        event = 'BufRead',
+        event = {"BufRead", "BufNewFile"},
         config = "require('plugins/nv-colorizer')"
     }
     use {
@@ -143,7 +143,7 @@ return packer.startup(function(use)
         event = 'insertEnter',
         config = "require('plugins/nv-auto-pairs')"
     }
-    use 'romgrk/fzy-lua-native'
+    --use 'romgrk/fzy-lua-native'
 
     -- terminal
     use {

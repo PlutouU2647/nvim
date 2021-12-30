@@ -30,7 +30,7 @@
 
 --#746
 
---#780
+--#790
 -- system setting
 require('plugin')
 require('keymappings')

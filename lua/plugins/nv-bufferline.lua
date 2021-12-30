@@ -3,8 +3,8 @@ vim.opt.termguicolors = true
 require("bufferline").setup {
     options = {
         number = "none",
-        modified_icon = "✥",
         buffer_close_icon = "",
+        close_icon = '',
         left_trunc_marker = "",
         right_trunc_marker = "",
         max_name_length = 14,
@@ -18,9 +18,9 @@ require("bufferline").setup {
         separator_style = "thin",
         offsets = {
             {
-                filetype = {"NvimTree", "quickfix", "quickfix_old", "quickfix_old_old"},
+                filetype = "NvimTree",
                 text = "File Explorer",
-                --text_align = "center",
+                text_align = "center",
                 padding = 1
             }
         }

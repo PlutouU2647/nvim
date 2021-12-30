@@ -50,10 +50,11 @@ map('v', 'L', '$', opt)
 map('v', '<', '<gv', opt)
 map('v', '>', '>gv', opt)
 
--- Tab switch 
+-- Tab switch
 map('n', '<TAB>', ':bnext<CR>', opt)
 map('n', '<S-TAB>', ':bprevious<CR>', opt)
-map('n', '<C-w>', ':bd<CR>', opt)
+--map('n', '<C-w>', ':bd<CR>', opt)
+map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>', opt)
 
 
 -- move selected lines
