@@ -54,20 +54,15 @@ return packer.startup(function(use)
     }
     use {
         'nvim-lualine/lualine.nvim',
-        --opt = true,
+        opt = true,
         --event = 'BufRead',
-        --event = 'BufWinEnter',
+        event = 'BufWinEnter',
         config = "require('plugins/nv-lualine')"
-    }
-    use {
-        "SmiteshP/nvim-gps",
-        requires = "nvim-treesitter/nvim-treesitter",
-        --config = "require('plugins/nv-gps')"
     }
     use {
         'christoomey/vim-tmux-navigator',  -- tmux-navigator
         config = "require('plugins/nv-tmux-navigator')",
-        }
+    }
 
     use {
         'itchyny/vim-cursorword',
@@ -76,8 +71,8 @@ return packer.startup(function(use)
     }
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
         opt = true,
+        run = ':TSUpdate',
         event = "BufRead",
         config ="require('plugins/nv-treesitter')"
     }
@@ -162,6 +157,14 @@ return packer.startup(function(use)
         event = 'BufRead',
         config = "require('plugins/nv-slime')"
     }
+--    use {
+--        "michaelb/sniprun",
+--        opt = true,
+--        --run = "bash ./install.sh",
+--        cmd = {"SnipRun", "'<,'>SnipRun"},
+--	run = 'bash install.sh',
+--        require('plugins/nv-sniprun')
+--    }
 
 
     -- lsp
@@ -230,13 +233,17 @@ return packer.startup(function(use)
     }
 
 
-    use 'psliwka/vim-smoothie'
     use {
         'simrat39/symbols-outline.nvim',
         config = "require('plugins/nv-symbols-outline')",
     }
     use {
         'karb94/neoscroll.nvim', -- Smooth scrolling for window movement commands (mappings optional): <C-u>, <C-d>, <C-b>, <C-f>, <C-y>, <C-e>, zt, zz, zb.
+    }
+    use {
+        'dstein64/vim-startuptime',
+        opt = true,
+        cmd = "StartupTime",
     }
 
 

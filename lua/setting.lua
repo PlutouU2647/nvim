@@ -86,3 +86,8 @@ autocmd InsertLeave * call Fcitx2en()
 autocmd InsertEnter * call Fcitx2zh()
 ]])
 
+vim.cmd([[
+set rtp+=~/.local/share/nvim/site/pack/packer/opt/nvim-gps
+set rtp+=~/.local/share/nvim/site/pack/packer/opt/nvim-treesitter
+]])
+

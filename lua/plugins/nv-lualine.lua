@@ -13,7 +13,7 @@ require'lualine'.setup {
         lualine_a = {'mode'},
         lualine_b = {'branch',{'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
                       --{'diagnostics', sources={'nvim_lsp', 'coc'}}},
-        lualine_c = {'filename'},
+        lualine_c = {"lsp_progress"},
         lualine_x = {'encoding', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
@@ -26,6 +26,14 @@ require'lualine'.setup {
     --lualine_y = {},
     --lualine_z = {'location'}
     --},
+    inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {"filename"},
+        lualine_x = {"location"},
+        lualine_y = {},
+        lualine_z = {}
+    },
     tabline = {},
     extensions = {
         --"quickfix",
