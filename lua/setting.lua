@@ -45,6 +45,7 @@ vim.o.splitright = true  -- splitright
 
 -- indenting
 --vim.o.foldmethod='indent'
+vim.o.foldmethod='manual'
 
 vim.cmd([[
 augroup highlightYankedText

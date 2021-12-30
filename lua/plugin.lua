@@ -50,7 +50,9 @@ return packer.startup(function(use)
     }
     use {
         'github/copilot.vim',
-        event = 'BufRead',
+        event = {"BufReadPre", "BufNewFile"},
+        opt = true
+        --event = 'BufRead',
     }
     use {
         'nvim-lualine/lualine.nvim',
@@ -67,7 +69,7 @@ return packer.startup(function(use)
     use {
         'itchyny/vim-cursorword',
         opt = true,
-        event = 'BufRead',
+        event = {"BufReadPre", "BufNewFile"},
     }
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -131,7 +133,8 @@ return packer.startup(function(use)
     use {
         "lukas-reineke/indent-blankline.nvim",
         opt = true,
-        event = 'BufRead',
+        --event = 'BufRead',
+        event = {"BufReadPre", "BufNewFile"},
         config = "require('plugins/nv-indentline')",
 
     }
@@ -152,20 +155,24 @@ return packer.startup(function(use)
 
     -- ide
     use {
+        'CRAG666/code_runner.nvim',
+        opt = true,
+        config = "require('plugins/nv-code-runner')",
+        ft = 'PYTHON',
+    }
+    use {
         'jpalardy/vim-slime',
         opt = true,
         event = 'BufRead',
+        ft = 'PYTHON',
         config = "require('plugins/nv-slime')"
     }
---    use {
---        "michaelb/sniprun",
---        opt = true,
---        --run = "bash ./install.sh",
---        cmd = {"SnipRun", "'<,'>SnipRun"},
---	run = 'bash install.sh',
---        require('plugins/nv-sniprun')
---    }
-
+    use {
+        'hanschen/vim-ipython-cell',
+        opt = true,
+        ft = 'PYTHON',  -- set filetype only strat out when python file is opened
+        config = "require('plugins/nv-ipython-cell')"
+    }
 
     -- lsp
     use {
@@ -221,24 +228,28 @@ return packer.startup(function(use)
     }
     use {
         'skywind3000/asyncrun.vim',
+        opt = true,
         config = "require('plugins/nv-asyncrun')",
-        event = 'BufRead'
+        ft = 'PYTHON',
     }
 
     -- multi-cursor
     use {
         'mg979/vim-visual-multi',
         opt = true,
-        event = 'BufRead',
+        event = {"BufReadPre", "BufNewFile"},
     }
 
 
     use {
         'simrat39/symbols-outline.nvim',
         config = "require('plugins/nv-symbols-outline')",
+        event = {"BufReadPre", "BufNewFile"},
     }
     use {
         'karb94/neoscroll.nvim', -- Smooth scrolling for window movement commands (mappings optional): <C-u>, <C-d>, <C-b>, <C-f>, <C-y>, <C-e>, zt, zz, zb.
+        event = {"BufReadPre", "BufNewFile"},
+        opt = true,
     }
     use {
         'dstein64/vim-startuptime',

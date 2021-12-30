@@ -13,7 +13,8 @@ require'lualine'.setup {
         lualine_a = {'mode'},
         lualine_b = {'branch',{'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
                       --{'diagnostics', sources={'nvim_lsp', 'coc'}}},
-        lualine_c = {"lsp_progress"},
+        --lualine_c = {"lsp_progress"},
+        lualine_c = {"filename","lsp_progress"},
         lualine_x = {'encoding', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}

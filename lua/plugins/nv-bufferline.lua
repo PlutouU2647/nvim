@@ -1,3 +1,4 @@
+-- TODO:ignore python
 vim.opt.termguicolors = true
 require("bufferline").setup {
     options = {
@@ -17,7 +18,7 @@ require("bufferline").setup {
         separator_style = "thin",
         offsets = {
             {
-                filetype = "NvimTree",
+                filetype = {"NvimTree", "quickfix", "quickfix_old", "quickfix_old_old"},
                 text = "File Explorer",
                 --text_align = "center",
                 padding = 1

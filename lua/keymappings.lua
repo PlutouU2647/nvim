@@ -63,8 +63,8 @@ map('v', 'J', ':m \'>+1<CR>gv=gv\'' , opt)
 map('v', 'K', ':m \'<-2<CR>gv=gv\'' , opt)
 --map('i', '<c-k>', '<esc>:m .-2<CR>==i' , opt)
 --map('i', '<c-j>', '<esc>:m .+1<CR>==i' , opt)
-map('n', '<leader>j', ':m .+1<CR>==' , opt)
-map('n', '<leader>k', ':m .-2<CR>==' , opt)
+--map('n', '<leader>j', ':m .+1<CR>==' , opt)
+--map('n', '<leader>k', ':m .-2<CR>==' , opt)
 
 -- comment
 map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })

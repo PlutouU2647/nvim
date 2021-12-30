@@ -19,7 +19,7 @@ end
 local mappings = {
     i = {'<Plug>SlimeRegionSend','Slime Run Selected code',mode = "v"},
     s = {':%s/','Search and replace',mode = "n",silent = false},
-    o = {'<Plug>SlimeParagraphSend','Slime Run Paragraph code'},
+    o = {':IPythonCellExecuteCell<CR>','Run Cell',mode = "n",silent = false},
     --g = {':SlimeSendCurrentLine<cr>','Slime Run Paragraph code'},
     b = {'<Plug>SlimeConfig','Slime config'},
     --q = {':q<CR>','quit'},
@@ -28,7 +28,8 @@ local mappings = {
     E = {':e ~/.config/nvim/init.lua<CR>','Edit config'},
     m = {':SymbolsOutline<CR>','SymbolsOutline'},
     --r = {':w<cr> | :!python %<CR>','Run Code'},
-    r = {':w<cr>|:AsyncRun!python %<CR>','Run Code'},
+    --r = {':w<cr>|:AsyncRun!python %<CR>','Run Code'},
+    r = {'<cmd>RunCode<cr>','Run Code'},
     f = {
         name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Recent File'},
@@ -64,6 +65,16 @@ local mappings = {
         e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<cr>','Show Line Diagnostics'},
         n = {'<cmd>lua vim.lsp.diagnostic.go_to_next()<cr>','show line diagnostics'},
     },
+    p ={
+        name = 'Ipython',
+        p = {':SlimeSend1 ipython --matplotlib<CR>','Ipython init'},
+        k = {':IPythonCellInsertAbove<CR>','Add cell Above'},
+        j = {':IPythonCellInsertBelow<CR>','Add cell below'},
+        c = {':IPythonCellClose<CR>', 'Close Window'},
+        d = {':SlimeSend1 %debug<CR>', 'Debug'},
+        --o = {'','Ipython init'},
+
+    }
     --t = {
         --name = 'floaterm',
         --r = {'<cmd>Telescope oldfiles<cr>'                    , 'Open Recent File'},
