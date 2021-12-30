@@ -31,3 +31,4 @@ require("bufferline").setup {
 --vim.api.nivm_set_keymap('n', '<S-TAB>', ':BufferLinePrev<CR>', {noremap = true, silent = true})
 
 
+-- 'https://github.com/akinsho/bufferline.nvim'
