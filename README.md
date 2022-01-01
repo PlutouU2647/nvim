@@ -35,3 +35,7 @@ pip install 'python-lsp-server[all]'
 ```
 ## IDE
 [用 Vim 写 Python 的最佳实践是什么？](https://www.zhihu.com/question/19655689)
+
+
+## format
+pip3 install --upgrade sqlparse

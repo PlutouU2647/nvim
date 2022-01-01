@@ -20,15 +20,15 @@ let g:slime_dont_ask_default = 1
 -- leader q
 -- IPythonCellExecuteCell
 
-map('n', '<c-[>', ':IPythonCellPrevCell<CR>', opt)
-map('n', '<c-]>', ':IPythonCellNextCell<CR>', opt)
+--map('n', '<c-[>', ':IPythonCellPrevCell<CR>', opt)
+--map('n', '<c-]>', ':IPythonCellNextCell<CR>', opt)
 
 map('n', '<leader>k', ':IPythonCellInsertAbove<CR>', opt)
 map('n', '<leader>j', ':IPythonCellInsertBelow<CR>', opt)
 --map('i', '<c-k>', '<cmd>IPythonCellInsertAbove<CR>', opt)
 --map('i', '<c-j>', '<cmd>IPythonCellInsertBelow<CR>', opt)
 
-map('n', '<c-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
+map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
 map('n', '<S-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
 
 --map('i', 'c-[', '<C-n>', opt)

@@ -93,25 +93,28 @@ cmp.setup {
   },
   -- cmp补全窗口的配置
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
-        luasnip = "[Snippet]",
+        luasnip = "[Luasnip]",
         buffer = "[Buffer]",
         path = "[Path]",
+        vsnip = "[Vsnip]",
       })[entry.source.name]
       return vim_item
     end,
   },
   sources = {
+      -- 安装好的插件放在这里
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,

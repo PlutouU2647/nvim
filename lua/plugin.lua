@@ -49,12 +49,6 @@ return packer.startup(function(use)
         config = "require('plugins/nv-nvimtree')"
         --config = con"require('plugins/nv-nvimtree')"
     }
-    use {
-        'kevinhwang91/rnvimr',
-        opt = true,
-        cmd = {"RnvimrToggle", "RnvimrOpen"},
-        --config = "require('plugins/nv-rnvimr')"
-    }
 
     use {
         'nvim-lualine/lualine.nvim',
