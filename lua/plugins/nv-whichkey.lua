@@ -51,6 +51,7 @@ local mappings = {
     l = {
         name = 'LSP',
         i = {'<cmd>LspInfo<cr>', 'LSP INFO'},
+        I = {'<cmd>LspInstallInfo<cr>', 'LSP INFO'},
         k = {'<cmd>lua vim.lsp.buf.signature_help()<cr>','Signature Help'},
         K = {'<cmd>lua vim.lsp.buf.hover()<cr>','Hover Info'},
         w = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>','Add Workspace Folder'},

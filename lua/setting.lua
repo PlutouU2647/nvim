@@ -54,6 +54,7 @@ augroup highlightYankedText
 augroup END
 ]])
 
+-- 上次的的位置
 vim.cmd([[
 augroup line_return
     au!
@@ -64,31 +65,34 @@ augroup line_return
 augroup END
 ]])
 
-vim.g.input_toggle = 0
-vim.g.timeoutlen=150
 
+-- 输入法切换
+-- 替代方法插件 xkbswitch
 vim.cmd([[
+let g:input_toggle = 0
 function! Fcitx2en()
-    let s:input_status = system("fcitx-remote")
-    if s:input_status == 2
-        let g:input_toggle = 1
-        let l:a = system("fcitx-remote -c")
-    endif
+   let s:input_status = system("fcitx-remote")
+   if s:input_status == 2
+      let g:input_toggle = 1
+      let l:a = system("fcitx-remote -c")
+   endif
 endfunction
 
 function! Fcitx2zh()
-    let s:input_status = system("fcitx-remote")
-    if s:input_status != 2 && g:input_toggle == 1
-        let l:a = system("fcitx-remote -o")
-        let g:input_toggle = 0
-    endif
+   let s:input_status = system("fcitx-remote")
+   if s:input_status != 2 && g:input_toggle == 1
+      let l:a = system("fcitx-remote -o")
+      let g:input_toggle = 0
+   endif
 endfunction
+
+set timeoutlen=150
 autocmd InsertLeave * call Fcitx2en()
 autocmd InsertEnter * call Fcitx2zh()
 ]])
 
-vim.cmd([[
-set rtp+=~/.local/share/nvim/site/pack/packer/opt/nvim-gps
-set rtp+=~/.local/share/nvim/site/pack/packer/opt/nvim-treesitter
-]])
+--vim.cmd([[
+--set rtp+=~/.local/share/nvim/site/pack/packer/opt/nvim-gps
+--set rtp+=~/.local/share/nvim/site/pack/packer/opt/nvim-treesitter
+--]])
 

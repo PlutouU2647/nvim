@@ -2,8 +2,7 @@ return {
 	settings = {
         pyright = {
             analysis = {
-                typeCheckingMode = "off",
-
+                typeCheckingMode = "off"
             }
 	    },
     }

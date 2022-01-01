@@ -42,7 +42,6 @@ local kind_icons = {
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
 
-
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -92,6 +91,7 @@ cmp.setup {
       --"s",
     --}),
   },
+  -- cmp补全窗口的配置
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)

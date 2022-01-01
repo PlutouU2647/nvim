@@ -41,6 +41,7 @@ return packer.startup(function(use)
         opt = false,
     }
 
+
     use {
         'kyazdani42/nvim-tree.lua',
         opt = true,
@@ -49,11 +50,12 @@ return packer.startup(function(use)
         --config = con"require('plugins/nv-nvimtree')"
     }
     use {
-        'github/copilot.vim',
-        event = {"BufReadPre", "BufNewFile"},
-        opt = true
-        --event = 'BufRead',
+        'kevinhwang91/rnvimr',
+        opt = true,
+        cmd = {"RnvimrToggle", "RnvimrOpen"},
+        --config = "require('plugins/nv-rnvimr')"
     }
+
     use {
         'nvim-lualine/lualine.nvim',
         opt = true,
@@ -106,8 +108,9 @@ return packer.startup(function(use)
     }
     use {
         'akinsho/bufferline.nvim',
-        opt = true,
-        event = "BufRead",
+        --opt = true,
+        --event = "BufRead",
+        event = "BufWinEnter",
         config = "require('plugins/nv-bufferline')"
     }
     use {
@@ -153,7 +156,14 @@ return packer.startup(function(use)
         --event = 'BufRead',
     }
 
+    --=========================
     -- ide
+    --=========================
+    use {
+        'github/copilot.vim',
+        event = {"BufReadPre", "BufNewFile"},
+        opt = true
+    }
     use {
         'CRAG666/code_runner.nvim',
         opt = true,
@@ -173,6 +183,15 @@ return packer.startup(function(use)
         ft = 'PYTHON',  -- set filetype only strat out when python file is opened
         config = "require('plugins/nv-ipython-cell')"
     }
+    use {
+        'skywind3000/asyncrun.vim',
+        opt = true,
+        config = "require('plugins/nv-asyncrun')",
+        ft = 'PYTHON',
+    }
+    --=========================
+    -- ide end
+    --=========================
 
     -- lsp
     use {
@@ -193,8 +212,9 @@ return packer.startup(function(use)
         --after = 'nvim-cmp'
     }
 
-    -- completion
-    -- cmp
+    --=========================
+    --cmp-start
+    --=========================
     use {
         'hrsh7th/nvim-cmp',  -- completion
         --event = "InsertEnter",
@@ -226,12 +246,9 @@ return packer.startup(function(use)
         --after = 'hrsh7th/nvim-cmp',
         --event = 'InsertLeave',
     }
-    use {
-        'skywind3000/asyncrun.vim',
-        opt = true,
-        config = "require('plugins/nv-asyncrun')",
-        ft = 'PYTHON',
-    }
+    --=========================
+    --cmp-end
+    --=========================
 
     -- multi-cursor
     use {
