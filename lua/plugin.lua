@@ -239,18 +239,16 @@ return packer.startup(function(use)
         opt = true,
         event = {"BufReadPre", "BufNewFile"},
     }
-
-
     use {
         'simrat39/symbols-outline.nvim',
         config = "require('plugins/nv-symbols-outline')",
         event = {"BufReadPre", "BufNewFile"},
     }
-    use {
-        'karb94/neoscroll.nvim', -- Smooth scrolling for window movement commands (mappings optional): <C-u>, <C-d>, <C-b>, <C-f>, <C-y>, <C-e>, zt, zz, zb.
-        event = {"BufReadPre", "BufNewFile"},
-        opt = true,
-    }
+    --use {
+        --'karb94/neoscroll.nvim', -- Smooth scrolling for window movement commands (mappings optional): <C-u>, <C-d>, <C-b>, <C-f>, <C-y>, <C-e>, zt, zz, zb.
+        --event = {"BufReadPre", "BufNewFile"},
+        --opt = true,
+    --}
     use {
         'dstein64/vim-startuptime',
         opt = true,

@@ -5,8 +5,7 @@
 --|_|  |_|\__, |    \_/  |_|_| |_| |_|_|  \___|
 --        |___/                                
 --
--- 💢
--- 你好
+-- 🌑🌕
 --guide
     --'https://github.com/glepnir/nvim-lua-guide-zh'
 -- goal
