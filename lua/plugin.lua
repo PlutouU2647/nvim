@@ -79,6 +79,7 @@ return packer.startup(function(use)
         'nvim-telescope/telescope.nvim',
         opt = true,
         cmd = 'Telescope',
+        event = {"BufReadPre", "BufNewFile"},
         config = "require('plugins/nv-telescope')"
     }
 

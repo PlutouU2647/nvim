@@ -8,9 +8,11 @@ local actions = require "telescope.actions"
 telescope.setup {
   defaults = {
 
-    prompt_prefix = " ",
+    prompt_prefix = "🔍 ",
     selection_caret = " ",
     path_display = { "smart" },
+    --find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
+
 
     mappings = {
       i = {
