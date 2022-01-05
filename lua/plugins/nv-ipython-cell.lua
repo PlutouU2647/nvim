@@ -11,6 +11,8 @@ else
     echo "vim mode"
     let g:slime_target = "neovim"
     let g:slime_last_channel = 7
+    let g:slime_default_config = {
+            \ 'jobid':  '7' }
     let g:slime_dont_ask_default = 1
 ]])
 
@@ -33,7 +35,7 @@ local opt = {noremap = true, silent = true }
 --end
 
 
-map('n', '<leader>j', ':lua hello()<CR>', opt)
+--map('n', '<leader>j', ':lua hello()<CR>', opt)
 ---- vim mode
 --vim.cmd([[
 --let g:slime_target = "neovim"
@@ -69,11 +71,11 @@ map('n', '<leader>j', ':lua hello()<CR>', opt)
 --map('n', '<c-]>', ':IPythonCellNextCell<CR>', opt)
 
 map('n', '<leader>k', ':IPythonCellInsertAbove<CR>', opt)
---map('n', '<leader>j', ':IPythonCellInsertBelow<CR>', opt)
+map('n', '<leader>j', ':IPythonCellInsertBelow<CR>', opt)
 --map('i', '<c-k>', '<cmd>IPythonCellInsertAbove<CR>', opt)
 --map('i', '<c-j>', '<cmd>IPythonCellInsertBelow<CR>', opt)
 
---map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
+map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
 --map('n', '<S-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
 
 --map('i', 'c-[', '<C-n>', opt)
