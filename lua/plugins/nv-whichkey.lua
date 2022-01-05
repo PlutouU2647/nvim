@@ -9,7 +9,7 @@ local toggle_lazygit = function()
     return lazygit:toggle()
 end
 local toggle_ipython = function()
-    local ipython = Terminal:new({cmd = 'ipython', direction= 'float'})
+    local ipython = Terminal:new({cmd = 'ipython', size = 60, direction= 'vertical'})
     return ipython:toggle()
 end
 local toggle_ranger= function()
@@ -48,6 +48,7 @@ local mappings = {
         l = {toggle_lazygit,'LazyGit'},
         p = {toggle_ipython,'ipython'},
         r = {toggle_ranger,'ranger'},
+        j = {':vs|:terminal<CR>','Termina'},
     },
     l = {
         name = 'LSP',
@@ -76,6 +77,9 @@ local mappings = {
         c = {':IPythonCellClose<CR>', 'Close Window'},
         d = {':SlimeSend1 %debug<CR>', 'Debug'},
         --o = {'','Ipython init'},
+        i = {':echo &channel<CR>','Get channel'},
+        --l = {':lua require("").lsp.buf.hover()<CR>','Hover Info'},
+        --
 
     }
     --t = {

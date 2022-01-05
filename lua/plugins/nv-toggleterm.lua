@@ -26,7 +26,14 @@ Terminal = require('toggleterm.terminal').Terminal
 
 
 require'toggleterm'.setup{
-    size = 13,
+    --size = 13,
+    size =  function(term)
+        if term.direction == "horizontal" then
+            return 15
+        elseif term.direction == "vertical" then
+            return vim.o.columns * 0.4
+        end
+    end,
     open_mapping = [[<C-\>]],
     shade_filetype = {},
     shade_terminals = true,

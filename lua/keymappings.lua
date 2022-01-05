@@ -105,6 +105,8 @@ map('i','<c-l>', '<right>', opt)
 
 vim.cmd([[
 nmap \ :
+tnoremap <ESC> <C-\><C-n>
 ]])
 
 -- tmux_navigator
+-- terminal 
