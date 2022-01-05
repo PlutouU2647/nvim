@@ -30,6 +30,7 @@ local mappings = {
     --r = {':w<cr> | :!python %<CR>','Run Code'},
     --r = {':w<cr>|:AsyncRun!python %<CR>','Run Code'},
     r = {'<cmd>RunCode<cr>','Run Code'},
+    H = {'<cmd>Dashboard<cr>','Home'},
     f = {
         name = 'Telescope',
         r = {'<cmd>Telescope oldfiles<cr>', 'Recent File'},
