@@ -6,6 +6,19 @@ end
 local actions = require "telescope.actions"
 
 telescope.setup {
+pickers = {
+    lsp_references = {
+      theme = "dropdown",
+        layout_config = {
+          width = 0.5,
+          prompt_position = "top",
+          --horizontal = {mirror = true},
+          --vertical = {mirror = false},
+          --vertical = { width = 0.8 }
+        },
+    }
+  },
+
   defaults = {
 
     prompt_prefix = "🔍 ",
@@ -79,15 +92,6 @@ telescope.setup {
         ["?"] = actions.which_key,
       },
     },
-  },
-  pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
   },
   extensions = {
     -- Your extension configuration goes here:

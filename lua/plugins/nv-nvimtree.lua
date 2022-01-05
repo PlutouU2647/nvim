@@ -33,8 +33,8 @@ g.nvim_tree_icons = {
    },
    folder = {
       default = "",
-      empty = "",
-      empty_open = "",
+      empty = "",
+      empty_open = "",
       open = "",
       symlink = "",
       symlink_open = "",
