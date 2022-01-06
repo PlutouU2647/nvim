@@ -163,26 +163,26 @@ return packer.startup(function(use)
         'CRAG666/code_runner.nvim',
         opt = true,
         config = "require('plugins/nv-code-runner')",
-        ft = 'PYTHON',
+        ft = 'python',
     }
     use {
         'jpalardy/vim-slime',
         opt = true,
         event = 'BufRead',
-        ft = 'PYTHON',
+        ft = 'python',
         config = "require('plugins/nv-slime')"
     }
     use {
         'hanschen/vim-ipython-cell',
         opt = true,
-        ft = 'PYTHON',  -- set filetype only strat out when python file is opened
+        ft = 'python',  -- set filetype only strat out when python file is opened
         config = "require('plugins/nv-ipython-cell')"
     }
     use {
         'skywind3000/asyncrun.vim',
         opt = true,
         config = "require('plugins/nv-asyncrun')",
-        ft = 'PYTHON',
+        ft = 'python',
     }
     --=========================
     -- ide end
