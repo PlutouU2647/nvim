@@ -39,6 +39,7 @@ local mappings = {
         g = {"<cmd>Telescope live_grep<cr>", "Live Grep"},
         h = {"<cmd>Telescope help_tags<cr>", "Help Tags"},
         b = {'<cmd>Telescope buffers<cr>', 'Search Buffer'},
+        --g = {'<cmd>Telescope git_files<cr>', 'Git Files'},
     },
     t = {
         --t = {':ToggleTerm<cr>','Split Below'},

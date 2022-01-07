@@ -1,27 +1,4 @@
 Terminal = require('toggleterm.terminal').Terminal
---toggle_float = function()
-    --float = Terminal:new({direction = 'float'})
-    --float:toggle()
---end
---toggle_lazygit = function()
-    --lazygit = Terminal:new({
-        --cmd = 'lazygit',
-        --direction= 'float'})
-    --return lazygit:toggle()
---end
---toggle_ipython = function()
-    --ipython = Terminal:new({
-        --cmd = 'ipython', 
-        --direction= 'float'})
-    --return ipython:toggle()
---end
---toggle_ranger= function()
-    --ranger = Terminal:new({
-        --cmd = 'ranger',
-        --direction= 'float'})
-    --return ranger:toggle()
---end
-
 
 
 
@@ -44,6 +21,16 @@ require'toggleterm'.setup{
     --direction = 'vertical',
     direction = 'float',
 }
+function _G.set_terminal_keymaps()
+  local opts = {noremap = true}
+  vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
+  --vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
+  vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
+end
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 
 --[Get_the_name_of_the_current_file](https://vim.fandom.com/wiki/Get_the_name_of_the_current_file)

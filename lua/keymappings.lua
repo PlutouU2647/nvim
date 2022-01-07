@@ -102,11 +102,10 @@ map('i','<c-l>', '<right>', opt)
 
 --plug
 --map('n', 'L', ':UndotreeToggle<CR>' , opt)
-
 vim.cmd([[
 nmap \ :
-tnoremap <ESC> <C-\><C-n>
 ]])
 
+--tnoremap <ESC> <C-\><C-n>
 -- tmux_navigator
 -- terminal 
