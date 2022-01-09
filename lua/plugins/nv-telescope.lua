@@ -112,6 +112,7 @@ require("project_nvim").setup {
       manual_mode = false,
       datapath = vim.fn.stdpath("data"),
       patterns = { ".git" },
+      exclude_dirs = {'~//*'},
   -- your configuration comes here
   -- or leave it empty to use the default settings
   -- refer to the configuration section below
