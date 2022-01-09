@@ -92,7 +92,42 @@ augroup END
 --]])
 
 vim.cmd([[
-let g:neovide_fullscreen=v:true
+function! Multiple_cursors_before()
+  let g:smartim_disable = 1
+endfunction
+function! Multiple_cursors_after()
+  unlet g:smartim_disable
+endfunction
 ]])
 
 
+
+vim.cmd([[
+set conceallevel=1
+let g:vimtex_quickfix_mode=0
+let maplocalleader = ","
+filetype plugin indent on
+syntax enable
+]])
+--let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+--let g:vimtex_view_method = 'zathura'
+--let g:latex_view_general_viewer = 'zathura'
+--let g:vimtex_view_method='zathura'
+--vim.cmd([[
+--let g:tex_flavor='latex'
+--let g:vimtex_quickfix_mode=0
+--let g:vimtex_view_method='zathura'
+--set spelllang=en_us
+--set conceallevel=1
+--let maplocalleader = ","
+--let g:vimtex_compiler_latexmk = {
+      --\ 'build_dir': 'build',
+      --\ 'options' : [
+      --\   '-shell-escape',
+      --\   '-verbose',
+      --\   '-file-line-error',
+      --\   '-synctex=1',
+      --\   '-interaction=nonstopmode',
+      --\ ],
+      --\}
+--]])

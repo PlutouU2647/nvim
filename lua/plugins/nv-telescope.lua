@@ -163,9 +163,10 @@ pickers = {
 --require('telescope').load_extension 'fzf'
 
 
+--local M = {}
+--def
 
-
-
+--return M
 
 -- Neovim: Customizing Telescope 🔭
 

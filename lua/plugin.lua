@@ -42,6 +42,7 @@ return packer.startup(function(use)
     }
 
 
+    -- file manager
     use {
         'kyazdani42/nvim-tree.lua',
         opt = true,
@@ -70,8 +71,8 @@ return packer.startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
         opt = true,
+        event = {"BufReadPre", "BufNewFile"},
         run = ':TSUpdate',
-        event = "BufRead",
         config ="require('plugins/nv-treesitter')"
     }
     -- telescope
@@ -265,6 +266,15 @@ return packer.startup(function(use)
         'dstein64/vim-startuptime',
         opt = true,
         cmd = "StartupTime",
+    }
+    use {
+        'ybian/smartim',
+        opt = true,
+        event = 'InsertEnter',
+    }
+    use {
+        'lervag/vimtex',
+        --opt = true,
     }
 
 

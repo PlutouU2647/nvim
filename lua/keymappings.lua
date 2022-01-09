@@ -109,3 +109,10 @@ nmap \ :
 --tnoremap <ESC> <C-\><C-n>
 -- tmux_navigator
 -- terminal 
+--
+--
+-- goneovim
+-- <D-v>
+map('n','<D-v>', 'a<C-r>+<Esc>', opt)
+map('i','<D-v>', '<C-r>+', opt)
+map('c','<D-v>', '<C-r>+', opt)
