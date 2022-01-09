@@ -39,8 +39,9 @@ local mappings = {
         g = {"<cmd>Telescope live_grep<cr>", "Live Grep"},
         h = {"<cmd>Telescope help_tags<cr>", "Help Tags"},
         b = {"<cmd>Telescope buffers<cr>", "Search Buffer"},
-        d = {"<cmd>lua require('plugins/nv-telescope').search_dotfiles()<cr>", "Search Dotfile"},
-        q = {"<cmd>lua require('plugins/nv-telescope').search_quantcode()<cr>","Search Quantcode"},
+        --d = {"<cmd>lua require('plugins/nv-telescope').search_dotfiles()<cr>", "Search Dotfile"},
+        --q = {"<cmd>lua require('plugins/nv-telescope').search_quantcode()<cr>","Search Quantcode"},
+        p = {"<cmd>Telescope projects<cr>","Open Project"},
     },
     t = {
         --t = {':ToggleTerm<cr>','Split Below'},

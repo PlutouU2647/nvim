@@ -83,7 +83,11 @@ return packer.startup(function(use)
         event = {"BufReadPre", "BufNewFile"},
         config = "require('plugins/nv-telescope')"
     }
-
+    use {
+        'ahmedkhalf/project.nvim',
+        --opt = true,
+        --after = 'nvim-telescope/telescope.nvim',
+    }
     -- colorscheme
     use {
         'EdenEast/nightfox.nvim',  -- colorscheme
@@ -179,12 +183,12 @@ return packer.startup(function(use)
         ft = 'python',  -- set filetype only strat out when python file is opened
         config = "require('plugins/nv-ipython-cell')"
     }
-    use {
-        'skywind3000/asyncrun.vim',
-        opt = true,
-        config = "require('plugins/nv-asyncrun')",
-        ft = 'python',
-    }
+    --use {
+        --'skywind3000/asyncrun.vim',
+        --opt = true,
+        --config = "require('plugins/nv-asyncrun')",
+        --ft = 'python',
+    --}
     --=========================
     -- ide end
     --=========================
