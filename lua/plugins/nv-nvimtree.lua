@@ -1,13 +1,24 @@
 -- TODO:understanding the keybindings
 local g = vim.g
+local status_ok, nvim_tree = pcall(require, "nvim-tree")
+if not status_ok then
+  return
+end
+
+local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
+if not config_status_ok then
+    return
+end
+local tree_cb = nvim_tree_config.nvim_tree_callback
+
 
 g.nvim_tree_respect_buf_cwd = 1  -- for projects plugin
-g.nvim_tree_add_trailing = 0 -- append a trailing slash to folder names
-g.nvim_tree_git_hl = 0
-g.nvim_tree_highlight_opened_files = 0
-g.nvim_tree_indent_markers = 1
-g.nvim_tree_quit_on_open = 0 -- closes tree when file's opened
-g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
+--g.nvim_tree_add_trailing = 0 -- append a trailing slash to folder names
+--g.nvim_tree_git_hl = 0
+--g.nvim_tree_highlight_opened_files = 0
+--g.nvim_tree_indent_markers = 1
+--g.nvim_tree_quit_on_open = 0 -- closes tree when file's opened
+--g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 
 g.nvim_tree_window_picker_exclude = {
    filetype = { "notify", "packer", "qf" },
@@ -42,7 +53,7 @@ g.nvim_tree_icons = {
       symlink_open = "",
    },
 }
-require'nvim-tree'.setup {
+nvim_tree.setup {
    filters = {
       dotfiles = false,
    },
@@ -60,6 +71,14 @@ require'nvim-tree'.setup {
    git = {
       ignore = false,
    },
+   mappings = {
+    custom_only = false,
+    list = {
+        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
+        { key = "h", cb = tree_cb "close_node" },
+        { key = "v", cb = tree_cb "vsplit" },
+     },
+         },
 }
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
@@ -140,7 +159,6 @@ require'nvim-tree'.setup {
     --auto_close = 1,
     --gitignore = 1,
 --}
--- 'https://github.com/kyazdani42/nvim-tree.lua'
 -- help
 -- 'https://github.com/kyazdani42/nvim-tree.lua'
--- help
+-- 'https://github.com/LunarVim/Neovim-from-scratch/blob/1d14e44126b153943abc8559e3c2a8ccce9fe931/lua/user/nvim-tree.lua'

@@ -173,7 +173,6 @@ return packer.startup(function(use)
     use {
         'jpalardy/vim-slime',
         opt = true,
-        event = 'BufRead',
         ft = 'python',
         config = "require('plugins/nv-slime')"
     }
@@ -260,6 +259,7 @@ return packer.startup(function(use)
         'simrat39/symbols-outline.nvim',
         config = "require('plugins/nv-symbols-outline')",
         event = {"BufReadPre", "BufNewFile"},
+        ft = {'python','lua'},  -- set filetype only strat out when python file is opened
     }
     --use {
         --'karb94/neoscroll.nvim', -- Smooth scrolling for window movement commands (mappings optional): <C-u>, <C-d>, <C-b>, <C-f>, <C-y>, <C-e>, zt, zz, zb.
