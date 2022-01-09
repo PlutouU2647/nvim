@@ -121,3 +121,4 @@ require("project_nvim").setup {
 
 -- 'https://github.com/nvim-telescope/telescope.nvim'
 -- help telescope
+-- 'https://github.com/ahmedkhalf/project.nvim'
