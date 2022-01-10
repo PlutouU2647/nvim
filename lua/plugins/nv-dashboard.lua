@@ -6,6 +6,7 @@ vim.g.dashboard_custom_section = {
     c = {description = {'  Find File          '}, command = 'Telescope find_files'},
     d = {description = {'  Search Text        '}, command = 'Telescope live_grep'},
     e = {description = {'  Config             '}, command = 'edit ~/.config/nvim/init.lua'},
+    f = {description = {'  Note               '}, command = 'edit ~/note/note.md'},
 }
 --vim.g.dashboard_custom_footer = {"You're perfect!"}
 --vim.g.dashboard_custom_footer = {"ᑐ ᑌ ᑎ ᕮ"}
