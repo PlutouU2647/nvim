@@ -114,29 +114,56 @@ wk.register(mappings, opts)
 vim.o.timeoutlen = 250
 
 --
-if vim.bo.filetype == "vimwiki" then
-    print("markdown")
-    --mappings.m.f = {
-        --name = "Markdown",
-        --f = {"<cmd>MarkdownFormat<cr>", "Format"},
-        --g = {"<cmd>MarkdownGitHub<cr>", "GitHub"},
-        --h = {"<cmd>MarkdownHelp<cr>", "Help"},
-    wk.register({
-        ["<leader>"] = {
-        m = {
-            name = "MarkDown",
-                r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-                i = {"<cmd>MarkdownInsertLink<cr>", "Insert Link"},
-            },
-        },
-    })
-end
+--if vim.bo.filetype == "vimwiki" then
+    --print("markdown")
+    ----mappings.m.f = {
+        ----name = "Markdown",
+        ----f = {"<cmd>MarkdownFormat<cr>", "Format"},
+        ----g = {"<cmd>MarkdownGitHub<cr>", "GitHub"},
+        ----h = {"<cmd>MarkdownHelp<cr>", "Help"},
+    --wk.register({
+        --["<leader>"] = {
+        --m = {
+            --name = "MarkDown",
+                --r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+                --i = {"<cmd>MarkdownInsertLink<cr>", "Insert Link"},
+            --},
+        --},
+    --})
+--end
 
 --if filetype == "md" then
     --print("md")
 --end
 
+local wkl = require('which-key')
+
+vim.cmd('autocmd FileType * lua setKeybinds()')
+function setKeybinds()
+    local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
+    local opts = { prefix = '<leader>', buffer = 0 }
+
+    if fileTy == 'python' then
+        wkl.register({
+            m = {
+                name = "Python",
+                m = {':w', 'test write'},
+                q = {':q', 'test quit'},
+            }
+        }, opts)
+    elseif fileTy == 'lua' then
+        wkl.register({
+            m = {
+                name = "Shell",
+                m = {':w', 'test write'},
+                q = {':q', 'test quit'},
+            }
+        }, opts)
+    end
+end
 
 --"https://github.com/folke/which-key.nvim"
 --:help which-key
 
+--https://github.nilmap.com/issue?dest_url=https://github.com/folke/which-key.nvim/issues/135
+--keymapping based on file type

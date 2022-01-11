@@ -19,13 +19,15 @@ else
 -- check is tmux is running
 -- if true then config slime target
 --ipython = require('ipythin-cell')
-local map = vim.api.nvim_set_keymap
-local opt = {noremap = true, silent = true }
-if vim.bo.filetype == "python" then
-    map('n', '<leader>k', ':IPythonCellInsertAbove<CR>', opt)
-    map('n', '<leader>j', ':IPythonCellInsertBelow<CR>', opt)
-    map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', opt)
-end
+--local map = vim.api.nvim_set_keymap
+--local opt = {noremap = true, silent = true }
+    --map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', opt)
+vim.cmd([[
+autocmd FileType python       nnoremap <buffer> <leader>k :IPythonCellInsertAbove<CR>
+autocmd FileType python       nnoremap <buffer> <leader>j :IPythonCellInsertBelow<CR>
+autocmd FileType python       nnoremap <buffer> <C-M> :IPythonCellExecuteCellJump<CR>
+]])
+
 
 -- add cell
 -- :IPythonCellInsertAbove<CR>

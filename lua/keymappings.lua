@@ -115,3 +115,9 @@ nmap \ :
 map('n','<D-v>', 'a<C-r>+<Esc>', opt)
 map('i','<D-v>', '<C-r>+', opt)
 map('c','<D-v>', '<C-r>+', opt)
+
+
+--vim.cmd([[
+--autocmd FileType lua                nnoremap <silent> <C-a> :echo 'lua'<CR>
+--autocmd FileType markdown           nnoremap <silent> <C-a> :echo 'md'<CR>
+--]])
