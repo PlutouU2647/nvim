@@ -113,8 +113,28 @@ local opts = {prefix = "<leader>"}
 wk.register(mappings, opts)
 vim.o.timeoutlen = 250
 
+--
+if vim.bo.filetype == "vimwiki" then
+    print("markdown")
+    --mappings.m.f = {
+        --name = "Markdown",
+        --f = {"<cmd>MarkdownFormat<cr>", "Format"},
+        --g = {"<cmd>MarkdownGitHub<cr>", "GitHub"},
+        --h = {"<cmd>MarkdownHelp<cr>", "Help"},
+    wk.register({
+        ["<leader>"] = {
+        m = {
+            name = "MarkDown",
+                r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+                i = {"<cmd>MarkdownInsertLink<cr>", "Insert Link"},
+            },
+        },
+    })
+end
 
-
+--if filetype == "md" then
+    --print("md")
+--end
 
 
 --"https://github.com/folke/which-key.nvim"

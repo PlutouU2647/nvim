@@ -102,13 +102,29 @@ endfunction
 
 
 
+--let g:vimtex_view_method = 'zathura'
+--let g:vimtex_quickfix_mode=0
+--filetype plugin indent on
 vim.cmd([[
-set conceallevel=1
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 let maplocalleader = ","
-filetype plugin indent on
-syntax enable
+
+
+set conceallevel=1
+let g:tex_conceal='abdmg'
+hi Conceal ctermbg=none
+
+set spelllang=en_us
+
+let g:vimtex_compiler_progname='nvr'
+
 ]])
+--syntax enable
+--
+--
+--
 --let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 --let g:vimtex_view_method = 'zathura'
 --let g:latex_view_general_viewer = 'zathura'
@@ -131,3 +147,7 @@ syntax enable
       --\ ],
       --\}
 --]])
+vim.cmd([[
+let g:vimwiki_list = [{'path': '/Users/lawrence/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/000vimwiki',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+]])

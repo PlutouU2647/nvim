@@ -280,6 +280,10 @@ return packer.startup(function(use)
         'lervag/vimtex',
         --opt = true,
     }
+    use {
+        'vimwiki/vimwiki',
+        config = "require('plugins/nv-vimwiki')",
+    }
 
 
 

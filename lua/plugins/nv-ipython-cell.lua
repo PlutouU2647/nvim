@@ -21,42 +21,11 @@ else
 --ipython = require('ipythin-cell')
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true }
-
-
---function hell()
-  --retuen
---end
-
- --tmux mode
--- if filetype == 'python' then
-
---if filetype == 'python' then
-    --map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
---end
-
-
---map('n', '<leader>j', ':lua hello()<CR>', opt)
----- vim mode
---vim.cmd([[
---let g:slime_target = "neovim"
---]])
-
---check if tmux open
---if vim.fn.getbufvar("%", "&tmux") == 1 then
-  --vim.cmd([[
-  --let g:slime_target = 'tmux'
-  --let g:slime_python_ipython = 1
-  --let g:slime_default_config = {
-            --\ 'socket_name': get(split($TMUX, ','), 0),
-            --\ 'target_pane': '{last}' }
-  --let g:slime_dont_ask_default = 1
-  --]])
---else
-  --vim.cmd([[
-  --let g:slime_target = "neovim"
-  --]])
---end
-
+if vim.bo.filetype == "python" then
+    map('n', '<leader>k', ':IPythonCellInsertAbove<CR>', opt)
+    map('n', '<leader>j', ':IPythonCellInsertBelow<CR>', opt)
+    map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', opt)
+end
 
 -- add cell
 -- :IPythonCellInsertAbove<CR>
@@ -70,12 +39,9 @@ local opt = {noremap = true, silent = true }
 --map('n', '<c-[>', ':IPythonCellPrevCell<CR>', opt)
 --map('n', '<c-]>', ':IPythonCellNextCell<CR>', opt)
 
-map('n', '<leader>k', ':IPythonCellInsertAbove<CR>', opt)
-map('n', '<leader>j', ':IPythonCellInsertBelow<CR>', opt)
 --map('i', '<c-k>', '<cmd>IPythonCellInsertAbove<CR>', opt)
 --map('i', '<c-j>', '<cmd>IPythonCellInsertBelow<CR>', opt)
 
-map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
 --map('n', '<S-M>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = true, silent = false })
 
 --map('i', 'c-[', '<C-n>', opt)
