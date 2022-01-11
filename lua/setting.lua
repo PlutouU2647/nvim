@@ -119,8 +119,8 @@ hi Conceal ctermbg=none
 set spelllang=en_us
 
 let g:vimtex_compiler_progname='nvr'
-
 ]])
+--vim.cmd('autocmd BufWinEnter,FileType * lua setKeybinds()') --keymapping based on file type
 --syntax enable
 --
 --

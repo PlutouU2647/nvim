@@ -240,11 +240,11 @@ return packer.startup(function(use)
         --after = 'hrsh7th/nvim-cmp',
         --event = 'InsertLeave',
     }
-    use {
-        "rafamadriz/friendly-snippets", -- a bunch of snippets to use
+    --use {
+        --"rafamadriz/friendly-snippets", -- a bunch of snippets to use
         --after = 'hrsh7th/nvim-cmp',
         --event = 'InsertLeave',
-    }
+    --}
     --=========================
     --cmp-end
     --=========================
