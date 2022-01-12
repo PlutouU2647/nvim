@@ -113,6 +113,32 @@ local opts = {prefix = "<leader>"}
 wk.register(mappings, opts)
 vim.o.timeoutlen = 250
 
+
+local wkl = require('which-key')
+
+vim.cmd('autocmd FileType * lua setKeybinds()')
+function setKeybinds()
+    local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
+    local opts = { prefix = '<leader>', buffer = 0 }
+
+    if fileTy == 'python' then
+        wkl.register({
+            m = {
+                name = "Python",
+                m = {':w', 'test write'},
+                q = {':q', 'test quit'},
+            }
+        }, opts)
+    elseif fileTy == 'lua' then
+        wkl.register({
+            m = {
+                name = "Shell",
+                m = {':w', 'test write'},
+                q = {':q', 'test quit'},
+            }
+        }, opts)
+    end
+end
 --
 --if vim.bo.filetype == "vimwiki" then
     --print("markdown")

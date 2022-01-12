@@ -1,0 +1,34 @@
+# mk 表示 make Ketax
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+	snip.rv = ' '
+else:
+	snip.rv = ''
+`$2
+endsnippet
+
+# dm 表示 Display math
+snippet dm "Math" wA
+$$
+${1:${VISUAL}}
+$$ $0
+endsnippet
+
+
+#- r 表示关键词使用正则表达式。正则表达式必须用 两个引号' '包围。比如 \'([1-9])day\'。
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+
+
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+
+
+
+#'https://github.com/SirVer/ultisnips'

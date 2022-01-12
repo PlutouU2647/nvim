@@ -74,3 +74,25 @@ require('plugins/theme-nightfox')
 
 -- copilot
 -- 'https://github.com/github/feedback/discussions?discussions_q=vim'
+
+
+vim.cmd([[
+"设置tab键为触发键
+let g:UltiSnipsExpandTrigger = '<tab>'
+"设置向后跳转键
+let g:UltiSnipsJumpForwardTrigger = '<c-b>'
+"设置向前跳转键
+let g:UltiSnipsJumpBackwardTrigger = '<C-z>'
+"设置文件目录
+let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips/']
+"设置打开配置文件时为垂直打开
+let g:UltiSnipsEditSplit="vertical"
+]])
+
+vim.cmd([[
+let g:copilot_filetypes = {
+                      \ 'xml': v:false,
+                      \ 'md': v:false,
+                                    \ }
+]])
+                      --\ 'tex': v:false,

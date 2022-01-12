@@ -71,7 +71,8 @@ return packer.startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
         opt = true,
-        event = {"BufReadPre", "BufNewFile"},
+        --event = {"BufReadPre", "BufNewFile"},
+        event = "BufWinEnter",
         run = ':TSUpdate',
         config ="require('plugins/nv-treesitter')"
     }
@@ -86,6 +87,8 @@ return packer.startup(function(use)
     use {
         'ahmedkhalf/project.nvim',
         --opt = true,
+        --opt = true,
+        --after = "telescope.nvim"
         --after = 'nvim-telescope/telescope.nvim',
     }
     -- colorscheme
@@ -280,10 +283,25 @@ return packer.startup(function(use)
         'lervag/vimtex',
         --opt = true,
     }
+    --use {
+        --'vimwiki/vimwiki',
+        --config = "require('plugins/nv-vimwiki')",
+    --}
     use {
-        'vimwiki/vimwiki',
-        config = "require('plugins/nv-vimwiki')",
+        'SirVer/ultisnips'
     }
+    use {
+        'rmagatti/goto-preview',
+        opt = true,
+        --event = {"BufReadPre", "BufNewFile"},
+        config = "require('plugins/nv-goto-preview')",
+        ft = 'python',
+    }
+    --use {
+        --'iamcco/markdown-preview.nvim',
+        --ft = "markdown",
+        --run = "cd app && yarn install"
+    --}
 
 
 

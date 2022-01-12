@@ -9,3 +9,5 @@
 -- let g:UltiSnipsSnippetDirectories=["path/of/snippetDirectories"]
 -- "设置打开配置文件时为垂直打开
 -- let g:UltiSnipsEditSplit="vertical"
+
+

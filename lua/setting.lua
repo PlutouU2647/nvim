@@ -11,8 +11,8 @@ vim.o.showmode = false  -- show vim botton mode
 vim.o.backup = false  -- no backup file
 vim.o.writebackup = false  -- no backup file
 vim.o.clipboard = 'unnamedplus'  -- clipboard
-vim.o.scrolloff = 5
-vim.o.sidescrolloff = 5
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
 vim.o.wrap = true
 vim.o.cursorline = true
 vim.o.signcolumn = 'yes'
@@ -153,29 +153,3 @@ let g:vimwiki_list = [{'path': '/Users/lawrence/Library/Mobile Documents/iCloud~
 ]])
 
 
-
-local wkl = require('which-key')
-
-vim.cmd('autocmd FileType * lua setKeybinds()')
-function setKeybinds()
-    local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
-    local opts = { prefix = '<leader>', buffer = 0 }
-
-    if fileTy == 'python' then
-        wkl.register({
-            m = {
-                name = "Python",
-                m = {':w', 'test write'},
-                q = {':q', 'test quit'},
-            }
-        }, opts)
-    elseif fileTy == 'lua' then
-        wkl.register({
-            m = {
-                name = "Shell",
-                m = {':w', 'test write'},
-                q = {':q', 'test quit'},
-            }
-        }, opts)
-    end
-end
