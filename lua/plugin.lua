@@ -281,7 +281,8 @@ return packer.startup(function(use)
     }
     use {
         'lervag/vimtex',
-        --opt = true,
+        opt = true,
+        ft = 'tex'
     }
     --use {
         --'vimwiki/vimwiki',
