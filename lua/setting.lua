@@ -151,3 +151,31 @@ vim.cmd([[
 let g:vimwiki_list = [{'path': '/Users/lawrence/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/000vimwiki',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 ]])
+
+
+
+local wkl = require('which-key')
+
+vim.cmd('autocmd FileType * lua setKeybinds()')
+function setKeybinds()
+    local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
+    local opts = { prefix = '<leader>', buffer = 0 }
+
+    if fileTy == 'python' then
+        wkl.register({
+            m = {
+                name = "Python",
+                m = {':w', 'test write'},
+                q = {':q', 'test quit'},
+            }
+        }, opts)
+    elseif fileTy == 'lua' then
+        wkl.register({
+            m = {
+                name = "Shell",
+                m = {':w', 'test write'},
+                q = {':q', 'test quit'},
+            }
+        }, opts)
+    end
+end

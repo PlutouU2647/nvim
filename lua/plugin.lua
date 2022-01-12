@@ -45,8 +45,8 @@ return packer.startup(function(use)
     -- file manager
     use {
         'kyazdani42/nvim-tree.lua',
-        opt = true,
-        cmd = {"NvimTreeToggle", "NvimTreeOpen"},
+        --opt = true,
+        --cmd = {"NvimTreeToggle", "NvimTreeOpen"},
         config = "require('plugins/nv-nvimtree')"
         --config = con"require('plugins/nv-nvimtree')"
     }
@@ -124,8 +124,8 @@ return packer.startup(function(use)
     }
     use {
         'folke/which-key.nvim',
-        opt = true,
-        keys = "<leader>",
+        --opt = true,
+        --keys = "<leader>",
         config = "require('plugins/nv-whichkey')"
 
     }
