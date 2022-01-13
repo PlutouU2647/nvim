@@ -135,3 +135,4 @@ map('c','<D-v>', '<C-r>+', opt)
 --map('n','<leader>io', ':lua require(function-obsidian)<CR>', opt)
 --
 
+map('n', '<Leader>ob', ":!open 'obsidian://open?vault=markdown'<CR>", opt)
