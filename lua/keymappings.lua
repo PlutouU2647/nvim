@@ -124,3 +124,14 @@ map('c','<D-v>', '<C-r>+', opt)
 --autocmd FileType lua                nnoremap <silent> <C-a> :echo 'lua'<CR>
 --autocmd FileType markdown           nnoremap <silent> <C-a> :echo 'md'<CR>
 --]])
+--
+--
+
+-- TODO:Open note in Obsidian from within Vim
+--'https://forum.obsidian.md/t/open-note-in-obsidian-from-within-vim-and-vice-versa/6837'
+--command IO execute "silent !open 'obsidian://open?vault=VAULTNAME&file=" . expand('%:r') . "'"
+--nnoremap <leader>io :<CR>
+--
+--map('n','<leader>io', ':lua require(function-obsidian)<CR>', opt)
+--
+

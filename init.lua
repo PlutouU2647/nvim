@@ -75,7 +75,7 @@ require('plugins/theme-nightfox')
 -- copilot
 -- 'https://github.com/github/feedback/discussions?discussions_q=vim'
 
-
+--utillsnip
 vim.cmd([[
 "设置tab键为触发键
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -96,7 +96,8 @@ let g:copilot_filetypes = {
 ]])
                       --\ 'md': v:true,
                       --\ 'tex': v:false,
-                      --
+
+--vim pandoc
 --vim.cmd([[
 --augroup pandoc_syntax
     --au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
