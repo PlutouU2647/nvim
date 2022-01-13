@@ -81,10 +81,13 @@ map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = tru
 
 
 -- insert edit mode
-map('i','<c-k>', '<up>', opt)
-map('i','<c-j>', '<down>', opt)
-map('i','<c-h>', '<left>', opt)
-map('i','<c-l>', '<right>', opt)
+--map('i','<c-k>', '<up>', opt)
+--map('i','<c-j>', '<down>', opt)
+--map('i','<c-h>', '<left>', opt)
+
+
+-- spell check
+map('i','<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u', opt)
 
 
 --map('x','<leader>ii', '<Plug>SlimeRegionSend', {noremap = false, silent = false })

@@ -1,4 +1,3 @@
-
 --vim.cmd('colorscheme dayfox')
 
 --vim.cmd('colorscheme rose-pine')

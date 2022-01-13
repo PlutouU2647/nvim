@@ -1,9 +1,9 @@
--- __  __        __     ___                    
---|  \/  |_   _  \ \   / (_)_ __ ___  _ __ ___ 
+-- __  __        __     ___
+--|  \/  |_   _  \ \   / (_)_ __ ___  _ __ ___
 --| |\/| | | | |  \ \ / /| | '_ ` _ \| '__/ __|
---| |  | | |_| |   \ V / | | | | | | | | | (__ 
+--| |  | | |_| |   \ V / | | | | | | | | | (__
 --|_|  |_|\__, |    \_/  |_|_| |_| |_|_|  \___|
---        |___/                                
+--        |___/
 --
 -- 🌑🌕
 --guide
@@ -80,9 +80,9 @@ vim.cmd([[
 "设置tab键为触发键
 let g:UltiSnipsExpandTrigger = '<tab>'
 "设置向后跳转键
-let g:UltiSnipsJumpForwardTrigger = '<c-b>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
 "设置向前跳转键
-let g:UltiSnipsJumpBackwardTrigger = '<C-z>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
 "设置文件目录
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips/']
 "设置打开配置文件时为垂直打开
@@ -92,7 +92,13 @@ let g:UltiSnipsEditSplit="vertical"
 vim.cmd([[
 let g:copilot_filetypes = {
                       \ 'xml': v:false,
-                      \ 'md': v:false,
                                     \ }
 ]])
+                      --\ 'md': v:true,
                       --\ 'tex': v:false,
+                      --
+--vim.cmd([[
+--augroup pandoc_syntax
+    --au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+--augroup END
+--]])

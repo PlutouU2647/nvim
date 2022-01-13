@@ -94,9 +94,15 @@ return packer.startup(function(use)
     -- colorscheme
     use {
         'EdenEast/nightfox.nvim',  -- colorscheme
-        config = "require('plugins/theme-nightfox')",
+        --config = "require('plugins/theme-nightfox')",
         --config = "vim.cmd('colorscheme duskfox')"
+        --
     }
+    use {
+        'navarasu/onedark.nvim',
+        config = "require('plugins/theme-onedark')",
+    }
+
 
     --use({
     --'rose-pine/neovim',
@@ -298,6 +304,9 @@ return packer.startup(function(use)
         config = "require('plugins/nv-goto-preview')",
         ft = 'python',
     }
+    --use {
+        --'plasticboy/vim-markdown'
+    --}
     --use {
         --'iamcco/markdown-preview.nvim',
         --ft = "markdown",

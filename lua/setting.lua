@@ -47,12 +47,26 @@ vim.o.splitright = true  -- splitright
 --vim.o.foldmethod='indent'
 vim.o.foldmethod='manual'
 
+
+--vim.o.setlocal = 'spell'
+
+--vim.o.spelllang='en_us'
+
+
+-- augroup highlightYankedText
+
+-- highlightYankedText
 vim.cmd([[
-augroup highlightYankedText
+augroup highlight_yank
     autocmd!
-    autocmd TextYankPost *  silent! lua require'vim.highlight'.on_yank()
+    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=160})
 augroup END
 ]])
+
+
+
+
+
 
 -- 上次的的位置
 vim.cmd([[
@@ -147,9 +161,9 @@ let g:vimtex_compiler_progname='nvr'
       --\ ],
       --\}
 --]])
-vim.cmd([[
-let g:vimwiki_list = [{'path': '/Users/lawrence/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/000vimwiki',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-]])
+--vim.cmd([[
+--let g:vimwiki_list = [{'path': '/Users/lawrence/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/000vimwiki',
+                      --\ 'syntax': 'markdown', 'ext': '.md'}]
+--]])
 
 

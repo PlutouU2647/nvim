@@ -1,5 +1,4 @@
 -- TODO:ignore python
-vim.opt.termguicolors = true
 require("bufferline").setup {
     options = {
         number = "none",
