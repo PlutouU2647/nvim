@@ -121,10 +121,6 @@ map('i','<D-v>', '<C-r>+', opt)
 map('c','<D-v>', '<C-r>+', opt)
 
 
---vim.cmd([[
---autocmd FileType lua                nnoremap <silent> <C-a> :echo 'lua'<CR>
---autocmd FileType markdown           nnoremap <silent> <C-a> :echo 'md'<CR>
---]])
 --
 --
 
@@ -141,3 +137,15 @@ map('n', '<Leader>ob', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt
 map('n', '<LocalLeader>ob', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 --'obsidian://search?vault=markdown&query=MOC'
+--
+--
+--
+--自定义文件类型快捷键
+--vim.cmd([[
+--autocmd FileType lua                nnoremap <silent> <C-a> :echo 'lua'<CR>
+--autocmd FileType markdown           nnoremap <silent> <C-a> :echo 'md'<CR>
+--]])
+vim.cmd([[
+  autocmd FileType markdown  imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
+]])
+  --imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")

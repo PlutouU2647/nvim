@@ -171,7 +171,8 @@ return packer.startup(function(use)
     use {
         'github/copilot.vim',
         event = {"BufReadPre", "BufNewFile"},
-        opt = true
+        opt = true,
+        require = "plugins/nv-copilot"
     }
     use {
         'CRAG666/code_runner.nvim',
@@ -320,6 +321,10 @@ return packer.startup(function(use)
 	    ft = "markdown",
         run = 'cd app && yarn install',
         config = "require('plugins/nv-markdown-preview')",
+    }
+    use {
+        'vimwiki/vimwiki',
+        config = "require('plugins/nv-vimwiki')",
     }
     --use {
         --'plasticboy/vim-markdown'
