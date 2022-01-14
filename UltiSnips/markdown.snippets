@@ -36,7 +36,6 @@ snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
 endsnippet
 
 
-
 # 识别括号内的公式
 priority 1000
 snippet '^.*\)/' "() Fraction" wrA
@@ -45,19 +44,18 @@ stripped = match.string[:-1]
 depth = 0
 i = len(stripped) - 1
 while True:
-    if stripped[i] == ')': depth += 1
-    if stripped[i] == '(': depth -= 1
-    if depth == 0: break;
-    i -= 1
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
 snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 `{$1}$0
 endsnippet
 
-
 # 最后一个与分数有关的 snippet 即使用你的选择来制作分数。你可以先用它选择一些文本，然后按下 Tab，打出/，然后再按下 Tab。
-snippet / "Fraction" iA
-\\frac{${VISUAL}}{$1}$0
-endsnippet
+#snippet / "Fraction" iA
+#\\frac{${VISUAL}}{$1}$0
+#endsnippet
 
 
 
@@ -129,31 +127,31 @@ endsnippet
 
 #值得分享的还有后缀 snippet，如 phat → \hat{p}，zbar → \overline{z} 等。一个类似的 snippet 是后缀向量，如 v → \vec{v}。这些 snippet 真的非常节省时间，因为你可以借此跟上老师板书的节奏。
 
-priority 10
-snippet "bar" "bar" riA
-\overline{$1}$0
-endsnippet
+#priority 10
+#snippet "bar" "bar" riA
+#\overline{$1}$0
+#endsnippet
 
-priority 100
-snippet "([a-zA-Z])bar" "bar" riA
-\overline{`!p snip.rv=match.group(1)`}
-endsnippet
-
-
-priority 10
-snippet "hat" "hat" riA
-\hat{$1}$0
-endsnippet
-
-priority 100
-snippet "([a-zA-Z])hat" "hat" riA
-\hat{`!p snip.rv=match.group(1)`}
-endsnippet
+#priority 100
+#snippet "([a-zA-Z])bar" "bar" riA
+#\overline{`!p snip.rv=match.group(1)`}
+#endsnippet
 
 
-snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
-\vec{`!p snip.rv=match.group(1)`}
-endsnippet 
+#priority 10
+#snippet "hat" "hat" riA
+#\hat{$1}$0
+#endsnippet
+
+#priority 100
+#snippet "([a-zA-Z])hat" "hat" riA
+#\hat{`!p snip.rv=match.group(1)`}
+#endsnippet
+
+
+#snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
+#\vec{`!p snip.rv=match.group(1)`}
+#endsnippet 
 
 
 
@@ -173,14 +171,28 @@ endsnippet
 
 
 
+# ┌────────────┐
+# │ code block │
+# └────────────┘
+#python
+snippet py` "python" wA
+\`\`\` python
+${1}
+\`\`
+endsnippet
 
 
+#uml
+snippet uml` "plantuml" wA
+\`\`\` plantuml  
+${1}
+\`\`
+endsnippet
 
-
-
-
-
-
-
-
-
+#uml
+snippet mer` "mermaid" wA
+\`\`\` mermaid  
+graph TD
+${1}
+\`\`
+endsnippet

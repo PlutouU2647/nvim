@@ -14,6 +14,7 @@ local opt = {noremap = true, silent = true }
 
 
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 
 -- Normal
 map('n', '<Leader>h', ':set hlsearch!<CR>', opt)
@@ -111,7 +112,7 @@ nmap \ :
 
 --tnoremap <ESC> <C-\><C-n>
 -- tmux_navigator
--- terminal 
+-- terminal
 --
 --
 -- goneovim
@@ -135,4 +136,8 @@ map('c','<D-v>', '<C-r>+', opt)
 --map('n','<leader>io', ':lua require(function-obsidian)<CR>', opt)
 --
 
-map('n', '<Leader>ob', ":!open 'obsidian://open?vault=markdown'<CR>", opt)
+-- obsidian
+map('n', '<Leader>ob', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
+map('n', '<LocalLeader>ob', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
+map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
+--'obsidian://search?vault=markdown&query=MOC'

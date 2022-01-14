@@ -45,7 +45,7 @@ vim.o.splitright = true  -- splitright
 
 -- indenting
 --vim.o.foldmethod='indent'
-vim.o.foldmethod='manual'
+--vim.o.foldmethod='manual'
 
 
 --vim.o.setlocal = 'spell'
@@ -119,11 +119,11 @@ endfunction
 --let g:vimtex_view_method = 'zathura'
 --let g:vimtex_quickfix_mode=0
 --filetype plugin indent on
+--let maplocalleader = ","
 vim.cmd([[
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-let maplocalleader = ","
 
 
 set conceallevel=1

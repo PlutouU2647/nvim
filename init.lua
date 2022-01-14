@@ -103,3 +103,7 @@ let g:copilot_filetypes = {
     --au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 --augroup END
 --]])
+--markdown new
+vim.cmd([[
+let g:vim_markdown_math = 1
+]])

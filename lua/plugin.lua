@@ -304,6 +304,23 @@ return packer.startup(function(use)
         config = "require('plugins/nv-goto-preview')",
         ft = 'python',
     }
+    use {
+        'godlygeek/tabular',
+        opt = true,
+	    ft = "markdown",
+    }
+    use {
+        'plasticboy/vim-markdown',
+        opt = true,
+	    ft = "markdown",
+    }
+    use {
+        'iamcco/markdown-preview.nvim',
+        opt = true,
+	    ft = "markdown",
+        run = 'cd app && yarn install',
+        config = "require('plugins/nv-markdown-preview')",
+    }
     --use {
         --'plasticboy/vim-markdown'
     --}

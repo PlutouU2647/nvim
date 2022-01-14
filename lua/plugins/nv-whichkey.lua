@@ -129,12 +129,13 @@ function setKeybinds()
                 q = {':q', 'test quit'},
             }
         }, opts)
-    elseif fileTy == 'lua' then
+    elseif fileTy == 'markdown' then
         wkl.register({
             m = {
-                name = "Shell",
-                m = {':w', 'test write'},
-                q = {':q', 'test quit'},
+                name = "markdown",
+                a = {':MarkdownPreview<CR>', 'Start Preview'},
+                c = {':MarkdownPreviewStop<CR>', 'Stop Preview'},
+                m = {':MarkdownPreviewToggle<CR>', 'Toggle Preview'},
             }
         }, opts)
     end
