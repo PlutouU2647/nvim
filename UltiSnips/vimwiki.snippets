@@ -138,15 +138,15 @@ endsnippet
 #endsnippet
 
 
-#priority 10
-#snippet "hat" "hat" riA
-#\hat{$1}$0
-#endsnippet
+priority 10
+snippet "hat" "hat" riA
+\hat{$1}$0
+endsnippet
 
-#priority 100
-#snippet "([a-zA-Z])hat" "hat" riA
-#\hat{`!p snip.rv=match.group(1)`}
-#endsnippet
+priority 100
+snippet "([a-zA-Z])hat" "hat" riA
+\hat{`!p snip.rv=match.group(1)`}
+endsnippet
 
 
 #snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA

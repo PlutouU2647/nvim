@@ -146,6 +146,7 @@ map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 --autocmd FileType markdown           nnoremap <silent> <C-a> :echo 'md'<CR>
 --]])
 vim.cmd([[
-  autocmd FileType markdown  imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
 ]])
+  --autocmd FileType markdown  imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
+  --autocmd FileType markdown  imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
   --imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")

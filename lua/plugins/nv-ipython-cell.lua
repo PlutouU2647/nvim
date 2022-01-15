@@ -25,7 +25,7 @@ else
 vim.cmd([[
 autocmd FileType python       nnoremap <buffer> <leader>k :IPythonCellInsertAbove<CR>
 autocmd FileType python       nnoremap <buffer> <leader>j :IPythonCellInsertBelow<CR>
-autocmd FileType python       nnoremap <buffer> <C-M> :IPythonCellExecuteCellJump<CR>
+autocmd FileType python       nnoremap <buffer> <S-cr> :IPythonCellExecuteCellJump<CR>
 ]])
 
 
