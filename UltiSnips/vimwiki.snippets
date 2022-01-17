@@ -153,8 +153,31 @@ endsnippet
 #\vec{`!p snip.rv=match.group(1)`}
 #endsnippet 
 
+# ┌──────┐
+# │ test │
+# └──────┘
+snippet \array "array" wA
+\left
+[\begin{array}{ccc}
+$1
+\end{array}
+\right]
+endsnippet
+
+# 自动添加right
+#snippet \left "Left" wA
+#\left
+#${1:${VISUAL}}
+#\right${0}
+#endsnippet
 
 
+# 自动添加right
+#snippet \begin "Begin" wA
+#[\begin{$1}
+#${2:${VISUAL}}
+#\end]{$1}
+#endsnippet
 
 
 #^2

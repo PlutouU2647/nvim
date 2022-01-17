@@ -25,9 +25,10 @@ local toggle_lf = function()
     return lf:toggle()
 end
 local mappings = {
-    i = {"<Plug>SlimeRegionSend","Slime Run Selected code",mode = "v"},
+    --i = {"<Plug>SlimeRegionSend","Slime Run Selected code",mode = "v"},
     s = {":%s/","Search and replace",mode = "n",silent = false},
     o = {":IPythonCellExecuteCell<CR>","Run Cell",mode = "n",silent = false},
+    i = {":IPythonCellExecuteCellVerbose<CR>","Run Cell",mode = "n",silent = false},
     --g = {":SlimeSendCurrentLine<cr>","Slime Run Paragraph code"},
     b = {"<Plug>SlimeConfig","Slime config"},
     --q = {":q<CR>","quit"},

@@ -3,4 +3,5 @@ let g:vimwiki_list = [{'path': '/Users/lawrence/Library/Mobile Documents/iCloud~
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 au filetype vimwiki silent! iunmap <buffer> <Tab>
 au filetype vimwiki silent! iunmap <buffer> <CR>
+au filetype vimwiki silent! iunmap <buffer> <S-Tab>
 ]])

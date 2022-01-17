@@ -82,7 +82,7 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 "设置向后跳转键
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 "设置向前跳转键
-let g:UltiSnipsJumpBackwardTrigger = '<S-tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 "设置文件目录
 let g:UltiSnipsSnippetDirectories=['~/.config/nvim/UltiSnips/']
 "设置打开配置文件时为垂直打开
