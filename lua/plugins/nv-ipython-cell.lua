@@ -14,6 +14,7 @@ else
     let g:slime_default_config = {
             \ 'jobid':  '7' }
     let g:slime_dont_ask_default = 1
+let g:slime_cell_delimiter = "# %%"
 ]])
 
 -- check is tmux is running

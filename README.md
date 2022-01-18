@@ -39,3 +39,6 @@ pip install 'python-lsp-server[all]'
 
 ## format
 pip3 install --upgrade sqlparse
+pip install pynvim
+
+sudo apt-get install xclip
