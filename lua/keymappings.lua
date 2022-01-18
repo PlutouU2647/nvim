@@ -145,8 +145,10 @@ map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 --autocmd FileType lua                nnoremap <silent> <C-a> :echo 'lua'<CR>
 --autocmd FileType markdown           nnoremap <silent> <C-a> :echo 'md'<CR>
 --]])
+--nmap <c-a> :hello
 vim.cmd([[
 ]])
+--nmap <c-a> <Plug>SlimeCellsPrev
   --autocmd FileType markdown  imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
   --autocmd FileType markdown  imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
   --imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")

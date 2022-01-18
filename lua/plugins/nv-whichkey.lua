@@ -124,12 +124,15 @@ function setKeybinds()
 
     if fileTy == 'python' then
         wkl.register({
+            k = {":IPythonCellInsertAbove<CR>","Insert Above",mode = "n",silent = true},
+            j = {":IPythonCellInsertBelow<CR>","Insert Below",mode = "n",silent = true},
             m = {
                 name = "Python",
                 m = {':w', 'test write'},
                 q = {':q', 'test quit'},
             }
         }, opts)
+        --vim.api.set
     elseif fileTy == 'markdown' then
         wkl.register({
             m = {

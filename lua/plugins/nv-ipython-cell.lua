@@ -1,3 +1,5 @@
+local map = vim.api.nvim_set_keymap
+local opt = {noremap = true, silent = true }
 vim.cmd([[
 if !empty($TMUX)
     echo "tmux mode"
@@ -16,6 +18,20 @@ else
     let g:slime_dont_ask_default = 1
 let g:slime_cell_delimiter = "# %%"
 ]])
+map('n', '<c-m>', "<plug>SlimeSendCell:IPythonCellNextCell<CR>", {noremap = false, silent = false })
+
+--vim.cmd('autocmd FileType * lua setKeybinds_py()')
+--function setKeybinds_py()
+    --local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
+    --local map = vim.api.nvim_set_keymap
+    --local opt = {noremap = true, silent = true }
+
+    --if fileTy == 'python' then
+        ----vim.api.nvim_buf_set_keymap(0, 'n', '<c-a', ":echo 'hi this is python'<cr>", opt)
+        --map('n', '<c-a>', ":echo 'hi this is python'<cr>", opt)
+    ----elseif fileTy == 'markdown' then
+    --end
+--end
 
 -- check is tmux is running
 -- if true then config slime target
@@ -23,11 +39,15 @@ let g:slime_cell_delimiter = "# %%"
 --local map = vim.api.nvim_set_keymap
 --local opt = {noremap = true, silent = true }
     --map('n', '<C-M>', '<cmd>IPythonCellExecuteCellJump<CR>', opt)
-vim.cmd([[
-autocmd FileType python       nnoremap <buffer> <leader>k :IPythonCellInsertAbove<CR>
-autocmd FileType python       nnoremap <buffer> <leader>j :IPythonCellInsertBelow<CR>
-autocmd FileType python       nnoremap <buffer> <S-cr> :IPythonCellExecuteCellJump<CR>
-]])
+--vim.cmd([[
+--autocmd FileType python       nnoremap <buffer> <leader>j :IPythonCellInsertBelow<CR>
+--autocmd FileType python       nnoremap <buffer> <leader>k :IPythonCellInsertAbove<CR>
+--]])
+--autocmd FileType python       nnoremap <buffer> <C-a> <Plug>SlimeSendCell
+
+--autocmd FileType python       nnoremap <buffer> <c-a> <Plug>SlimeSendCell
+--autocmd FileType python       nnoremap <buffer> <S-cr> <Plug>SlimeSendCell
+--autocmd FileType python       nnoremap <buffer> <S-cr> :IPythonCellExecuteCellJump<CR>
 
 
 -- add cell
