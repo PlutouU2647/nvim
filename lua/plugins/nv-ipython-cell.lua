@@ -18,7 +18,6 @@ else
     let g:slime_dont_ask_default = 1
 let g:slime_cell_delimiter = "# %%"
 ]])
-map('n', '<c-m>', "<plug>SlimeSendCell:IPythonCellNextCell<CR>", {noremap = false, silent = false })
 
 --vim.cmd('autocmd FileType * lua setKeybinds_py()')
 --function setKeybinds_py()
