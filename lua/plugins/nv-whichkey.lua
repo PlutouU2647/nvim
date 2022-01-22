@@ -108,7 +108,6 @@ local mappings = {
         --y = {"<cmd>FloatermNew ytop<CR>"                              , "ytop"},
         --s = {"<cmd>FloatermNew ncdu<CR>"                              , "ncdu"},
      --},
-
 }
 local opts = {prefix = "<leader>"}
 wk.register(mappings, opts)
@@ -120,7 +119,7 @@ local wkl = require('which-key')
 vim.cmd('autocmd FileType * lua setKeybinds()')
 function setKeybinds()
     local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
-    local opts = { prefix = '<leader>', buffer = 0 }
+    local optss = { prefix = '<leader>', buffer = 0 }
     local opt = {noremap = true, silent = false }
     local map = vim.api.nvim_buf_set_keymap
 
@@ -135,7 +134,7 @@ function setKeybinds()
                 m = {':w', 'test write'},
                 q = {':q', 'test quit'},
             }
-        }, opts)
+        }, optss)
         --vim.api.set
     elseif fileTy == 'markdown' then
         wkl.register({
@@ -145,7 +144,7 @@ function setKeybinds()
                 c = {':MarkdownPreviewStop<CR>', 'Stop Preview'},
                 m = {':MarkdownPreviewToggle<CR>', 'Toggle Preview'},
             }
-        }, opts)
+        }, optss)
     end
 end
 --
