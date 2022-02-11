@@ -38,7 +38,7 @@ pip install 'python-lsp-server[all]'
 
 
 ## format
-- 
+
 ```
 pip3 install --upgrade sqlparse
 ```
