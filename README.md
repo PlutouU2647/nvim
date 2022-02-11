@@ -38,7 +38,13 @@ pip install 'python-lsp-server[all]'
 
 
 ## format
+- 
+```
 pip3 install --upgrade sqlparse
+```
+- install dependency for pynvim
+```
 pip install pynvim
+```
 
 sudo apt-get install xclip
