@@ -40,6 +40,15 @@ local mappings = {
     --r = {":w<cr>|:AsyncRun!python %<CR>","Run Code"},
     r = {"<cmd>RunCode<cr>","Run Code"},
     H = {"<cmd>Dashboard<cr>","Home"},
+    ["1"] = "which_key_ignore",
+    ["2"] = "which_key_ignore",
+    ["3"] = "which_key_ignore",
+    ["4"] = "which_key_ignore",
+    ["5"] = "which_key_ignore",
+    ["6"] = "which_key_ignore",
+    ["7"] = "which_key_ignore",
+    ["8"] = "which_key_ignore",
+    ["9"] = "which_key_ignore",
     f = {
         name = "Telescope",
         r = {"<cmd>Telescope oldfiles<cr>", "Recent File"},
@@ -147,6 +156,11 @@ function setKeybinds()
         }, optss)
     end
 end
+local presets = require("which-key.plugins.presets")
+presets.objects['1'] = nil
+presets.objects['2'] = nil
+presets.objects['3'] = nil
+presets.objects['4'] = nil
 --
 --if vim.bo.filetype == "vimwiki" then
     --print("markdown")

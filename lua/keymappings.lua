@@ -61,6 +61,7 @@ map('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', opt)
 map('n', '<leader>2', '<Cmd>BufferLineGoToBuffer 2<CR>', opt)
 map('n', '<leader>3', '<Cmd>BufferLineGoToBuffer 3<CR>', opt)
 map('n', '<leader>4', '<Cmd>BufferLineGoToBuffer 4<CR>', opt)
+map('n', '<leader>5', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 
 
 -- move selected lines
