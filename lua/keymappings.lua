@@ -57,6 +57,10 @@ map('n', '<S-TAB>', ':bprevious<CR>', opt)
 --map('n', '<C-w>', ':bd<CR>', opt)
 map('n', '<C-w>', ':bdelete<CR>', opt)
 --map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>', opt)
+map('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', opt)
+map('n', '<leader>2', '<Cmd>BufferLineGoToBuffer 2<CR>', opt)
+map('n', '<leader>3', '<Cmd>BufferLineGoToBuffer 3<CR>', opt)
+map('n', '<leader>4', '<Cmd>BufferLineGoToBuffer 4<CR>', opt)
 
 
 -- move selected lines
@@ -124,6 +128,9 @@ map('c','<D-v>', '<C-r>+', opt)
 --
 --
 
+-- ┌─────────┐
+-- │ Obsidan │
+-- └─────────┘
 -- TODO:Open note in Obsidian from within Vim
 --'https://forum.obsidian.md/t/open-note-in-obsidian-from-within-vim-and-vice-versa/6837'
 --command IO execute "silent !open 'obsidian://open?vault=VAULTNAME&file=" . expand('%:r') . "'"
@@ -131,12 +138,14 @@ map('c','<D-v>', '<C-r>+', opt)
 --
 --map('n','<leader>io', ':lua require(function-obsidian)<CR>', opt)
 --
-
 -- obsidian
 map('n', '<Leader>ob', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', '<LocalLeader>ob', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
---'obsidian://search?vault=markdown&query=MOC'
+map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
+
+
+--map('n', ''':silent !open "obsidian://open?vault=VAULTNAME&file=' . expand('%:r') . " ''', opt)
 --
 --
 --
