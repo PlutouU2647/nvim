@@ -64,6 +64,12 @@ map('n', '<leader>4', '<Cmd>BufferLineGoToBuffer 4<CR>', opt)
 map('n', '<leader>5', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 
 
+
+--TODO
+map('n', '<D-1>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
+
+
+
 -- move selected lines
 --map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
 --map('x', 'J', ':move \'>+1<CR>gv-gv\'' , opt)
