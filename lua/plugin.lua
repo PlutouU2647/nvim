@@ -281,11 +281,11 @@ return packer.startup(function(use)
         opt = true,
         cmd = "StartupTime",
     }
-    use {
-        'ybian/smartim',
-        opt = true,
-        event = 'InsertEnter',
-    }
+    --use {
+        --'ybian/smartim',
+        --opt = true,
+        --event = 'InsertEnter',
+    --}
     use {
         'lervag/vimtex',
         opt = true,
