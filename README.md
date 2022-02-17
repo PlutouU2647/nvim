@@ -48,3 +48,13 @@ pip install pynvim
 ```
 
 sudo apt-get install xclip
+
+
+## markdown preview
+``` shell
+cd /Users/lawrence/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim/app
+yarn install
+```
+
+
+
