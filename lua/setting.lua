@@ -25,7 +25,7 @@ vim.o.ignorecase = true  -- ignorecase also in cmd mode auto complete
 vim.o.autoindent = true  -- autoindent
 
 -- font
-vim.o.guifont = 'MesloLGS NF:h14'  -- font
+--vim.o.guifont = 'MesloLGS NF:h14'  -- font
 
 
 -- tab
