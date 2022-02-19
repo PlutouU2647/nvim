@@ -149,7 +149,8 @@ map('c','<D-v>', '<C-r>+', opt)
 -- obsidian
 --map('n', '<Leader>ob', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', "<Leader>ob", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
-map('n', '<LocalLeader><LocalLeader>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
+map('n', "<LocalLeader><LocalLeader>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
+--map('n', '<LocalLeader><LocalLeader>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
 
