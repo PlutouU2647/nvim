@@ -51,10 +51,13 @@ sudo apt-get install xclip
 
 
 ## markdown preview
+- after you install `markdown-preview`, you need to install yarn add go to plugin directory and run `yarn install`
+- 
 ``` shell
 cd /Users/lawrence/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim/app
 yarn install
 ```
+
 
 
 
