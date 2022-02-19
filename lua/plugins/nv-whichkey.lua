@@ -133,8 +133,8 @@ function setKeybinds()
     local map = vim.api.nvim_buf_set_keymap
 
     if fileTy == 'python' then
-        map(0, 'n', '<C-m>', '<plug>SlimeSendCell:IPythonCellNextCell<CR>', {noremap = false, silent = false })
-        map(0, 'n', '<C-a>', ':echo "hello"<cr>', opt)
+        --map(0, 'n', '<C-m>', '<plug>SlimeSendCell:IPythonCellNextCell<CR>', {noremap = false, silent = false })
+        --map(0, 'n', '<C-a>', ':echo "hello"<cr>', opt)
         wkl.register({
             k = {":IPythonCellInsertAbove<CR>","Insert Above",mode = "n",silent = true},
             j = {":IPythonCellInsertBelow<CR>","Insert Below",mode = "n",silent = true},
