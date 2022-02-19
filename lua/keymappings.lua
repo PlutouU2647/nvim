@@ -25,7 +25,8 @@ map('n','S',':w<CR>',opt)
 map('n','Q',':q<CR>',opt)
 --map('n', ';', ':', opt)
 --map('n', ':', ';', opt)
-
+-- 运行代码
+map('n', '<LocalLeader>r', ":RunCode<CR>", opt)
 -- explorer
 map('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
 
@@ -84,12 +85,14 @@ map('v', 'K', ':m \'<-2<CR>gv=gv\'' , opt)
 -- comment
 map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
-
+map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
+map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 -- 改变窗口大小
 --map('n','<up>', ':res -2<CR>', opt)
 --map('n','<down>', ':res +2<CR>', opt)
 --map('n','<left>', ':vertical resize -2<CR>', opt)
 --map('n','<right>', ':vertical resize +2<CR>', opt)
+
 
 
 
@@ -152,6 +155,7 @@ map('n', "<Leader>ob", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<
 map('n', '<LocalLeader><LocalLeader>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
+
 
 
 --map('n', ''':silent !open "obsidian://open?vault=VAULTNAME&file=' . expand('%:r') . " ''', opt)
