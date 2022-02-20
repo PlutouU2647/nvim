@@ -63,12 +63,12 @@ local mappings = {
     },
     t = {
         name = "Terminal",
-        t = {":ToggleTerm dir=%:p:h<cr>",   "Split Below"},
-        f = {toggle_float,                  "Floating Terminal"},
-        g = {toggle_lazygit,                "LazyGit"},
-        p = {toggle_ipython,                "Ipython"},
-        r = {toggle_ranger,                 "Ranger"},
-        l = {toggle_lf,                     "Lf"},
+        t = {":ToggleTerm dir=%:p:h<cr>",                 "Split Below"},
+        f = {toggle_float,                                "Floating Terminal"},
+        g = {toggle_lazygit,                              "LazyGit"},
+        p = {toggle_ipython,                          "Ipython"},
+        r = {toggle_ranger,                               "Ranger"},
+        l = {toggle_lf,                                   "Lf"},
     },
     l = {
         name = "LSP",
@@ -133,7 +133,7 @@ function setKeybinds()
     local map = vim.api.nvim_buf_set_keymap
 
     if fileTy == 'python' then
-        --map(0, 'n', '<C-m>', '<plug>SlimeSendCell:IPythonCellNextCell<CR>', {noremap = false, silent = false })
+        map(0, 'n', '<C-m>', '<plug>SlimeSendCell:IPythonCellNextCell<CR>', {noremap = false, silent = false })
         --map(0, 'n', '<C-a>', ':echo "hello"<cr>', opt)
         wkl.register({
             k = {":IPythonCellInsertAbove<CR>","Insert Above",mode = "n",silent = true},
