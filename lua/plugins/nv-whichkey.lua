@@ -60,6 +60,7 @@ local mappings = {
         --d = {"<cmd>lua require('plugins/nv-telescope').search_dotfiles()<cr>", "Search Dotfile"},
         --q = {"<cmd>lua require('plugins/nv-telescope').search_quantcode()<cr>","Search Quantcode"},
         p = {"<cmd>Telescope projects<cr>","Open Project"},
+        m = {"<cmd>Telescope marks<cr>","Show Marks"},
     },
     t = {
         name = "Terminal",
