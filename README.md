@@ -8,7 +8,10 @@ install
 ## MY GUI
 - [goneovim](https://github.com/akiyosi/goneovim)
 
-
+## Telescope
+```bash
+brew install ripgrep
+```
 ## colorscheme
 https://github.com/sainnhe/edge
 -- [theme_github](https://github.com/rafi/awesome-vim-colorschemes)
