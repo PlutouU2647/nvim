@@ -70,7 +70,7 @@ return packer.startup(function(use)
     }
     use {
         'nvim-treesitter/nvim-treesitter',
-        opt = true,
+        --opt = true,
         --event = {"BufReadPre", "BufNewFile"},
         event = "BufWinEnter",
         run = ':TSUpdate',
