@@ -94,3 +94,4 @@ let g:mkdp_filetypes = ['markdown']
 --[[
 --https://github.com/iamcco/markdown-preview.nvim
 --]]
+--cd ~/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim/app/
