@@ -318,7 +318,7 @@ return packer.startup(function(use)
     use {
         'iamcco/markdown-preview.nvim',
         opt = true,
-        ft = {'markdown', 'vimviki'},
+        ft = {'markdown', 'vimwiki'},
         run = "cd app && yarn install",
         config = "require('plugins/nv-markdown-preview')",
     }

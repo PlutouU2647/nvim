@@ -91,3 +91,6 @@ let g:mkdp_page_title = '「${name}」'
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
 ]])
+--[[
+--https://github.com/iamcco/markdown-preview.nvim
+--]]
