@@ -5,6 +5,12 @@ install
 ## plugin manage
 [packer](https://github.com/wbthomason/packer.nvim)
 
+
+## requirement
+- Telescope
+    - ripgrep
+    - pynvim
+
 ## MY GUI
 - [goneovim](https://github.com/akiyosi/goneovim)
 
@@ -60,6 +66,7 @@ sudo apt-get install xclip
 cd /Users/lawrence/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim/app
 yarn install
 ```
+
 
 
 
