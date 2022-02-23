@@ -249,6 +249,7 @@ return packer.startup(function(use)
         'L3MON4D3/LuaSnip', --snippet engine
         --after = 'hrsh7th/nvim-cmp',
         --event = 'InsertLeave',
+        config = "require('plugins/nv-luasnip')",
     }
     --use {
         --"rafamadriz/friendly-snippets", -- a bunch of snippets to use
@@ -318,8 +319,9 @@ return packer.startup(function(use)
     use {
         'iamcco/markdown-preview.nvim',
         opt = true,
-        ft = {'markdown', 'vimwiki'},
+        --ft = {'markdown', 'vimwiki'},
         run = "cd app && yarn install",
+        cmd = "MarkdownPreview",
         config = "require('plugins/nv-markdown-preview')",
     }
     use {

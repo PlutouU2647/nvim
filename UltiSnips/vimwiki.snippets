@@ -1,3 +1,7 @@
+# ┌──────┐
+# │ Math │
+# └──────┘
+
 # mk 表示 make Ketax
 snippet mk "Math" wA
 $${1}$`!p
@@ -57,6 +61,15 @@ endsnippet
 #\\frac{${VISUAL}}{$1}$0
 #endsnippet
 
+# sum 表示求和
+snippet sum "sum" wA
+\sum_{${1:i=1}}^{${2:n}}${3:${VISUAL}}$0
+endsnippet
+
+# infty 表示无穷
+snippet ooo "infty" wA
+\infty$0
+endsnippet
 
 
 #输入当前日期
@@ -226,4 +239,6 @@ graph TD
 ${1}
 \`\`
 endsnippet
+
+
 
