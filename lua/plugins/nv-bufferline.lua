@@ -31,3 +31,4 @@ require("bufferline").setup {
 
 
 -- 'https://github.com/akinsho/bufferline.nvim'
+-- TODO add bufferline close key
