@@ -12,7 +12,8 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 
-g.nvim_tree_respect_buf_cwd = 1  -- for projects plugin
+--g.nvim_tree_respect_buf_cwd = 1  -- for projects plugin
+
 --g.nvim_tree_add_trailing = 0 -- append a trailing slash to folder names
 --g.nvim_tree_git_hl = 0
 --g.nvim_tree_highlight_opened_files = 0
@@ -20,10 +21,6 @@ g.nvim_tree_respect_buf_cwd = 1  -- for projects plugin
 --g.nvim_tree_quit_on_open = 0 -- closes tree when file's opened
 --g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 
-g.nvim_tree_window_picker_exclude = {
-   filetype = { "notify", "packer", "qf" },
-   buftype = { "terminal" },
-}
 
 g.nvim_tree_show_icons = {
    folders = 1,
@@ -73,44 +70,31 @@ nvim_tree.setup {
    },
    mappings = {
     custom_only = false,
-    list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
+        list = {
+            { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
+            { key = "h", cb = tree_cb "close_node" },
+            { key = "v", cb = tree_cb "vsplit" },
+        },
      },
-         },
+     actions = {
+    change_dir = {
+      enable = false,
+      global = false,
+    },
+    open_file = {
+      quit_on_open = false,
+      resize_window = false,
+      window_picker = {
+        enable = true,
+        chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+        exclude = {
+          filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame", },
+          buftype  = { "nofile", "terminal", "help", },
+        }
+      }
+    }
+  }
 }
--- following options are the default
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
-----------
---vim.g.nvim_tree_indent_markers = 1
---require'nvim-tree'.setup {
-    --auto_close = 1,
-    --auto_open = 1,
-    ----gitignore = 1,
---}
---vim.g.nvim_tree_icons = {
-   --default = "",
-   --symlink = "",
-   --git = {
-      --deleted = "",
-      --ignored = "◌",
-      --renamed = "➜",
-      --staged = "✓",
-      --unmerged = "", unstaged = "✗",
-      --untracked = "★",
-   --},
-   --folder = {
-      --default = "",
-      --empty = "",
-      --empty_open = "",
-      --open = "",
-      --symlink = "",
-      --symlink_open = "",
-   --},
---}
-
-
 
 ----------
 --vim.g.nvim_tree_width = 25
