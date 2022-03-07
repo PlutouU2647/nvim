@@ -92,15 +92,19 @@ return packer.startup(function(use)
         --after = 'nvim-telescope/telescope.nvim',
     }
     -- colorscheme
-    use {
-        'EdenEast/nightfox.nvim',  -- colorscheme
+    --use {
+        --'EdenEast/nightfox.nvim',  -- colorscheme
         --config = "require('plugins/theme-nightfox')",
         --config = "vim.cmd('colorscheme duskfox')"
         --
-    }
+    --}
+    --use {
+        --'navarasu/onedark.nvim',
+        --config = "require('plugins/theme-onedark')",
+    --}
     use {
-        'navarasu/onedark.nvim',
-        config = "require('plugins/theme-onedark')",
+        'Mofiqul/dracula.nvim',
+        config = "require('plugins/theme-dracula')",
     }
 
 

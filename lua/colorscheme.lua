@@ -1,4 +1,4 @@
---vim.cmd('colorscheme duskfox')
+vim.cmd('colorscheme dracula')
 
 --vim.cmd('colorscheme rose-pine')
 
