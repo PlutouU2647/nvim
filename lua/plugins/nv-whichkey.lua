@@ -126,16 +126,27 @@ vim.o.timeoutlen = 250
 
 local wkl = require('which-key')
 
+-- get oprating system if it's linux or macos
+
+
 vim.cmd('autocmd FileType * lua setKeybinds()')
 function setKeybinds()
     local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
     local optss = { prefix = '<leader>', buffer = 0 }
     local opt = {noremap = true, silent = false }
     local map = vim.api.nvim_buf_set_keymap
+    local os = vim.fn.systemlist("uname")[1]
 
     if fileTy == 'python' then
-        map(0, 'n', '<C-m>', '<plug>SlimeSendCell:IPythonCellNextCell<CR>', {noremap = false, silent = false })
-        --map(0, 'n', '<C-a>', ':echo "hello"<cr>', opt)
+        if os == 'Darwin' then
+            map(0, 'n', '<C-m>', ':IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })
+            print('mac')
+        elseif os == "Linux" then
+            map(0, 'n', '<C-m>', '<plug>SlimeSendCell:IPythonCellNextCell<CR>', {noremap = false, silent = false })
+            print('linux')
+        end
+
+
         wkl.register({
             k = {":IPythonCellInsertAbove<CR>","Insert Above",mode = "n",silent = true},
             j = {":IPythonCellInsertBelow<CR>","Insert Below",mode = "n",silent = true},
