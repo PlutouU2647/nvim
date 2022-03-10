@@ -299,10 +299,6 @@ return packer.startup(function(use)
         opt = true,
         ft = 'tex'
     }
-    --use {
-        --'vimwiki/vimwiki',
-        --config = "require('plugins/nv-vimwiki')",
-    --}
     use {
         'SirVer/ultisnips'
     }
@@ -351,4 +347,6 @@ return packer.startup(function(use)
     end
 end)
 
--- 'https://github.com/wbthomason/packer.nvim'
+--[[
+https://github.com/wbthomason/packer.nvim
+--]]
