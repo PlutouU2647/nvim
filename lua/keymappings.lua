@@ -160,8 +160,8 @@ map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>",
 -- ┌─────────┐
 -- │ Luasnip │
 -- └─────────┘
-map('n', '<D-l>', "<cmd>Telescope ultisnips<CR>", opt)
-map('i', '<D-l>', "<cmd>Telescope ultisnips<CR>", opt)
+map('n', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
+map('i', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
 
 
 --map('n', ''':silent !open "obsidian://open?vault=VAULTNAME&file=' . expand('%:r') . " ''', opt)

@@ -133,5 +133,6 @@ let g:slime_cell_delimiter = "# %%"
 --]])
 
 
---
--- 'https://github.com/hanschen/vim-ipython-cell'
+--[[
+https://github.com/hanschen/vim-ipython-cell
+--]]
