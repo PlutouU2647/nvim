@@ -1,5 +1,6 @@
 Terminal = require('toggleterm.terminal').Terminal
-
+local map = vim.api.nvim_set_keymap
+local opt = {noremap = true, silent = true }
 
 
 require'toggleterm'.setup{
@@ -58,6 +59,7 @@ function _lfpicker_toggle()
   lfpicker:toggle()
 end
 
+map('n', '<c-p>', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 
 
 
