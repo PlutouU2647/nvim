@@ -15,15 +15,7 @@ local toggle_ipython = function()
     local ipython = Terminal:new({cmd = "ipython", size = 60, direction= "vertical", dir="%:p:h"})
     return ipython:toggle()
 end
--- ranger
-local toggle_ranger = function()
-    local ranger = Terminal:new({cmd = "ranger", direction= "float", dir="%:p:h"})
-    return ranger:toggle()
-end
-local toggle_lf = function()
-    local lf = Terminal:new({cmd = "lf", direction= "float", dir="%:p:h"})
-    return lf:toggle()
-end
+
 local mappings = {
     --i = {"<Plug>SlimeRegionSend","Slime Run Selected code",mode = "v"},
     s = {":%s/","Search and replace",mode = "n",silent = false},
@@ -67,9 +59,9 @@ local mappings = {
         t = {":ToggleTerm dir=%:p:h<cr>",                 "Split Below"},
         f = {toggle_float,                                "Floating Terminal"},
         g = {toggle_lazygit,                              "LazyGit"},
-        p = {toggle_ipython,                          "Ipython"},
-        r = {toggle_ranger,                               "Ranger"},
-        l = {toggle_lf,                                   "Lf"},
+        p = {toggle_ipython,                              "Ipython"},
+        l = {"<cmd>lua _lfpicker_toggle()<cr>",           "Lf"},
+
     },
     l = {
         name = "LSP",

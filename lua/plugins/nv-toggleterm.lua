@@ -59,7 +59,6 @@ function _lfpicker_toggle()
   lfpicker:toggle()
 end
 
-map('n', '<c-p>', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 
 
 

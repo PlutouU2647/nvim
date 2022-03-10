@@ -163,6 +163,14 @@ map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>",
 map('n', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
 map('i', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
 
+-- ┌────────────┐
+-- │ ToggleTerm │
+-- └────────────┘
+map('n', '<c-p>', '<cmd>lua _lfpicker_toggle()<cr>', opt)
+map('n', '<leader>lf', '<cmd>lua _lfpicker_toggle()<cr>', opt)
+
+
+
 
 --map('n', ''':silent !open "obsidian://open?vault=VAULTNAME&file=' . expand('%:r') . " ''', opt)
 --
