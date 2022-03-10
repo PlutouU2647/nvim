@@ -17,6 +17,7 @@ install
 ## Telescope
 ```bash
 brew install ripgrep
+brew install fd
 ```
 ## colorscheme
 https://github.com/sainnhe/edge

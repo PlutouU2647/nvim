@@ -91,6 +91,9 @@ return packer.startup(function(use)
         --after = "telescope.nvim"
         --after = 'nvim-telescope/telescope.nvim',
     }
+    use {
+        'fhill2/telescope-ultisnips.nvim'
+    }
     -- colorscheme
     --use {
         --'EdenEast/nightfox.nvim',  -- colorscheme

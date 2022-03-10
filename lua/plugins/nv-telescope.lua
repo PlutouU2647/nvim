@@ -106,7 +106,10 @@ pickers = {
 --plugins
 --require('telescope').load_extension 'fzf'
 require('telescope').load_extension'projects'
+--require('telescope').load_extension('luasnip')
+require('telescope').load_extension('ultisnips')
 
+--require'telescope'.extensions.ultisnips.ultisnips{}
 
 require("project_nvim").setup {
       manual_mode = false,

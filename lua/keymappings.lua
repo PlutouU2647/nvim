@@ -157,6 +157,11 @@ map('n', "<LocalLeader><LocalLeader>", ":silent !open 'obsidian://open?vault=mar
 map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
 
+-- ┌─────────┐
+-- │ Luasnip │
+-- └─────────┘
+map('n', '<D-l>', "<cmd>Telescope ultisnips<CR>", opt)
+map('i', '<D-l>', "<cmd>Telescope ultisnips<CR>", opt)
 
 
 --map('n', ''':silent !open "obsidian://open?vault=VAULTNAME&file=' . expand('%:r') . " ''', opt)
