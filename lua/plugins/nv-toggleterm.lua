@@ -64,7 +64,6 @@ end
 
 
 
-
 --[Get_the_name_of_the_current_file](https://vim.fandom.com/wiki/Get_the_name_of_the_current_file)
 -- 'https://github.com/akinsho/toggleterm.nvim'
 -- todo
@@ -80,5 +79,7 @@ end
 --:TermExec size=30 cmd="git status" dir=~/work-repo
 --Since distinguishing the size and dir from the command would have been tough otherwise
 
---expand('%:p:h')
---ToggleTerm size=25 dir=%:p:h
+
+--[[
+https://github.com/akinsho/toggleterm.nvim
+--]]
