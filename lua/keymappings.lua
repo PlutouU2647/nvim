@@ -169,7 +169,12 @@ map('i', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
 map('n', '<c-p>', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 map('n', '<leader>lf', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 
-
+-- ┌────────┐
+-- │ WINDOW │
+-- └────────┘
+map('n', '`l', '<cmd>tabn<cr>', opt)
+map('n', '`h', '<cmd>tabp<cr>', opt)
+map('n', '`c', '<cmd>tabnew %<cr>', opt)
 
 
 --map('n', ''':silent !open "obsidian://open?vault=VAULTNAME&file=' . expand('%:r') . " ''', opt)
