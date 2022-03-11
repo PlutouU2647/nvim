@@ -6,9 +6,27 @@ install
 [packer](https://github.com/wbthomason/packer.nvim)
 
 
+## dependency
+``` shell
+ape install ripgrep
+```
+``` shell
+sudo apt-get install xclip
+sudo apt install xclip
+echo 111 > xclip
+```
+- install dependency for pynvim
+```
+pip install pynvim
+```
+- format
+
+```
+pip3 install --upgrade sqlparse
+```
+
 ## requirement
 - Telescope
-    - ripgrep
     - pynvim
 
 ## MY GUI
@@ -47,17 +65,7 @@ pip install 'python-lsp-server[all]'
 [用 Vim 写 Python 的最佳实践是什么？](https://www.zhihu.com/question/19655689)
 
 
-## format
 
-```
-pip3 install --upgrade sqlparse
-```
-- install dependency for pynvim
-```
-pip install pynvim
-```
-
-sudo apt-get install xclip
 
 
 ## markdown preview
