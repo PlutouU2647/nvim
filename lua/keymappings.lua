@@ -56,8 +56,6 @@ map('v', '>', '>gv', opt)
 map('n', '<TAB>', ':bnext<CR>', opt)
 map('n', '<S-TAB>', ':bprevious<CR>', opt)
 --map('n', '<C-w>', ':bd<CR>', opt)
-map('n', '<C-w>', ':bdelete<CR>', opt)
-map('n', '<D-w>', ':bdelete<CR>', opt)
 --map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>', opt)
 map('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', opt)
 map('n', '<leader>2', '<Cmd>BufferLineGoToBuffer 2<CR>', opt)
@@ -67,8 +65,6 @@ map('n', '<leader>5', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 
 
 
---TODO
-map('n', '<D-1>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 
 
 
@@ -85,8 +81,6 @@ map('v', 'K', ':m \'<-2<CR>gv=gv\'' , opt)
 -- comment
 map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
-map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
-map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 -- 改变窗口大小
 --map('n','<up>', ':res -2<CR>', opt)
 --map('n','<down>', ':res +2<CR>', opt)
@@ -130,10 +124,6 @@ nmap \ :
 -- terminal
 --
 --
--- goneovim
-map('n','<D-v>', 'a<C-r>+<Esc>', opt)
-map('i','<D-v>', '<C-r>+', opt)
-map('c','<D-v>', '<C-r>+', opt)
 
 
 --
@@ -157,11 +147,6 @@ map('n', "<LocalLeader><LocalLeader>", ":silent !open 'obsidian://open?vault=mar
 map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
 
--- ┌─────────┐
--- │ Luasnip │
--- └─────────┘
-map('n', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
-map('i', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
 
 -- ┌────────────┐
 -- │ ToggleTerm │
@@ -175,6 +160,36 @@ map('n', '<leader>lf', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 map('n', '`l', '<cmd>tabn<cr>', opt)
 map('n', '`h', '<cmd>tabp<cr>', opt)
 map('n', '`c', '<cmd>tabnew %<cr>', opt)
+
+
+-- ┌──────────┐
+-- │ goneovim │
+-- └──────────┘
+map('n','<D-v>', 'a<C-r>+<Esc>', opt)
+map('i','<D-v>', '<C-r>+', opt)
+map('c','<D-v>', '<C-r>+', opt)
+--TODO
+--map('n', '<D-1>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
+map('n', '<C-w>', ':bdelete<CR>', opt)
+map('n', '<D-w>', ':bdelete<CR>', opt)
+map('n', '<D-o>', ':Telescope find_files<CR>', opt)
+
+map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
+map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
+-- ┌─────────┐
+-- │ Luasnip │
+-- └─────────┘
+map('n', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
+map('i', '<D-l>', "<cmd>Telescope ultisnips theme=dropdown<CR>", opt)
+
+-- ┌────────────┐
+-- │ BufferLine │
+-- └────────────┘
+map('n', '<D-1>', '<Cmd>BufferLineGoToBuffer 1<CR>', opt)
+map('n', '<D-2>', '<Cmd>BufferLineGoToBuffer 2<CR>', opt)
+map('n', '<D-3>', '<Cmd>BufferLineGoToBuffer 3<CR>', opt)
+map('n', '<D-4>', '<Cmd>BufferLineGoToBuffer 4<CR>', opt)
+map('n', '<D-5>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 
 
 --map('n', ''':silent !open "obsidian://open?vault=VAULTNAME&file=' . expand('%:r') . " ''', opt)
