@@ -132,10 +132,8 @@ function setKeybinds()
     if fileTy == 'python' then
         if os == 'Darwin' then
             map(0, 'n', '<C-m>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })
-            print('mac')
         elseif os == "Linux" then
-            map(0, 'n', '<C-m>', '<plug>SlimeSendCell:IPythonCellNextCell<CR>', {noremap = false, silent = false })
-            print('linux')
+            map(0, 'n', '<C-m>', '<plug>IPythonCellExecuteCellVerboseJump<CR>', {noremap = false, silent = false })
         end
 
 
