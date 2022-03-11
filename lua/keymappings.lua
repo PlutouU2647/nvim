@@ -160,7 +160,8 @@ map('n', '<leader>lf', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 map('n', '`l', '<cmd>tabn<cr>', opt)
 map('n', '`h', '<cmd>tabp<cr>', opt)
 map('n', '`c', '<cmd>tabnew %<cr>', opt)
-
+map('n', '`v', '<cmd>vs<CR>', opt)
+map('n', '`b', '<cmd>sv<CR>', opt)
 
 -- ┌──────────┐
 -- │ goneovim │
