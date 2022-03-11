@@ -10,12 +10,7 @@ if !empty($TMUX)
             \ 'target_pane': '{last}' }
     let g:slime_dont_ask_default = 1
 else
-    echo "vim mode"
     let g:slime_target = "neovim"
-    let g:slime_last_channel = 7
-    let g:slime_default_config = {
-            \ 'jobid':  '7' }
-    let g:slime_dont_ask_default = 1
 let g:slime_cell_delimiter = "# %%"
 ]])
 
