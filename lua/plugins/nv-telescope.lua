@@ -37,6 +37,7 @@ pickers = {
         ["<C-k>"] = actions.move_selection_previous,
 
         ["<C-c>"] = actions.close,
+        ["<D-o>"] = actions.close,
 
         ["<Down>"] = actions.move_selection_next,
         ["<Up>"] = actions.move_selection_previous,
