@@ -1,3 +1,4 @@
+
 # ┌──────┐
 # │ Math │
 # └──────┘
@@ -75,6 +76,11 @@ endsnippet
 #输入当前日期
 snippet today "Date"
 `date +%F`
+endsnippet
+
+# 输入当前时间
+snippet time "Time"
+`date +%H:%M:%S`
 endsnippet
 
 
@@ -268,3 +274,26 @@ endsnippet
 snippet plug "Insert a new plugin on my vimrc" w
 Plug '${1:`!v substitute(@+, ' \|\n', '', 'g' )`}'
 endsnippet
+
+
+# zettelcasken
+snippet idea` "zettelcasken"
+---
+date: `date +%F`
+---
+
+# Title
+${1}
+
+# Reference
+${2}
+
+
+endsnippet
+
+
+# get current file name
+snippet file "Get current file name" w
+`('%:t')`
+endsnippet
+
