@@ -258,17 +258,13 @@ endsnippet
 
 
 # link
-#snippet link "link"
 #[${1:Link Text}](${2:http://example.com})
-#endsnippet
+snippet link "link"
+[${1}](${2:`!v substitute(@+, ' \|\n', '', 'g' )`})
+endsnippet
 
 #${1:${VISUAL}}
 
 snippet plug "Insert a new plugin on my vimrc" w
 Plug '${1:`!v substitute(@+, ' \|\n', '', 'g' )`}'
-endsnippet
-
-
-snippet link "insert link from clipboard"
-[${1:`!p snip.rv = clipboard`}](${2:`!p snip.rv = clipboard`})
 endsnippet
