@@ -6,12 +6,18 @@ let g:vimwiki_list = [{'path': '/Users/$USER/Library/Mobile Documents/iCloud~md~
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 au filetype vimwiki silent! iunmap <buffer> <Tab>
-au filetype vimwiki silent! iunmap <buffer> <CR>
 au filetype vimwiki silent! iunmap <buffer> <S-Tab>
 let g:vimwiki_use_mouse = 1
 let g:vimwiki_auto_chdir = 1
 let g:vimwiki_hl_headers = 1
 ]])
+--au filetype vimwiki silent! iunmap <buffer> <CR>
+--
+--
+--
+--
+--
+--
 --let g:vimwiki_ext2syntax = {'.md': 'markdown'}
 --let g:vimwiki_syntax_variables.markdown.Link1 = vimwiki#vars#get_global('WikiLinkTemplate1')
 --let g:vimwiki_syntax_variables.markdown.Link1 = vimwiki#vars#get_global('WikiLinkTemplate1')
