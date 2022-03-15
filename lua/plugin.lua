@@ -315,6 +315,12 @@ return packer.startup(function(use)
 	    ft = "markdown",
     }
     use {
+        'sigma2647/goyo.vim',
+        opt = true,
+	    ft = "markdown",
+        cmd = "Goyo",
+    }
+    use {
         'plasticboy/vim-markdown',
         opt = true,
 	    ft = "markdown",
