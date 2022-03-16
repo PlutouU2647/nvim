@@ -280,20 +280,15 @@ endsnippet
 snippet idea` "zettelcasken"
 ---
 date: `date +%F`
+Tags: [${1},]
 ---
 
-# Title
-${1}
-
-# Reference
+# `!p snip.rv = snip.fn.split('.')[0]`
 ${2}
 
+---
+# Reference
+${0}
 
-endsnippet
-
-
-# get current file name
-snippet file "Get current file name" w
-`('%:t')`
 endsnippet
 
