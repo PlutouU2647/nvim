@@ -17,6 +17,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 
 -- Normal
+map('n', '<Bar>', '<CMD>echo "empty key!!"<CR>', {noremap = true, silent = false})
+map('n', '<Bslash>', ':', {noremap = true, silent = false})
 map('n', '<Leader>h', ':set hlsearch!<CR>', opt)
 map('n', '<Space>', '<NOP>', opt)
 --map('n',"<leader>\",':',opt)
@@ -115,9 +117,6 @@ map('i','<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u', opt)
 
 --plug
 --map('n', 'L', ':UndotreeToggle<CR>' , opt)
-vim.cmd([[
-nmap \ :
-]])
 
 --tnoremap <ESC> <C-\><C-n>
 -- tmux_navigator
@@ -179,6 +178,8 @@ map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('n', '<S-D-]>', '<Cmd>bnext<CR>', opt)
 map('n', '<S-D-[>', '<Cmd>bprevious<CR>', opt)
+
+map('n', '<D-p>', '<Cmd>lua _lfpicker_toggle()<CR>', opt)
 
 -- ┌─────────┐
 -- │ Luasnip │

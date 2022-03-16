@@ -30,8 +30,8 @@ local mappings = {
     m = {":SymbolsOutline<CR>","SymbolsOutline"},
     --r = {":w<cr> | :!python %<CR>","Run Code"},
     --r = {":w<cr>|:AsyncRun!python %<CR>","Run Code"},
-    r = {"<cmd>RunCode<cr>","Run Code"},
-    H = {"<cmd>Dashboard<cr>","Home"},
+    r = {"<CMD>RunCode<cr>","Run Code"},
+    H = {"<CMD>Dashboard<cr>","Home"},
     ["1"] = "which_key_ignore",
     ["2"] = "which_key_ignore",
     ["3"] = "which_key_ignore",
@@ -43,16 +43,16 @@ local mappings = {
     ["9"] = "which_key_ignore",
     f = {
         name = "Telescope",
-        r = {"<cmd>Telescope oldfiles<cr>", "Recent File"},
-        c = {"<cmd>Telescope colorscheme<cr>", "Change Theme"},
-        f = {"<cmd>Telescope find_files<cr>", "Find Files"},
-        g = {"<cmd>Telescope live_grep<cr>", "Live Grep"},
-        h = {"<cmd>Telescope help_tags<cr>", "Help Tags"},
-        b = {"<cmd>Telescope buffers<cr>", "Search Buffer"},
-        --d = {"<cmd>lua require('plugins/nv-telescope').search_dotfiles()<cr>", "Search Dotfile"},
-        --q = {"<cmd>lua require('plugins/nv-telescope').search_quantcode()<cr>","Search Quantcode"},
-        p = {"<cmd>Telescope projects<cr>","Open Project"},
-        m = {"<cmd>Telescope marks<cr>","Show Marks"},
+        r = {"<CMD>Telescope oldfiles<cr>", "Recent File"},
+        c = {"<CMD>Telescope colorscheme<cr>", "Change Theme"},
+        f = {"<CMD>Telescope find_files<cr>", "Find Files"},
+        g = {"<CMD>Telescope live_grep<cr>", "Live Grep"},
+        h = {"<CMD>Telescope help_tags<cr>", "Help Tags"},
+        b = {"<CMD>Telescope buffers<cr>", "Search Buffer"},
+        --d = {"<CMD>lua require('plugins/nv-telescope').search_dotfiles()<cr>", "Search Dotfile"},
+        --q = {"<CMD>lua require('plugins/nv-telescope').search_quantcode()<cr>","Search Quantcode"},
+        p = {"<CMD>Telescope projects<cr>","Open Project"},
+        m = {"<CMD>Telescope marks<cr>","Show Marks"},
     },
     t = {
         name = "Terminal",
@@ -60,26 +60,26 @@ local mappings = {
         f = {toggle_float,                                "Floating Terminal"},
         g = {toggle_lazygit,                              "LazyGit"},
         p = {toggle_ipython,                              "Ipython"},
-        l = {"<cmd>lua _lfpicker_toggle()<cr>",           "Lf"},
+        l = {"<CMD>lua _lfpicker_toggle()<cr>",           "Lf"},
 
     },
     l = {
         name = "LSP",
-        i = {"<cmd>LspInfo<cr>",                                                       "LSP INFO"},
-        I = {"<cmd>LspInstallInfo<cr>",                                                "LSP INFO"},
-        k = {"<cmd>lua vim.lsp.buf.signature_help()<cr>",                              "Signature Help"},
-        K = {"<cmd>lua vim.lsp.buf.hover()<cr>",                                       "Hover Info"},
-        w = {"<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>",                        "Add Workspace Folder"},
-        W = {"<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>",                     "remove Workspace Folder"},
-        l = {"<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>",  "List Workspace Folders"},
-        t = {"<cmd>lua vim.lsp.buf.type_definition()<cr>",                             "Type Definition"},
-        d = {"<cmd>lua vim.lsp.buf.definition()<cr>",                                  "Go To Definition"},
-        D = {"<cmd>lua vim.lsp.buf.declaration()<cr>",                                 "Go To Declaration"},
-        --r = {"<cmd>lua vim.lsp.buf.references()<cr>",                                "References"},
-        r = {"<cmd>lua vim.lsp.buf.rename()<cr>",                                      "Rename"},
-        a = {"<cmd>lua vim.lsp.buf.code_action()<cr>",                                 "Code Action"},
-        e = {"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<cr>",                "Show Line Diagnostics"},
-        n = {"<cmd>lua vim.lsp.diagnostic.go_to_next()<cr>",                           "show line diagnostics"},
+        i = {"<CMD>LspInfo<cr>",                                                       "LSP INFO"},
+        I = {"<CMD>LspInstallInfo<cr>",                                                "LSP INFO"},
+        k = {"<CMD>lua vim.lsp.buf.signature_help()<cr>",                              "Signature Help"},
+        K = {"<CMD>lua vim.lsp.buf.hover()<cr>",                                       "Hover Info"},
+        w = {"<CMD>lua vim.lsp.buf.add_workspace_folder()<cr>",                        "Add Workspace Folder"},
+        W = {"<CMD>lua vim.lsp.buf.remove_workspace_folder()<cr>",                     "remove Workspace Folder"},
+        l = {"<CMD>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>",  "List Workspace Folders"},
+        t = {"<CMD>lua vim.lsp.buf.type_definition()<cr>",                             "Type Definition"},
+        d = {"<CMD>lua vim.lsp.buf.definition()<cr>",                                  "Go To Definition"},
+        D = {"<CMD>lua vim.lsp.buf.declaration()<cr>",                                 "Go To Declaration"},
+        --r = {"<CMD>lua vim.lsp.buf.references()<cr>",                                "References"},
+        r = {"<CMD>lua vim.lsp.buf.rename()<cr>",                                      "Rename"},
+        a = {"<CMD>lua vim.lsp.buf.code_action()<cr>",                                 "Code Action"},
+        e = {"<CMD>lua vim.lsp.diagnostic.show_line_diagnostics()<cr>",                "Show Line Diagnostics"},
+        n = {"<CMD>lua vim.lsp.diagnostic.go_to_next()<cr>",                           "show line diagnostics"},
     },
     p ={
         name = "Ipython",
@@ -97,18 +97,18 @@ local mappings = {
     }
     --t = {
         --name = "floaterm",
-        --r = {"<cmd>Telescope oldfiles<cr>"                    , "Open Recent File"},
-        --t = {"<cmd>FloatermNew --wintype=popup --height=6<CR>"        , "terminal"},
-        --f = {"<cmd>FloatermNew fzf<CR>"                               , "fzf"},
-        --g = {"<cmd>FloatermNew lazygit<CR>"                           , "git"},
-        --d = {"<cmd>FloatermNew lazydocker<CR>"                        , "docker"},
-        --n = {"<cmd>FloatermNew node<CR>"                              , "node"},
-        --N = {"<cmd>FloatermNew nnn<CR>"                               , "nnn"},
-        --p = {"<cmd>FloatermNew ipython<CR>"                           , "ipython"},
-        --r = {"<cmd>FloatermNew ranger<CR>"                            , "ranger"},
-        --t = {"<cmd>FloatermToggle<CR>"                                , "toggle"},
-        --y = {"<cmd>FloatermNew ytop<CR>"                              , "ytop"},
-        --s = {"<cmd>FloatermNew ncdu<CR>"                              , "ncdu"},
+        --r = {"<CMD>Telescope oldfiles<cr>"                    , "Open Recent File"},
+        --t = {"<CMD>FloatermNew --wintype=popup --height=6<CR>"        , "terminal"},
+        --f = {"<CMD>FloatermNew fzf<CR>"                               , "fzf"},
+        --g = {"<CMD>FloatermNew lazygit<CR>"                           , "git"},
+        --d = {"<CMD>FloatermNew lazydocker<CR>"                        , "docker"},
+        --n = {"<CMD>FloatermNew node<CR>"                              , "node"},
+        --N = {"<CMD>FloatermNew nnn<CR>"                               , "nnn"},
+        --p = {"<CMD>FloatermNew ipython<CR>"                           , "ipython"},
+        --r = {"<CMD>FloatermNew ranger<CR>"                            , "ranger"},
+        --t = {"<CMD>FloatermToggle<CR>"                                , "toggle"},
+        --y = {"<CMD>FloatermNew ytop<CR>"                              , "ytop"},
+        --s = {"<CMD>FloatermNew ncdu<CR>"                              , "ncdu"},
      --},
 }
 local opts = {prefix = "<leader>"}
@@ -131,9 +131,10 @@ function setKeybinds()
 
     if fileTy == 'python' then
         if os == 'Darwin' then
-            map(0, 'n', '<C-m>', '<cmd>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })
+            map(0, 'n', '<C-M>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })   -- execute cell
+            map(0, 'n', '<S-CR>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })  -- shift + enter execute cell and jump to next cell
         elseif os == "Linux" then
-            map(0, 'n', '<C-m>', '<cmd>IPythonCellExecuteCellVerboseJump<CR>', {noremap = false, silent = false })
+            map(0, 'n', '<C-m>', '<CMD>IPythonCellExecuteCellVerboseJump<CR>', {noremap = false, silent = false })
         end
 
 
@@ -148,6 +149,7 @@ function setKeybinds()
         }, optss)
         --vim.api.set
     elseif fileTy == 'markdown' then
+        --map(0, 'n', '<M-CR>', '<CMD>echo "hello"<CR>', {noremap = false, silent = false })  -- option + enter execute cell and insert below
         wkl.register({
             m = {
                 name = "markdown",
@@ -168,15 +170,15 @@ presets.objects['4'] = nil
     --print("markdown")
     ----mappings.m.f = {
         ----name = "Markdown",
-        ----f = {"<cmd>MarkdownFormat<cr>", "Format"},
-        ----g = {"<cmd>MarkdownGitHub<cr>", "GitHub"},
-        ----h = {"<cmd>MarkdownHelp<cr>", "Help"},
+        ----f = {"<CMD>MarkdownFormat<cr>", "Format"},
+        ----g = {"<CMD>MarkdownGitHub<cr>", "GitHub"},
+        ----h = {"<CMD>MarkdownHelp<cr>", "Help"},
     --wk.register({
         --["<leader>"] = {
         --m = {
             --name = "MarkDown",
-                --r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-                --i = {"<cmd>MarkdownInsertLink<cr>", "Insert Link"},
+                --r = { "<CMD>Telescope oldfiles<cr>", "Open Recent File" },
+                --i = {"<CMD>MarkdownInsertLink<cr>", "Insert Link"},
             --},
         --},
     --})

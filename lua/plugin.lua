@@ -197,6 +197,7 @@ return packer.startup(function(use)
         'hanschen/vim-ipython-cell',
         opt = true,
         ft = 'python',  -- set filetype only strat out when python file is opened
+        cmd = 'IPythonCellExecuteCellJump',
         config = "require('plugins/nv-ipython-cell')"
     }
     --use {
@@ -272,6 +273,7 @@ return packer.startup(function(use)
         'mg979/vim-visual-multi',
         opt = true,
         event = {"BufReadPre", "BufNewFile"},
+        config = "require('plugins/nv-visualmulti')",
     }
     use {
         'simrat39/symbols-outline.nvim',

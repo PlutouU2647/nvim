@@ -13,8 +13,10 @@ if !empty($TMUX)
 else
     let g:slime_target = "neovim"
 let g:slime_cell_delimiter = "# %%"
+let g:ipython_cell_tag = ['# %%', '```', '```python', '```py']
 ]])
 
+--let g:ipython_cell_tag = "# %%"
 --vim.cmd('autocmd FileType * lua setKeybinds_py()')
 --function setKeybinds_py()
     --local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
