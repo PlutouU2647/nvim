@@ -1,5 +1,6 @@
 -- :help options
 vim.cmd('filetype plugin on')
+vim.cmd('filetype on')
 vim.cmd('syntax on')
 vim.g.nocompatible = true
 vim.o.whichwrap='b,s,<,>,[,],h,l'  -- 允许使用上下左右箭头移动光标

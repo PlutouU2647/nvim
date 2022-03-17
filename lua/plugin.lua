@@ -302,7 +302,9 @@ return packer.startup(function(use)
         ft = 'tex'
     }
     use {
-        'SirVer/ultisnips'
+        'SirVer/ultisnips',
+        config = "require('plugins/nv-ultisnips')",
+
     }
     use {
         'rmagatti/goto-preview',
