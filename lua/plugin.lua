@@ -299,7 +299,7 @@ return packer.startup(function(use)
     use {
         'lervag/vimtex',
         opt = true,
-        ft = 'tex'
+        ft = {"plaintex", "tex", "latex", "markdown", "vimwiki"}
     }
     use {
         'SirVer/ultisnips',
@@ -327,7 +327,7 @@ return packer.startup(function(use)
     use {
         'plasticboy/vim-markdown',
         opt = true,
-	    ft = "markdown",
+	    ft = {"markdown", "vimwiki"},
     }
     use {
         'iamcco/markdown-preview.nvim',
