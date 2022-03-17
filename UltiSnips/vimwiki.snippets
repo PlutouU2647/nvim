@@ -79,18 +79,13 @@ snippet sum "sum" wA
 endsnippet
 
 # infty 表示无穷
-#snippet ooo "infty" wA
-#\infty$0
-#endsnippet
-
-context "math()"
-snippet ooo "\infty" 
-\infty
+snippet ooo "infty" wA
+\infty$0
 endsnippet
 
 
 priority 100
-context "math()"
+#context "math()"
 snippet '(?<!\\)(vec)' "latexmath" rwA
 \\`!p snip.rv = match.group(1)`{$0}
 endsnippet
@@ -151,8 +146,7 @@ endsnippet
 #^2
 #endsnippet
 
-context "math()"
-snippet sr "^2" 
+snippet sr "^2" iA
 ^2
 endsnippet
 
