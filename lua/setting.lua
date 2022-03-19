@@ -39,10 +39,10 @@ vim.o.expandtab = true  -- expandtab
 vim.o.smarttab = true  -- smarttab
 vim.o.smartindent = true  -- smartindent
 vim.o.shiftwidth = 4  -- shiftwidth
-vim.cmd([[
-autocmd FileType yaml setlocal tabstop=2
-autocmd FileType md setlocal ts=2 sts=2 sw=2 expandtab
-]])
+--vim.cmd([[
+--autocmd FileType yaml setlocal tabstop=2
+--autocmd FileType md setlocal ts=2 sts=2 sw=2 expandtab
+--]])
 
 
 vim.o.fillchars="eob: "
