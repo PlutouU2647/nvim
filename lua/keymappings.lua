@@ -180,6 +180,8 @@ map('n', '<S-D-]>', '<Cmd>bnext<CR>', opt)
 map('n', '<S-D-[>', '<Cmd>bprevious<CR>', opt)
 
 map('n', '<D-p>', '<Cmd>lua _lfpicker_toggle()<CR>', opt)
+map('n', '<S-D-F>', '<Cmd>Telescope live_grep<CR>', opt)
+
 
 -- ┌─────────┐
 -- │ Luasnip │

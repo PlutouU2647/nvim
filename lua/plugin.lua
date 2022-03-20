@@ -327,7 +327,8 @@ return packer.startup(function(use)
     use {
         'plasticboy/vim-markdown',
         opt = true,
-	    ft = {"markdown", "vimwiki"},
+        ft = {"markdown", "vimwiki"},
+        config = "require('plugins/nv-markdown')",
     }
     use {
         'iamcco/markdown-preview.nvim',
