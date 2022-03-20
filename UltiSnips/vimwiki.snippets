@@ -264,13 +264,6 @@ ${1}
 \`\`
 endsnippet
 
-#uml
-snippet mer` "mermaid" wA
-\`\`\` mermaid  
-graph TD
-${1}
-\`\`\`
-endsnippet
 
 
 
@@ -336,3 +329,38 @@ endsnippet
 snippet bmat "bmat" iA
 \begin{bmatrix} $1 \end{bmatrix} $0
 endsnippet
+
+# ┌─────────┐
+# │ Mermaid │
+# └─────────┘
+snippet mermaid_class "mermaid class"
+\`\`\` mermaid  
+classDiagram
+class Shape{
+    <<name>>
+	
+}
+\`\`\`
+endsnippet
+
+#uml
+snippet mer` "mermaid" wA
+\`\`\` mermaid  
+graph TD
+${1}
+\`\`\`
+endsnippet
+
+snippet lp "Long parenthesis"
+\left(${1:${VISUAL:contents}}\right)$0
+endsnippet
+
+# "\\?b(egin)?"
+
+# "\\?b(egin)?"
+snippet begin "beginend"
+\begin{${1:something}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+

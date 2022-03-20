@@ -155,7 +155,7 @@ function setKeybinds()
                 name = "markdown",
                 a = {':MarkdownPreview<CR>', 'Start Preview'},
                 c = {':MarkdownPreviewStop<CR>', 'Stop Preview'},
-                m = {':MarkdownPreviewToggle<CR>', 'Toggle Preview'},
+                m = {':MarkdownPreview<CR>', 'markdown preview'},
             }
         }, optss)
     end
