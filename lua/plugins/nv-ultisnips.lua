@@ -7,6 +7,8 @@ iAwrb 为snippet的选项。
 - b 表示只有在一行的开头才会被触发。
 
 --]]
+
+
 -- TODO:
 -- "设置tab键为触发键
 -- let g:UltiSnipsExpandTrigger = '<tab>'
