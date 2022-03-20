@@ -38,6 +38,7 @@ pickers = {
 
         ["<C-c>"] = actions.close,
         ["<D-o>"] = actions.close,
+        ["<S-D-F>"] = actions.close,
 
         ["<Down>"] = actions.move_selection_next,
         ["<Up>"] = actions.move_selection_previous,
@@ -67,6 +68,8 @@ pickers = {
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
         ["<C-t>"] = actions.select_tab,
+        ["<D-o>"] = actions.close,
+        ["<S-D-F>"] = actions.close,
 
         ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
         ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
