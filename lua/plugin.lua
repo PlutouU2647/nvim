@@ -1,6 +1,7 @@
 --'~/.local/share/nvim/site/pack/packer'
 local fn = vim.fn
 
+
 -- Automatically load plugins
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -14,11 +15,19 @@ if fn.empty(fn.glob(install_path)) > 0 then
     }
 end
 
--- Use a protected call so we don't error out on first use
+-- 在首次配置packer第一次启动不会报错
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
 end
+
+--每次保存都会自动compile
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
 
 -- Have packer use a popup window
 packer.init {
@@ -194,14 +203,17 @@ return packer.startup(function(use)
         'jpalardy/vim-slime',
         opt = true,
         ft = 'python',
-        config = "require('plugins/nv-slime')"
+        config = "require('plugins/nv-slime')",
+        keys = { '<Plug>SlimeConfig'},
+
     }
     use {
         'hanschen/vim-ipython-cell',
         opt = true,
         ft = 'python',  -- set filetype only strat out when python file is opened
         cmd = 'IPythonCellExecuteCellJump',
-        config = "require('plugins/nv-ipython-cell')"
+        config = "require('plugins/nv-ipython-cell')",
+        after = 'vim-slime',
     }
     --use {
         --'skywind3000/asyncrun.vim',
