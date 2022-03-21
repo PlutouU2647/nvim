@@ -2,6 +2,7 @@ local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true }
 vim.cmd([[
 let g:ipython_cell_prefer_external_copy = 1
+let g:slime_python_ipython = 1
 if !empty($TMUX)
     echo "tmux mode"
     let g:slime_target = 'tmux'

@@ -18,11 +18,12 @@ end
 
 local mappings = {
     --i = {"<Plug>SlimeRegionSend","Slime Run Selected code",mode = "v"},
-    s = {":%s/","Search and replace",mode = "n",silent = false},
+    S = {":%s/","Search and replace",mode = "n",silent = false},
+    s = {"<Plug>SlimeSendCell", "Send Cell"},
     --o = {"<Plug>SlimeSendCell","Run Cell",mode = "n",silent = false},
     --i = {":IPythonCellExecuteCellVerbose<CR>","Run Cell",mode = "n",silent = false},
     --g = {":SlimeSendCurrentLine<cr>","Slime Run Paragraph code"},
-    b = {"<CMD>SlimeConfig<CR>","Slime config"},
+    b = {"<Plug>SlimeConfig","Slime config"},
     --q = {":q<CR>","quit"},
     --w = {":w<CR>","save"},
     --q = {":q<CR>","quit"},
@@ -131,6 +132,7 @@ function setKeybinds()
 
     if fileTy == 'python' then
         if os == 'Darwin' then
+            map(0, 'n', '<C-c><C-c>', '<CMD>IPythonCellExecuteCell<CR>', {noremap = false, silent = false })   -- execute cell
             map(0, 'n', '<C-M>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })   -- execute cell
             map(0, 'n', '<S-CR>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })  -- shift + enter execute cell and jump to next cell
         elseif os == "Linux" then
@@ -150,7 +152,12 @@ function setKeybinds()
         --vim.api.set
     elseif fileTy == 'markdown' then
         --map(0, 'n', '<M-CR>', '<CMD>echo "hello"<CR>', {noremap = false, silent = false })  -- option + enter execute cell and insert below
-        map(0, 'n', '<C-c>c', '<CMD>IPythonCellExecuteCell<CR>', {noremap = false, silent = false })   -- execute cell
+        map(0, 'n', '<C-c><C-c>', '<CMD>IPythonCellExecuteCell<CR>', {noremap = false, silent = false })   -- execute cell
+
+        -- 快捷键循环日记
+        map(0, 'n', '<C-[>', '<CMD>VimwikiDiaryPrevDay<CR>', {noremap = false, silent = false })   -- execute cell
+        map(0, 'n', '<C-]>', '<CMD>VimwikiDiaryNextDay<CR>', {noremap = false, silent = false })   -- execute cell
+        vim.b.slime_cell_delimiter = '```'
         wkl.register({
             m = {
                 name = "markdown",
