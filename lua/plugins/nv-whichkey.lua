@@ -22,7 +22,7 @@ local mappings = {
     --o = {"<Plug>SlimeSendCell","Run Cell",mode = "n",silent = false},
     --i = {":IPythonCellExecuteCellVerbose<CR>","Run Cell",mode = "n",silent = false},
     --g = {":SlimeSendCurrentLine<cr>","Slime Run Paragraph code"},
-    b = {"<Plug>SlimeConfig","Slime config"},
+    b = {"<CMD>SlimeConfig<CR>","Slime config"},
     --q = {":q<CR>","quit"},
     --w = {":w<CR>","save"},
     --q = {":q<CR>","quit"},
@@ -150,6 +150,7 @@ function setKeybinds()
         --vim.api.set
     elseif fileTy == 'markdown' then
         --map(0, 'n', '<M-CR>', '<CMD>echo "hello"<CR>', {noremap = false, silent = false })  -- option + enter execute cell and insert below
+        map(0, 'n', '<C-c>c', '<CMD>IPythonCellExecuteCell<CR>', {noremap = false, silent = false })   -- execute cell
         wkl.register({
             m = {
                 name = "markdown",

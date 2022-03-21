@@ -103,3 +103,14 @@ let g:copilot_filetypes = {
     --au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 --augroup END
 --]])
+
+--vim.cmd([[
+--let g:copilot_no_tab_map = v:true
+--let g:copilot_assume_mapped = 0
+--let g:copilot_tab_fallback = ""
+--]])
+
+
+--vim.cmd([[
+--autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
+--]])

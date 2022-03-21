@@ -21,4 +21,6 @@
 
 
 
--- 'https://github.com/jpalardy/vim-slime'
+--[[
+https://github.com/jpalardy/vim-slime
+--]]

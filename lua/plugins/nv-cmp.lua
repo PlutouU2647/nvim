@@ -64,50 +64,35 @@ cmp.setup {
     },
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm { select = true },
-    ["<Tab>"] = function(fallback)
-        if cmp.visible() then
-            cmp.select_next_item()
-        --elseif vim.fn["vsnip#available"](1) > 0 then
-            --u.input("<Plug>(vsnip-expand-or-jump)")
-        else
-            local copilot_keys = vim.fn["copilot#Accept"]()
-            if copilot_keys ~= "" then
-                vim.api.nvim_feedkeys(copilot_keys, "i", true)
-            else
-                fallback()
-            end
-        end
-    end,
-    --["<Tab>"] = cmp.mapping(function(fallback)
+    
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+    --["<Tab>"] = function(fallback)
         --if cmp.visible() then
             --cmp.select_next_item()
-        --elseif luasnip.expandable() then
-            --luasnip.expand()
-        --elseif luasnip.expand_or_jumpable() then
-            --luasnip.expand_or_jump()
-        --elseif check_backspace() then
-            --fallback()
+        ----elseif vim.fn["vsnip#available"](1) > 0 then
+            ----vim.fn.feedkeys('<Plug>(vsnip-expand-or-jump)', '')
+            ----u.input("<Plug>(vsnip-expand-or-jump)")
         --else
-            --fallback()
+            --local copilot_keys = vim.fn["copilot#Accept"]()
+            --if copilot_keys ~= "" then
+                --vim.api.nvim_feedkeys(copilot_keys, "i", true)
+            --else
+                --fallback()
+            --end
         --end
-    --end, {
-      --"i",
-      --"s",
-    --}),
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, {
-      "i",
-      "s",
-    }),
-  },
+    --end,
+      --['<S-tab>'] = cmp.mapping(function (fallback)
+        --local luasnip = require('luasnip')
+        --if cmp.visible() then
+          --cmp.select_prev_item()
+        --elseif luasnip and luasnip.jumpable(-1) then
+          --luasnip.jump(-1)
+        --else
+          --fallback()
+        --end
+      --end, { 'i', 's', 'c' })
+},
+
   -- cmp补全窗口的配置
   formatting = {
     fields = { "abbr", "kind", "menu" },
@@ -118,7 +103,7 @@ cmp.setup {
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         luasnip = "[Luasnip]",
-        buffer = "[Buffer]",
+        buffer = "[Buf]",
         path = "[Path]",
         vsnip = "[Vsnip]",
       })[entry.source.name]
@@ -129,9 +114,8 @@ cmp.setup {
       -- 安装好的插件放在这里
     { name = "nvim_lsp" },
     { name = "luasnip" },
-    { name = "buffer" },
+    { name = "buffer", keyword_lenth = 5 },
     { name = "path" },
-
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
@@ -438,4 +422,9 @@ cmp.setup.cmdline(':', {
 --
 --
 --
---'https://github.com/hrsh7th/nvim-cmp'
+--[[
+https://github.com/hrsh7th/nvim-cmp
+
+How do remap copilot#Accept() in a Lua function?
+https://www.reddit.com/r/neovim/comments/r6ppfl/how_do_remap_copilotaccept_in_a_lua_function/
+--]]
