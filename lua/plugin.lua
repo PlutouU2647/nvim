@@ -146,7 +146,9 @@ return packer.startup(function(use)
 
     }
     use {
-        'preservim/nerdcommenter', config = "require('plugins/nv-nerdcommenter')", event = 'BufRead'
+        'preservim/nerdcommenter',
+        config = "require('plugins/nv-nerdcommenter')",
+        event = 'BufRead'
     }
     --use 'mbbill/undotree'  -- undo tree
     use {
@@ -170,6 +172,7 @@ return packer.startup(function(use)
         --opt = true,
         --cmd = 'ToggleTerm',
         --event = 'BufRead',
+        config = "require('plugins/nv-toggleterm')"
     }
 
     --=========================
@@ -252,6 +255,7 @@ return packer.startup(function(use)
     use {
         'hrsh7th/cmp-vsnip',  -- snippet
         event = 'InsertEnter',
+        config = "require('plugins/nv-vsnip')",
     }
     use {
         'L3MON4D3/LuaSnip', --snippet engine

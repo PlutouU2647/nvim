@@ -171,3 +171,6 @@ let g:vimtex_compiler_progname='nvr'
 --]])
 
 
+vim.cmd([[
+autocmd Filetype yaml setlocal et ts=2 sw=2 sts=0
+]])
