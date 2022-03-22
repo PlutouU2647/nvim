@@ -168,7 +168,7 @@ map('n', '`b', '<cmd>sv<CR>', opt)
 map('n','<D-v>', 'a<C-r>+<Esc>', opt)
 map('i','<D-v>', '<C-r>+', opt)
 map('c','<D-v>', '<C-r>+', opt)
---TODO
+--EDITOR
 --map('n', '<D-1>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 map('n', '<C-w>', ':bdelete<CR>', opt)
 map('n', '<D-w>', ':bdelete<CR>', opt)
@@ -176,12 +176,13 @@ map('n', '<D-o>', ':Telescope find_files<CR>', opt)
 
 map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
-map('n', '<S-D-]>', '<Cmd>bnext<CR>', opt)
-map('n', '<S-D-[>', '<Cmd>bprevious<CR>', opt)
+map('n', '<S-D-]>', '<Cmd>BufferLineCycleNext<CR>', opt)
+map('n', '<S-D-[>', '<Cmd>BufferLineCyclePrev<CR>', opt)
 
 map('n', '<D-p>', '<Cmd>lua _lfpicker_toggle()<CR>', opt)
 map('n', '<S-D-F>', '<Cmd>Telescope live_grep<CR>', opt)
-
+map('n', '<D-[>', '<Cmd>bprevious<CR>', opt)
+map('n', '<D-]>', '<Cmd>bnext<CR>', opt)
 
 -- ┌─────────┐
 -- │ Luasnip │

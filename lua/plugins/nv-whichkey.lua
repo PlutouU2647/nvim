@@ -54,6 +54,7 @@ local mappings = {
         --q = {"<CMD>lua require('plugins/nv-telescope').search_quantcode()<cr>","Search Quantcode"},
         p = {"<CMD>Telescope projects<cr>","Open Project"},
         m = {"<CMD>Telescope marks<cr>","Show Marks"},
+        P = {"<CMD>Telescope packer<cr>","Open Pakcker"},
     },
     t = {
         name = "Terminal",

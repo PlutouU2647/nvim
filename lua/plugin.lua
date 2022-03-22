@@ -21,13 +21,6 @@ if not status_ok then
   return
 end
 
---每次保存都会自动compile
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
 
 -- Have packer use a popup window
 packer.init {
@@ -37,6 +30,27 @@ packer.init {
         end,
     },
 }
+
+vim.cmd [[
+  augroup packer_user_config
+      autocmd!
+      autocmd BufWritePost plugin.lua source <afile> | PackerCompile
+  augroup end
+]]
+
+--[[
+指定某个
+use {
+    "wbthomason/packer.nvim",
+    config = function(config)
+        config.opt_dir = "~/.local/share/nvim/site/pack/packer/opt"
+    end,
+
+
+
+},
+
+--]]
 
 -- plugins
 return packer.startup(function(use)
@@ -102,6 +116,12 @@ return packer.startup(function(use)
     }
     use {
         'fhill2/telescope-ultisnips.nvim'
+    }
+    use {
+        'nvim-telescope/telescope-packer.nvim',
+        --opt = true,
+        --keys = { '<leader>t' },
+        --cmd = 'Telescope packer',
     }
     -- colorscheme
     --use {
@@ -211,7 +231,7 @@ return packer.startup(function(use)
         'hanschen/vim-ipython-cell',
         opt = true,
         ft = 'python',  -- set filetype only strat out when python file is opened
-        cmd = 'IPythonCellExecuteCellJump',
+        cmd = {'IPythonCellExecuteCellJump', 'IPythonCellExecuteCell' },
         config = "require('plugins/nv-ipython-cell')",
         after = 'vim-slime',
     }
