@@ -223,6 +223,7 @@ return packer.startup(function(use)
         'jpalardy/vim-slime',
         opt = true,
         ft = 'python',
+        event = 'TermEnter',
         config = "require('plugins/nv-slime')",
         keys = { '<Plug>SlimeConfig'},
 
@@ -231,6 +232,7 @@ return packer.startup(function(use)
         'hanschen/vim-ipython-cell',
         opt = true,
         ft = 'python',  -- set filetype only strat out when python file is opened
+        event = 'TermEnter',
         cmd = {'IPythonCellExecuteCellJump', 'IPythonCellExecuteCell' },
         config = "require('plugins/nv-ipython-cell')",
         after = 'vim-slime',

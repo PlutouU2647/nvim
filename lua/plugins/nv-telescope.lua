@@ -38,6 +38,7 @@ telescope.setup {
 
                 ["<C-c>"] = actions.close,
                 ["<D-o>"] = actions.close,
+                ["<D-e>"] = actions.close,
                 ["<S-D-F>"] = actions.close,
 
                 ["<Down>"] = actions.move_selection_next,

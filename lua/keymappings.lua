@@ -173,6 +173,7 @@ map('c','<D-v>', '<C-r>+', opt)
 map('n', '<C-w>', ':bdelete<CR>', opt)
 map('n', '<D-w>', ':bdelete<CR>', opt)
 map('n', '<D-o>', ':Telescope find_files<CR>', opt)
+map('n', '<D-e>', '<Cmd>Telescope oldfiles<CR>', opt)
 
 map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
