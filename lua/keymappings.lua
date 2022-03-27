@@ -174,6 +174,8 @@ map('n', '<C-w>', ':bd<CR>', opt)
 map('n', '<D-w>', ':bd<CR>', opt)
 map('n', '<D-o>', ':Telescope find_files<CR>', opt)
 map('n', '<D-e>', '<Cmd>Telescope oldfiles<CR>', opt)
+map('n', '<D-k>', '<Cmd>Telekasten insert_link<CR>', opt)
+map('i', '<D-k>', '<Cmd>Telekasten insert_link<CR>', opt)
 
 map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })

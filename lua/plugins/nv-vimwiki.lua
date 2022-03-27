@@ -2,7 +2,7 @@
                       --\ 'ext': '.md'}]
                       --\ 'syntax': 'markdown', 'ext': '.md'}]
 vim.cmd([[
-let g:vimwiki_list = [{'path': '/Users/$USER/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/wikipage',
+let g:vimwiki_list = [{'path': '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/wikipage',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 au filetype vimwiki silent! iunmap <buffer> <Tab>
