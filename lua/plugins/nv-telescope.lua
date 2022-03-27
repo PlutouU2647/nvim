@@ -5,18 +5,19 @@ end
 
 local actions = require "telescope.actions"
 
+
 telescope.setup {
     pickers = {
     lsp_references = {
-      theme = "dropdown",
-        layout_config = {
-          width = 0.5,
-          prompt_position = "top",
-          --horizontal = {mirror = true},
-          --vertical = {mirror = false},
-          --vertical = { width = 0.8 }
-        },
-    }
+          theme = "dropdown",
+            layout_config = {
+                width = 0.5,
+                prompt_position = "top",
+                --horizontal = {mirror = true},
+                --vertical = {mirror = false},
+                --vertical = { width = 0.8 }
+            },
+        }
     },
 
     defaults = {
@@ -35,6 +36,7 @@ telescope.setup {
                 --["<C-j>"] = actions.move_selection_next,
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
+                --["<C-a>"] = 
 
                 ["<C-c>"] = actions.close,
                 ["<D-o>"] = actions.close,
@@ -130,9 +132,6 @@ require("project_nvim").setup {
       datapath = vim.fn.stdpath("data"),
       patterns = { ".git" },
       exclude_dirs = {'~//*'},
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  -- refer to the configuration section below
 }
 
 
@@ -140,3 +139,6 @@ require("project_nvim").setup {
 -- 'https://github.com/nvim-telescope/telescope.nvim'
 -- help telescope
 -- 'https://github.com/ahmedkhalf/project.nvim'
+
+
+

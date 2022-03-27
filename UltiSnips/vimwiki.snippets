@@ -257,13 +257,19 @@ ${1}
 endsnippet
 
 
-#uml
-snippet uml` "plantuml" wA
-\`\`\` plantuml  
-${1}
-\`\`
-endsnippet
 
+#umlclass
+snippet class` "plantuml" 
+\`\`\` mermaid
+classDiagram
+class Shape{
+	<<name>>
+	para1
+	function1()
+	${1}
+}
+\`\`\`
+endsnippet
 
 
 

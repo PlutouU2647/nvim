@@ -150,7 +150,7 @@ map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>",
 -- ┌────────────┐
 -- │ ToggleTerm │
 -- └────────────┘
-map('n', '<c-p>', '<cmd>lua _lfpicker_toggle()<cr>', opt)
+--map('n', '<c-p>', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 map('n', '<leader>lf', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 
 -- ┌────────┐
@@ -170,8 +170,8 @@ map('i','<D-v>', '<C-r>+', opt)
 map('c','<D-v>', '<C-r>+', opt)
 --EDITOR
 --map('n', '<D-1>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
-map('n', '<C-w>', ':bdelete<CR>', opt)
-map('n', '<D-w>', ':bdelete<CR>', opt)
+map('n', '<C-w>', ':bd<CR>', opt)
+map('n', '<D-w>', ':bd<CR>', opt)
 map('n', '<D-o>', ':Telescope find_files<CR>', opt)
 map('n', '<D-e>', '<Cmd>Telescope oldfiles<CR>', opt)
 
@@ -204,9 +204,10 @@ map('n', '<D-5>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 vim.cmd([[
 imap “ <Plug>(copilot-next)
 imap ‘ <Plug>(copilot-previous)
+imap ” <Plug>(copilot-next)
+imap ‘ <Plug>(copilot-previous)
 ]])
 
---map('n', ''':silent !open "obsidian://open?vault=VAULTNAME&file=' . expand('%:r') . " ''', opt)
 --
 --
 --

@@ -123,6 +123,16 @@ return packer.startup(function(use)
         --keys = { '<leader>t' },
         --cmd = 'Telescope packer',
     }
+    use {
+        'kien/ctrlp.vim'
+    }
+    use {
+        'renerocksai/telekasten.nvim',
+        opt = true,
+        ft = {'markdown', 'wiki' },
+        config = "require('plugins/nv-telekasten')"
+
+    }
     -- colorscheme
     --use {
         --'EdenEast/nightfox.nvim',  -- colorscheme
@@ -379,6 +389,9 @@ return packer.startup(function(use)
     use {
         'vimwiki/vimwiki',
         config = "require('plugins/nv-vimwiki')",
+        --ft = {'markdown', 'vimwiki'},
+
+
     }
     --use {
         --'plasticboy/vim-markdown'
