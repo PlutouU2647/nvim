@@ -184,7 +184,6 @@ command! -nargs=1 NewZettel :execute ":e" zettelkasten . strftime("%Y%m%d%H%M") 
 nnoremap <leader>nz :NewZettel 
 
 " CtrlP function for inserting a markdown link with Ctrl-X
-[init.lua](init.lua)
 function! CtrlPOpenFunc(action, line)
    if a:action =~ '^h$'    
       " Get the filename

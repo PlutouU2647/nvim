@@ -4,13 +4,13 @@
 vim.cmd([[
 let g:vimwiki_list = [{'path': '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/wikipage',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
-
-au filetype vimwiki silent! iunmap <buffer> <Tab>
-au filetype vimwiki silent! iunmap <buffer> <S-Tab>
+let g:vimwiki_key_mappings = { 'table_mappings': 0, }
 let g:vimwiki_use_mouse = 1
 let g:vimwiki_auto_chdir = 1
 let g:vimwiki_hl_headers = 1
 ]])
+--au filetype vimwiki silent! iunmap <buffer> <Tab>
+--au filetype vimwiki silent! iunmap <buffer> <S-Tab>
 --au filetype vimwiki silent! iunmap <buffer> <CR>
 --
 --
