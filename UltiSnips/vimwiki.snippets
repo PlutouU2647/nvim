@@ -300,11 +300,15 @@ snippet plug "Insert a new plugin on my vimrc" w
 Plug '${1:`!v substitute(@+, ' \|\n', '', 'g' )`}'
 endsnippet
 
+# ┌──────┐
+# │ note │
+# └──────┘
+
 
 # zettelcasken
 snippet idea` "zettelcasken"
 ---
-date: `date +%F`
+date: `!v strftime("%Y-%m-%d %H:%M")`
 Tags: [${1}, ${2}]
 ---
 
@@ -314,6 +318,26 @@ Tags: [${1}, ${2}]
 # Reference
 ${0}
 
+\`\`\`dataview
+TABLE tags
+from #$1
+\`\`\`
+endsnippet
+
+# note
+snippet note "note"
+---
+date: `!v strftime("%Y-%m-%d %H:%M")`
+Tags: [${1}, ${2}]
+---
+
+# `!p snip.rv = snip.fn.split('.')[0]`
+
+
+---
+
+# Reference
+${0}
 endsnippet
 
 
