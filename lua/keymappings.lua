@@ -143,7 +143,6 @@ map('i','<C-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u', opt)
 map('n', "<Leader>ob", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
 map('n', "<LocalLeader><LocalLeader>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
 --map('n', '<LocalLeader><LocalLeader>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
-map('n', '<C-,>', ":silent !open 'obsidian://open?vault=markdown'<CR>", opt)
 map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>", opt)
 
 
@@ -186,6 +185,8 @@ map('n', '<D-p>', '<Cmd>lua _lfpicker_toggle()<CR>', opt)
 map('n', '<S-D-F>', '<Cmd>Telescope live_grep<CR>', opt)
 map('n', '<D-[>', '<Cmd>bprevious<CR>', opt)
 map('n', '<D-]>', '<Cmd>bnext<CR>', opt)
+-- vimwiki
+map('n', '<C-,>', ":VimwikiMakeDiaryNote<CR>", opt)
 
 -- ┌─────────┐
 -- │ Luasnip │
@@ -202,13 +203,12 @@ map('n', '<D-3>', '<Cmd>BufferLineGoToBuffer 3<CR>', opt)
 map('n', '<D-4>', '<Cmd>BufferLineGoToBuffer 4<CR>', opt)
 map('n', '<D-5>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 
-
-vim.cmd([[
-imap “ <Plug>(copilot-next)
-imap ‘ <Plug>(copilot-previous)
-imap ” <Plug>(copilot-next)
-imap ‘ <Plug>(copilot-previous)
-]])
+--vim.cmd([[
+--imap “ <Plug>(copilot-next)
+--imap ‘ <Plug>(copilot-previous)
+--imap ” <Plug>(copilot-next)
+--imap ‘ <Plug>(copilot-previous)
+--]])
 
 --
 --
