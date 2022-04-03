@@ -341,8 +341,8 @@ return packer.startup(function(use)
     }
     use {
         'ybian/smartim',
-        opt = true,
-        event = 'InsertEnter',
+        --opt = true,
+        --event = 'InsertEnter',
     }
     use {
         'lervag/vimtex',

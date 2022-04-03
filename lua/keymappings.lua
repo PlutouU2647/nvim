@@ -203,12 +203,12 @@ map('n', '<D-3>', '<Cmd>BufferLineGoToBuffer 3<CR>', opt)
 map('n', '<D-4>', '<Cmd>BufferLineGoToBuffer 4<CR>', opt)
 map('n', '<D-5>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 
---vim.cmd([[
---imap “ <Plug>(copilot-next)
---imap ‘ <Plug>(copilot-previous)
---imap ” <Plug>(copilot-next)
---imap ‘ <Plug>(copilot-previous)
---]])
+vim.cmd([[
+imap “ <Plug>(copilot-next)
+imap ‘ <Plug>(copilot-previous)
+imap ” <Plug>(copilot-next)
+imap ‘ <Plug>(copilot-previous)
+]])
 
 --
 --
