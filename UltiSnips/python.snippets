@@ -308,9 +308,10 @@ write_init_body(args, t[2], snip)
 endsnippet
 
 
-snippet def "def" b
-def __init__(self$4):
-	`!p snip.rv = triple_quotes(snip)`${5:TODO: to be defined.}`!p
+snippet def1 "def" b
+def ${1:func_name}($2):
+	`!p snip.rv = triple_quotes(snip)
+	`${5:TODO: to be defined.}`!p
 snip.rv = ""
 snip >> 2
 
@@ -324,4 +325,39 @@ if args:
 write_init_body(args, t[2], snip)
 `
 		$0
+endsnippet
+
+
+
+snippet class(nn) "class template for Neural Network" b
+class $1(nn.Module):
+    def __init__(self, $2):
+		'''
+		Args:
+			`!p
+snip.rv = ("\n" + " " * 12).join(["%s: " % x.strip() for x in t[2].split(",")])
+`
+		'''
+        super($1, self).__init__()
+		${3:pass}
+
+    def forward(self, $4):
+		'''
+		Args:
+			`!p
+snip.rv = ("\n" + " " * 12).join(["%s: " % x.strip() for x in t[4].split(",")])
+`
+		'''
+		${5:pass}
+endsnippet
+
+
+snippet def "def1" b
+def ${1:func_name}($4):
+	'''
+	`!p
+snip.rv = ("\n" + " " * 4).join(["%s: " % x.strip() for x in t[4].split(",")])
+`
+	'''
+	${5:pass}
 endsnippet

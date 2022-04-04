@@ -343,6 +343,7 @@ return packer.startup(function(use)
         'ybian/smartim',
         --opt = true,
         --event = 'InsertEnter',
+        config = "require('plugins/nv-smartim')",
     }
     use {
         'lervag/vimtex',
