@@ -50,6 +50,10 @@ indent_blankline.setup({
     },
 })
 vim.cmd("autocmd CursorMoved * IndentBlanklineRefresh")
+        --"var",
+    --},
+--})
+--vim.cmd("autocmd CursorMoved * IndentBlanklineRefresh")
 
 --indent_blankline.setup({
 	---- show_end_of_line = true,

@@ -41,15 +41,12 @@ vim.cmd [[
 --[[
 指定某个
 use {
-    "wbthomason/packer.nvim",
-    config = function(config)
-        config.opt_dir = "~/.local/share/nvim/site/pack/packer/opt"
-    end,
-
+    "wbthomason/packer.nvim",  -- 插件名称
+    config = "require('filepath')",  -- 配置文件
+    branch = "master",  -- 分支
 
 
 },
-
 --]]
 
 -- plugins
@@ -390,9 +387,8 @@ return packer.startup(function(use)
     use {
         'vimwiki/vimwiki',
         config = "require('plugins/nv-vimwiki')",
+        branch = 'dev',
         --ft = {'markdown', 'vimwiki'},
-
-
     }
     --use {
         --'plasticboy/vim-markdown'

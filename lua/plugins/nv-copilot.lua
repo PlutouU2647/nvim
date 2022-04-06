@@ -5,3 +5,9 @@ vim.g.copilot_tab_fallback = ""
 copilot
 https://github.com/github/feedback/discussions?discussions_q=vim
 --]]
+
+vim.cmd([[
+let g:copilot_filetypes = {
+      \ 'markdown': v:true,
+      \ }
+]])
