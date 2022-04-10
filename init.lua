@@ -14,4 +14,3 @@ require('colorscheme')
 -- plugins
 require('plugin')
 
-

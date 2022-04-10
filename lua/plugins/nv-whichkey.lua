@@ -19,7 +19,8 @@ end
 local mappings = {
     --i = {"<Plug>SlimeRegionSend","Slime Run Selected code",mode = "v"},
     S = {":%s/","Search and replace",mode = "n",silent = false},
-    s = {"<Plug>SlimeSendCell", "Send Cell"},
+    s = {":'<,'> Tabularize /:", "Tabularize",mode = "v", silent = false},
+    --s = {"<Plug>SlimeSendCell", "Send Cell"},
     --o = {"<Plug>SlimeSendCell","Run Cell",mode = "n",silent = false},
     --i = {":IPythonCellExecuteCellVerbose<CR>","Run Cell",mode = "n",silent = false},
     --g = {":SlimeSendCurrentLine<cr>","Slime Run Paragraph code"},
@@ -55,6 +56,8 @@ local mappings = {
         p = {"<CMD>Telescope projects<cr>","Open Project"},
         m = {"<CMD>Telescope marks<cr>","Show Marks"},
         P = {"<CMD>Telescope packer<cr>","Open Pakcker"},
+
+        s = {"<CMD>Telescope ultisnips theme=dropdown<CR>", "Ultisnips"},
     },
     t = {
         name = "Terminal",
