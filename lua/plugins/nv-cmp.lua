@@ -52,8 +52,8 @@ cmp.setup {
   mapping = {
     --["<C-k>"] = cmp.mapping.select_prev_item(),
     --["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-p>"] = cmp.mapping.select_prev_item(),
-    ["<C-n>"] = cmp.mapping.select_next_item(),
+    ["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), {"i"}),
+    ["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), {"i"}),
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
@@ -128,9 +128,15 @@ cmp.setup {
 }
 
 
+
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
-    mapping = cmp.mapping.preset.cmdline(),
+    --mapping = cmp.mapping.preset.cmdline(),
+    mapping = {
+        ['<TAB>']   = cmp.mapping(cmp.mapping.select_next_item(), {"c", "s"}),
+        ['<S-TAB>'] = cmp.mapping(cmp.mapping.select_prev_item(), {"c", "s"}),
+        --['C-p']     = cmp.mapping.close(),
+    },
     sources = {
       { name = 'buffer' }
     }
@@ -138,291 +144,15 @@ cmp.setup.cmdline('/', {
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
+    mapping = {
+        ['<TAB>']   = cmp.mapping(cmp.mapping.select_next_item(), {"c", "s"}),
+        ['<S-TAB>'] = cmp.mapping(cmp.mapping.select_prev_item(), {"c", "s"}),
+        --['C-p']     = cmp.mapping.close(),
+    },
+
     sources = cmp.config.sources({
       { name = 'path' }
     }, {
       { name = 'cmdline' }
     })
 })
-
-------------------------------------------------------------------------
---vim.g.completeopt = "menu,menuone,noselect,noinsert"
-
---local cmp = require'cmp'
---cmp.setup({
-    --snippet = {
-    --expand = function(args)
-      --vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      ---- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-      ---- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-      ---- require'snippy'.expand_snippet(args.body) -- For `snippy` users.
-    --end,
-    --},
-    --mapping = {
-    --["<C-k>"] = cmp.mapping.select_prev_item(),
-    --["<C-j>"] = cmp.mapping.select_next_item(),
-    --['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-    --['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-    --['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-    --['<C-y>'] = cmp.config.disable,
-    --['<C-e>'] = cmp.mapping({
-      --i = cmp.mapping.abort(),
-      --c = cmp.mapping.close(),
-    --}),
-    ----['<CR>'] = cmp.mapping.confirm({ select = true }),
-    --},
-    --sources = cmp.config.sources({
-    --{ name = 'nvim_lsp' },
-    --{ name = 'vsnip' }, -- For vsnip users.
-    ---- { name = 'luasnip' }, -- For luasnip users.
-    ---- { name = 'ultisnips' }, -- For ultisnips users.
-    ---- { name = 'snippy' }, -- For snippy users.
-    --}, {
-    --{ name = 'buffer' ,Keyword_lenth = 4},
-    --})
---})
----- Kind icons
-----vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-
----- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
---cmp.setup.cmdline('/', {
-  --sources = {
-    --{ name = 'buffer' }
-  --}
---})
-
----- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
---cmp.setup.cmdline(':', {
-  --sources = cmp.config.sources({
-    --{ name = 'path' }
-  --}, {
-    --{ name = 'cmdline' }
-  --})
---})
-
----- Setup lspconfig.
---local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
----- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-----require'lspconfig'.python.setup {
-  ----capabilities = capabilities
-----}
---require'lspconfig'.html.setup {
-  --capabilities = capabilities
---}
-
-
---enddd
----------------------------
---local cmp_status_ok, cmp = pcall(require, "cmp")
---if not cmp_status_ok then
-  --return
---end
-
---local snip_status_ok, luasnip = pcall(require, "luasnip")
---if not snip_status_ok then
-  --return
---end
-
---require("luasnip/loaders/from_vscode").lazy_load()
-
---local check_backspace = function()
-  --local col = vim.fn.col "." - 1
-  --return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
---end
-
-----   פּ ﯟ   some other good icons
---local kind_icons = {
-  --Text = "",
-  --Method = "m",
-  --Function = "",
-  --Constructor = "",
-  --Field = "",
-  --Variable = "",
-  --Class = "",
-  --Interface = "",
-  --Module = "",
-  --Property = "",
-  --Unit = "",
-  --Value = "",
-  --Enum = "",
-  --Keyword = "",
-  --Snippet = "",
-  --Color = "",
-  --File = "",
-  --Reference = "",
-  --Folder = "",
-  --EnumMember = "",
-  --Constant = "",
-  --Struct = "",
-  --Event = "",
-  --Operator = "",
-  --TypeParameter = "",
---}
----- find more here: https://www.nerdfonts.com/cheat-sheet
-
---cmp.setup {
-  --snippet = {
-    --expand = function(args)
-      --luasnip.lsp_expand(args.body) -- For `luasnip` users.
-    --end,
-  --},
-  --mapping = {
-    --["<C-k>"] = cmp.mapping.select_prev_item(),
-    --["<C-j>"] = cmp.mapping.select_next_item(),
-    --["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-    --["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-    --["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-    --["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    --["<C-e>"] = cmp.mapping {
-      --i = cmp.mapping.abort(),
-      --c = cmp.mapping.close(),
-    --},
-    ---- Accept currently selected item. If none selected, `select` first item.
-    ---- Set `select` to `false` to only confirm explicitly selected items.
-    --["<CR>"] = cmp.mapping.confirm { select = true },
-    --["<Tab>"] = cmp.mapping(function(fallback)
-      --if cmp.visible() then
-        --cmp.select_next_item()
-      --elseif luasnip.expandable() then
-        --luasnip.expand()
-      --elseif luasnip.expand_or_jumpable() then
-        --luasnip.expand_or_jump()
-      --elseif check_backspace() then
-        --fallback()
-      --else
-        --fallback()
-      --end
-    --end, {
-      --"i",
-      --"s",
-    --}),
-    --["<S-Tab>"] = cmp.mapping(function(fallback)
-      --if cmp.visible() then
-        --cmp.select_prev_item()
-      --elseif luasnip.jumpable(-1) then
-        --luasnip.jump(-1)
-      --else
-        --fallback()
-      --end
-    --end, {
-      --"i",
-      --"s",
-    --}),
-  --},
-  --formatting = {
-    --fields = { "kind", "abbr", "menu" },
-    --format = function(entry, vim_item)
-      ---- Kind icons
-      --vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-       --vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-      --vim_item.menu = ({
-        --nvim_lsp = "[LSP]",
-        --luasnip = "[Snippet]",
-        --buffer = "[Buffer]",
-        --path = "[Path]",
-      --})[entry.source.name]
-      --return vim_item
-    --end,
-  --},
-  --sources = {
-    --{ name = "nvim_lsp" },
-    --{ name = "luasnip" },
-    --{ name = "buffer" },
-    --{ name = "path" },
-  --},
-  --confirm_opts = {
-    --behavior = cmp.ConfirmBehavior.Replace,
-    --select = false,
-  --},
-  --documentation = {
-    --border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  --},
-  --experimental = {
-    --ghost_text = false,
-    --native_menu = false,
-  --},
---}
-
-
--------
---vim.o.completeopt = "menuone,noselect"
-
---require'compe'.setup {
-  --enabled = true;
-  --autocomplete = true;
-  --debug = false;
-  --min_length = 1;
-  --preselect = 'enable';
-  --throttle_time = 80;
-  --source_timeout = 200;
-  --incomplete_delay = 400;
-  --max_abbr_width = 100;
-  --max_kind_width = 100;
-  --max_menu_width = 100;
-  --documentation = false;
-
-  --source = {
-    --path = true;
-    --buffer = true;
-    --calc = true;
-    --vsnip = true;
-    --nvim_lsp = true;
-    --nvim_lua = true;
-    --spell = true;
-    --tags = true;
-    --snippets_nvim = true;
-    --treesitter = true;
-  --};
---}
---local t = function(str)
-  --return vim.api.nvim_replace_termcodes(str, true, true, true)
---end
-
---local check_back_space = function()
-    --local col = vim.fn.col('.') - 1
-    --if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        --return true
-    --else
-        --return false
-    --end
---end
-
----- Use (s-)tab to:
------ move to prev/next item in completion menuone
------ jump to prev/next snippet's placeholder
---_G.tab_complete = function()
-  --if vim.fn.pumvisible() == 1 then
-    --return t "<C-n>"
-  --elseif vim.fn.call("vsnip#available", {1}) == 1 then
-    --return t "<Plug>(vsnip-expand-or-jump)"
-  --elseif check_back_space() then
-    --return t "<Tab>"
-  --else
-    --return vim.fn['compe#complete']()
-  --end
---end
---_G.s_tab_complete = function()
-  --if vim.fn.pumvisible() == 1 then
-    --return t "<C-p>"
-  --elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
-    --return t "<Plug>(vsnip-jump-prev)"
-  --else
-    ---- If <S-Tab> is not working in your terminal, change it to <C-h>
-    --return t "<S-Tab>"
-  --end
---end
-
---vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
---vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
---vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
---vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
---
---
---
---[[
-https://github.com/hrsh7th/nvim-cmp
-
-How do remap copilot#Accept() in a Lua function?
-https://www.reddit.com/r/neovim/comments/r6ppfl/how_do_remap_copilotaccept_in_a_lua_function/
---]]
