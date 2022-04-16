@@ -44,10 +44,12 @@ use {
     "wbthomason/packer.nvim",  -- 插件名称
     config = "require('filepath')",  -- 配置文件
     branch = "master",  -- 分支
+    commit = ""  -- 指定某个commit
 
 
 },
 --]]
+
 
 -- plugins
 return packer.startup(function(use)
@@ -218,7 +220,9 @@ return packer.startup(function(use)
         'github/copilot.vim',
         event = {"BufReadPre", "BufNewFile"},
         opt = true,
-        require = "plugins/nv-copilot"
+        commit = "47eb231",
+        require = "plugins/nv-copilot",
+
     }
     use {
         'CRAG666/code_runner.nvim',

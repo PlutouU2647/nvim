@@ -135,7 +135,7 @@ cmp.setup.cmdline('/', {
     mapping = {
         ['<TAB>']   = cmp.mapping(cmp.mapping.select_next_item(), {"c", "s"}),
         ['<S-TAB>'] = cmp.mapping(cmp.mapping.select_prev_item(), {"c", "s"}),
-        --['C-p']     = cmp.mapping.close(),
+        ['C-p']     = cmp.mapping.close(),
     },
     sources = {
       { name = 'buffer' }
@@ -147,7 +147,7 @@ cmp.setup.cmdline(':', {
     mapping = {
         ['<TAB>']   = cmp.mapping(cmp.mapping.select_next_item(), {"c", "s"}),
         ['<S-TAB>'] = cmp.mapping(cmp.mapping.select_prev_item(), {"c", "s"}),
-        --['C-p']     = cmp.mapping.close(),
+        ['C-p']     = cmp.mapping.close(),
     },
 
     sources = cmp.config.sources({
