@@ -362,6 +362,7 @@ return packer.startup(function(use)
     use {
         'godlygeek/tabular',
         opt = true,
+        cmd = {'Tabularize'},
 	    ft = "markdown",
     }
     use {
