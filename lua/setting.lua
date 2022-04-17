@@ -113,26 +113,26 @@ augroup END
 --autocmd InsertEnter * call Fcitx2zh()
 --]])
 
-vim.cmd([[
-let g:smartim_default = 'com.apple.keylayout.US'
-function! Multiple_cursors_before()
-  let g:smartim_disable = 1
-endfunction
-function! Multiple_cursors_after()
-  unlet g:smartim_disable
-endfunction
-]])
-
 --vim.cmd([[
 --let g:smartim_default = 'com.apple.keylayout.US'
---augroup smartim
-  --autocmd!
-  --set timeoutlen=0
-  --autocmd VimLeavePre * call Smartim_SelectDefault()
-  --autocmd InsertLeave * call Smartim_SelectDefault()
-  --autocmd InsertEnter * call Smartim_SelectSaved()
---augroup end
+--function! Multiple_cursors_before()
+  --let g:smartim_disable = 1
+--endfunction
+--function! Multiple_cursors_after()
+  --unlet g:smartim_disable
+--endfunction
 --]])
+
+vim.cmd([[
+let g:smartim_default = 'com.apple.keylayout.US'
+augroup smartim
+  autocmd!
+  set timeoutlen=0
+  autocmd VimLeavePre * call Smartim_SelectDefault()
+  autocmd InsertLeave * call Smartim_SelectDefault()
+  autocmd InsertEnter * call Smartim_SelectSaved()
+augroup end
+]])
 
 
 
