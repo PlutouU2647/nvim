@@ -1,3 +1,6 @@
+--[[
+https://github.com/EdenEast/nightfox.nvim
+--]]
 -- Palettes are the base color defines of a colorscheme.
 -- You can override these palettes for each colorscheme defined by nightfox
 local palettes = {
@@ -110,6 +113,7 @@ require("nightfox").setup({
 
             ----
 
+            sel1 = "#27253e", -- Popup sel bg, search bg
             --bg1 = "#27253e",  -- 背景
             --bg1 = "#282c34",
             ----bg1 = "#2d323b",
@@ -141,6 +145,7 @@ require("nightfox").setup({
     },
     -- hello
     groups = {
+        --CursorColumn = { bg = "sel0", link = "" },
         CursorColumn = { bg = "sel0", link = "" },
         TSField = { fg = "palette.red" },
         Search = { fb = "bg1", bg = "palette.red" },  -- 搜索框颜色
