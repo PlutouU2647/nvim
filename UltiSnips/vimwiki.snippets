@@ -320,6 +320,7 @@ endsnippet
 # zettelcasken
 snippet idea` "zettelcasken"
 ---
+alias:
 date: `!v strftime("%Y-%m-%d %H:%M")`
 Tags: [${1}, ${2}]
 ---
@@ -330,11 +331,25 @@ Tags: [${1}, ${2}]
 # Reference
 ${0}
 
+\`\`\`ad-tip
+title: Reference
 \`\`\`dataview
 TABLE tags
 from #$1
 \`\`\`
 endsnippet
+
+
+
+snippet yaml "yaml" b
+---
+alias:
+date: `!v strftime("%Y-%m-%d %H:%M")`
+Tags: [${1}, ${2}]
+Filename: `!p snip.rv = snip.fn.split('.')[0]`
+
+---
+
 
 # note
 snippet note "note"

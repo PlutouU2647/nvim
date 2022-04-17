@@ -6,9 +6,9 @@ require'lualine'.setup {
         --component_separators = "|",
         disabled_filetypes = {},
         always_divide_middle = true,
-        --theme = "nightfox"
+        theme = "nightfox"
         --theme = 'dracula',
-        theme = 'onedark'
+        --theme = 'onedark'
     },
     sections = {
         lualine_a = {'mode'},

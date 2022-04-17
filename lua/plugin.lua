@@ -134,19 +134,23 @@ return packer.startup(function(use)
     }
     -- colorscheme
     --use {
-        --'EdenEast/nightfox.nvim',  -- colorscheme
-        --config = "require('plugins/theme-nightfox')",
-        --config = "vim.cmd('colorscheme duskfox')"
-        --
+        --"sonph/onehalf",
+        --subdir = "vim",
+        --config = "require('plugins/theme-onehalf')"
     --}
+
+    use {
+        'EdenEast/nightfox.nvim',  -- colorscheme
+        config = "require('plugins/theme-nightfox')",
+    }
     --use {
         --'navarasu/onedark.nvim',
         --config = "require('plugins/theme-onedark')",
     --}
-    use {
-        'Mofiqul/dracula.nvim',
-        config = "require('plugins/theme-dracula')",
-    }
+    --use {
+        --'Mofiqul/dracula.nvim',
+        --config = "require('plugins/theme-dracula')",
+    --}
 
 
     --use({
