@@ -119,9 +119,12 @@ augroup END
   --let g:smartim_disable = 1
 --endfunction
 --function! Multiple_cursors_after()
-  --unlet g:smartim_disable
+  --let g:smartim_disable = 0
 --endfunction
 --]])
+--[[
+https://blog.csdn.net/lxyoucan/article/details/114365153
+--]]
 
 vim.cmd([[
 let g:smartim_default = 'com.apple.keylayout.US'
@@ -133,6 +136,7 @@ augroup smartim
   autocmd InsertEnter * call Smartim_SelectSaved()
 augroup end
 ]])
+
 
 
 
