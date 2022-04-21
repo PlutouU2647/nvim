@@ -9,6 +9,11 @@ if not snippet_status_ok then
 end
 --local u = require("utils")
 
+local check_backspace = function()
+  local col = vim.fn.col "." - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+end
+
 require('luasnip/loaders/from_vscode').lazy_load()
 
 --   פּ ﯟ   some other good icons
@@ -91,6 +96,22 @@ cmp.setup {
           --fallback()
         --end
       --end, { 'i', 's', 'c' })
+     ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expandable() then
+        luasnip.expand()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      elseif check_backspace() then
+        fallback()
+      else
+        fallback()
+      end
+    end, {
+      "i",
+      "s",
+    }),
 },
 
   -- cmp补全窗口的配置

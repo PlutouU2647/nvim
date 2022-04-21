@@ -96,7 +96,7 @@ require("nightfox").setup({
         -- black, red, green, yellow, blue, magenta, cyan, white, orange, pink
         duskfox = {
             orange = "#e29c45",  -- 数字1,2,3,4,
-            white = "f3f9f1",  -- 白色字体
+            --white = "f3f9f1",  -- 白色字体
             cyan = "#ff8936",  -- 传参(arg)
             red = "#cd83e1",  -- functions & def
             --white = "#f3f9f1",  -- 白色字体

@@ -14,6 +14,6 @@ require('colorscheme')
 -- plugins
 require('plugin')
 
---vim.cmd("colorscheme nightfox")
+--vim.cmd("colorscheme duskfox")
 --require('plugins/theme-nightfox')
 

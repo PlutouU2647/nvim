@@ -141,7 +141,7 @@ return packer.startup(function(use)
 
     use {
         'EdenEast/nightfox.nvim',  -- colorscheme
-        config = "require('plugins/theme-nightfox')",
+         config = "require('plugins/theme-nightfox')",
     }
     --use {
         --'navarasu/onedark.nvim',
