@@ -56,9 +56,8 @@ local mappings = {
         p = {"<CMD>Telescope projects<cr>","Open Project"},
         m = {"<CMD>Telescope marks<cr>","Show Marks"},
         P = {"<CMD>Telescope packer<cr>","Open Pakcker"},
-        w = {"<CMD>Telescope insert_link<cr>","Insert Wiki Link"},
-
-        s = {"<CMD>Telescope ultisnips theme=dropdown<CR>", "Ultisnips"},
+        k = {"<CMD>Telekasten insert_link<cr>","Insert Wiki Link"},
+        l = {"<CMD>Telescope ultisnips theme=dropdown<CR>", "Ultisnips"},
     },
     t = {
         name = "Terminal",
