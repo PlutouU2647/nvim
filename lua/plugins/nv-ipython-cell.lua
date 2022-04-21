@@ -17,6 +17,18 @@ let g:slime_cell_delimiter = "# %%"
 let g:ipython_cell_tag = ['# %%', '```', '```python', '``` python', '```py']
 ]])
 
+vim.cmd([[
+if get(g:, "slime_target", "") == "neovim"
+  augroup auto_channel
+    autocmd!
+    " autocmd TermEnter * let g:slime_last_channel = &channel
+    " autocmd BufEnter,WinEnter,TermOpen * lua require"slime".reset_slime()
+    " autocmd TermLeave,TermOpen * lua require"function.slime".reset_slime()
+    autocmd BufEnter,WinEnter,TermOpen * lua require"function.slime".reset_slime()
+  augroup END
+end
+]])
+
 --let g:ipython_cell_tag = "# %%"
 --vim.cmd('autocmd FileType * lua setKeybinds_py()')
 --function setKeybinds_py()
