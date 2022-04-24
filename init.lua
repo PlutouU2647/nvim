@@ -6,14 +6,18 @@
 --        |___/
 
 
--- system setting
-require('keymappings')
-require('setting')
-require('colorscheme')
+if not vim.g.vscode then
+    -- system setting
+    require('keymappings')
+    require('setting')
+    require('colorscheme')
 
--- plugins
-require('plugin')
+    -- plugins
+    require('plugin')
 
---vim.cmd("colorscheme duskfox")
---require('plugins/theme-nightfox')
+    --vim.cmd("colorscheme duskfox")
+    --require('plugins/theme-nightfox')
+else
+    require('vscode')
+end
 
