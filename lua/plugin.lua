@@ -273,7 +273,7 @@ return packer.startup(function(use)
     use {
         'williamboman/nvim-lsp-installer',  -- simple to use language server installer
         opt = true,
-        after = 'nvim-lspconfig',
+        event = "BufReadPre",
         config = "require('plugins/lsp/lsp-installer')",
     }
     use {
