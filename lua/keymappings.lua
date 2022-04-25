@@ -19,7 +19,7 @@ vim.g.maplocalleader = ','
 -- Normal
 map('n', '<Bar>', '<CMD>echo "empty key!!"<CR>', {noremap = true, silent = false})
 map('n', '<Bslash>', ':', {noremap = true, silent = false})
-map('n', '<Leader>h', ':set hlsearch!<CR>', opt)
+map('n', '<Leader>h', ':nohlsearch<CR>', opt)
 map('n', '<Space>', '<NOP>', opt)
 --map('n',"<leader>\",':',opt)
 map('n','S',':w<CR>',opt)
