@@ -22,7 +22,7 @@ return {
   settings = {
     python = {
       analysis = {
-        typeCheckingMode = 'off',
+        --typeCheckingMode = 'off',
         useLibraryCodeForTypes = true,
         completeFunctionParens = true,
         typeCheckingMode = "basic", -- Used to specify the level of type checking analysis performed.

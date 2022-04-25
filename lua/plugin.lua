@@ -302,6 +302,9 @@ return packer.startup(function(use)
         --after = 'hrsh7th/nvim-cmp',
     }
     use {
+        "quangnguyen30192/cmp-nvim-ultisnips"
+    }
+    use {
         'hrsh7th/cmp-vsnip',  -- snippet
         event = 'InsertEnter',
         config = "require('plugins/nv-vsnip')",

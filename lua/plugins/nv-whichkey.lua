@@ -15,6 +15,10 @@ local toggle_ipython = function()
     local ipython = Terminal:new({cmd = "ipython", size = 60, direction= "vertical", dir="%:p:h"})
     return ipython:toggle()
 end
+local toggle_blow = function()
+    local blow = Terminal:new({direction = "horizontal", size = 60})
+    return blow:toggle()
+end
 
 local mappings = {
     --i = {"<Plug>SlimeRegionSend","Slime Run Selected code",mode = "v"},
@@ -62,11 +66,13 @@ local mappings = {
     },
     t = {
         name = "Terminal",
-        t = {":ToggleTerm dir=%:p:h<cr>",                 "Split Below"},
+        t = {":ToggleTerm dir=%:p:h<cr>",                 "Open Terminal In Current Dir"},
         f = {toggle_float,                                "Floating Terminal"},
         g = {toggle_lazygit,                              "LazyGit"},
         p = {toggle_ipython,                              "Ipython"},
         l = {"<CMD>lua _lfpicker_toggle()<cr>",           "Lf"},
+        b = {toggle_blow,                                 "Blow"},
+
 
     },
     l = {
