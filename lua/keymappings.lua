@@ -178,6 +178,7 @@ map('n', '<D-i>', '<Cmd>Telekasten insert_link<CR>', opt)
 map('i', '<D-i>', '<Cmd>Telekasten insert_link<CR>', opt)
 map('v', ';', "<Cmd>'<,'> Tabularize /:<CR>", opt)
 
+map('i','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('n', '<S-D-]>', '<Cmd>BufferLineCycleNext<CR>', opt)

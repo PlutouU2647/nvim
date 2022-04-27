@@ -21,3 +21,8 @@ else
     require('vscode')
 end
 
+
+--vim.cmd([[
+--nnoremap <silent> gs <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
+--nnoremap <silent> B <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+--]])

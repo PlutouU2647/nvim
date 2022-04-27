@@ -68,14 +68,6 @@ nvim_tree.setup {
    git = {
       ignore = false,
    },
-   mappings = {
-    custom_only = false,
-        list = {
-            { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-            { key = "h", cb = tree_cb "close_node" },
-            { key = "v", cb = tree_cb "vsplit" },
-        },
-     },
      actions = {
     change_dir = {
       enable = false,

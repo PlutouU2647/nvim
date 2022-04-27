@@ -112,6 +112,7 @@ cmp.setup {
       --"i",
       --"s",
     --}),
+
 },
 
   -- cmp补全窗口的配置
@@ -136,6 +137,7 @@ cmp.setup {
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer", keyword_lenth = 5 },
+    { name = "ultisnips" },
     { name = "path" },
   },
   confirm_opts = {

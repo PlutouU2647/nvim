@@ -280,6 +280,12 @@ return packer.startup(function(use)
         'hrsh7th/cmp-nvim-lsp',
         --after = 'nvim-cmp'
     }
+    use {
+        'tami5/lspsaga.nvim',
+        opt = true,
+        event = "BufReadPre",
+        config = "require('plugins/nv-lspsaga')",
+    }
 
     --=========================
     --cmp-start

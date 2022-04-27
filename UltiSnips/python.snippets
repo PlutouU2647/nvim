@@ -363,3 +363,11 @@ snip.rv = ("\n" + " " * 4).join(["%s: " % x.strip() for x in t[4].split(",")])
 endsnippet
 
 
+# box
+snippet box "Box" bA
+`!p snip.rv = '# ┌' + '─' * (len(t[1]) + 2) + '┐'`
+# │ $1 │
+`!p snip.rv = '# └' + '─' * (len(t[1]) + 2) + '┘'`
+$0
+endsnippet
+
