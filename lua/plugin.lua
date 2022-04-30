@@ -308,6 +308,11 @@ return packer.startup(function(use)
         --after = 'hrsh7th/nvim-cmp',
     }
     use {
+        'tzachar/cmp-tabnine',
+        opt = true,
+        event = "BufReadPre",
+    }
+    use {
         "quangnguyen30192/cmp-nvim-ultisnips"
     }
     use {
