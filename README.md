@@ -92,7 +92,3 @@ yarn install
 
 
 
-# 关于中英文混合输入法
-- 安装im-select
-- 使用smart-input插件
-- todo安装goyo
