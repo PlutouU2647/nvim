@@ -1,8 +1,7 @@
 # Neovim config
 
-[中文](.README_ZH.md)
+[中文](./README_ZH.md)
 ## requirement
-
 
 ## install 
 run the following command to install neovim
