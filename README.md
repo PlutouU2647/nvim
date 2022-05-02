@@ -17,7 +17,7 @@ install
 [packer](https://github.com/wbthomason/packer.nvim)
 
 
-## dependency
+## Requirements
 ``` shell
 ape install ripgrep
 ```
