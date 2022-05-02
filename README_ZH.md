@@ -32,9 +32,9 @@ brew install fd
 ![启动时间](https://images.mirror-media.xyz/publication-images/Pw0A5VSDz01tvAimQhDyZ.png?height=659&width=1435)
 
 ## 插件介绍
-[中英文输入法切换](https://github.com/ybian/smartim)
-[浮动终端](https://github.com/akinsho/toggleterm.nvim.git)
-[使用slime发送代码分屏运行](https://github.com/jpalardy/vim-slime)
+- [中英文输入法切换](https://github.com/ybian/smartim)
+- [浮动终端](https://github.com/akinsho/toggleterm.nvim.git)
+- [使用slime发送代码分屏运行](https://github.com/jpalardy/vim-slime)
 
 
 
