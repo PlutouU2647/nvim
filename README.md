@@ -1,5 +1,17 @@
-# my neovim config
-## hello this my lua config
+# Neovim config
+
+[中文](.README_ZH.md)
+## requirement
+
+
+## install 
+run the following command to install neovim
+``` shell
+git clone https://github.com/sigma2647/nvim ~/.config/nvim
+brew install neovim
+```
+
+
 install
 [neovim](https://github.com/neovim/neovim)
 ## plugin manage
