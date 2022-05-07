@@ -11,7 +11,8 @@ vim.g.dashboard_custom_section = {
 --vim.g.dashboard_custom_footer = {"You're perfect!"}
 --vim.g.dashboard_custom_footer = {"ᑐ ᑌ ᑎ ᕮ"}
 --vim.g.dashboard_custom_footer = {"你背朝太阳,就只能看到自己的影子————纪伯伦"}
-vim.g.dashboard_custom_footer = {"任何抽象的概念都要给我一个例子————希尔伯特"}
+--vim.g.dashboard_custom_footer = {"任何抽象的概念都要给我一个例子————希尔伯特"}
+vim.g.dashboard_custom_footer = {"你完全可以过你自己想要的生活"}
 
 -- vim.g.dashboard_custom_header = {
 --     [[              ...  .......          ]],
