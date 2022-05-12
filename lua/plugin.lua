@@ -224,7 +224,7 @@ return packer.startup(function(use)
         'github/copilot.vim',
         event = {"BufReadPre", "BufNewFile"},
         opt = true,
-        commit = "47eb231",
+        --commit = "47eb231",
         require = "plugins/nv-copilot",
 
     }
