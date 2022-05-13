@@ -61,6 +61,7 @@ local function lsp_keymaps(bufnr)
   --buf_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
   buf_keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
   --buf_keymap("n", "gp", "<cmd>Lspsaga preview_definition<CR>", opts)
+  buf_keymap("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
   buf_keymap("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
   buf_keymap("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
 

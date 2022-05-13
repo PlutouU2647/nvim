@@ -220,14 +220,14 @@ return packer.startup(function(use)
     --=========================
     -- ide
     --=========================
-    use {
-        'github/copilot.vim',
-        event = {"BufReadPre", "BufNewFile"},
-        opt = true,
-        --commit = "47eb231",
-        require = "plugins/nv-copilot",
+    --use {
+        --'github/copilot.vim',
+        --event = {"BufReadPre", "BufNewFile"},
+        --opt = true,
+        ----commit = "47eb231",
+        --require = "plugins/nv-copilot",
 
-    }
+    --}
     use {
         'CRAG666/code_runner.nvim',
         opt = true,
@@ -307,11 +307,12 @@ return packer.startup(function(use)
         'hrsh7th/cmp-cmdline',  -- cmdline completion
         --after = 'hrsh7th/nvim-cmp',
     }
-    --use {
-        --'tzachar/cmp-tabnine',
-        --opt = true,
-        --event = "BufReadPre",
-    --}
+    use {
+        'tzachar/cmp-tabnine',
+        opt = true,
+        run='./install.sh',
+        event = "BufReadPre",
+    }
     use {
         "quangnguyen30192/cmp-nvim-ultisnips"
     }

@@ -135,6 +135,7 @@ cmp.setup {
   sources = {
       -- 安装好的插件放在这里
     { name = "nvim_lsp" },
+    { name = 'cmp_tabnine' },
     { name = "luasnip" },
     { name = "buffer", keyword_lenth = 5 },
     { name = "ultisnips" },
