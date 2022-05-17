@@ -93,8 +93,8 @@ return packer.startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
         --opt = true,
-        --event = {"BufReadPre", "BufNewFile"},
-        event = "BufWinEnter",
+        --event = {"BufReadPre", "BufNewFile", "BufWinEnter"},
+        --event = "BufWinEnter",
         run = ':TSUpdate',
         config ="require('plugins/nv-treesitter')"
     }
@@ -286,6 +286,11 @@ return packer.startup(function(use)
         event = "BufReadPre",
         config = "require('plugins/nv-lspsaga')",
     }
+    use {
+        'ray-x/lsp_signature.nvim',
+        event = 'InsertEnter',
+        config = "require('plugins/nv-lspsignature')",
+    }
 
     --=========================
     --cmp-start
@@ -311,7 +316,7 @@ return packer.startup(function(use)
         'tzachar/cmp-tabnine',
         opt = true,
         run='./install.sh',
-        event = "BufReadPre",
+        event = {"BufReadPre", "BufNewFile"},
     }
     use {
         "quangnguyen30192/cmp-nvim-ultisnips"
