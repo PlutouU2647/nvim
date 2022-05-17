@@ -149,6 +149,7 @@ function setKeybinds()
         if os == 'Darwin' then
             map(0, 'n', '<C-c><C-c>', '<CMD>IPythonCellExecuteCell<CR>', {noremap = false, silent = false })   -- execute cell
             map(0, 'n', '<CR>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })   -- execute cell
+            map(0, 'n', '<S-CR>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })   -- execute cell
         elseif os == "Linux" then
             map(0, 'n', '<C-m>', '<CMD>IPythonCellExecuteCellVerboseJump<CR>', {noremap = false, silent = false })
         end
