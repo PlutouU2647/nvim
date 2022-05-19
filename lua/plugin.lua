@@ -144,6 +144,9 @@ return packer.startup(function(use)
          config = "require('plugins/theme-nightfox')",
     }
     --use {
+        --'folke/tokyonight.nvim'
+    --}
+    --use {
         --'navarasu/onedark.nvim',
         --config = "require('plugins/theme-onedark')",
     --}
@@ -199,7 +202,6 @@ return packer.startup(function(use)
         --event = 'BufRead',
         event = {"BufReadPre", "BufNewFile"},
         config = "require('plugins/nv-indentline')",
-
     }
     use {
         'windwp/nvim-autopairs',
