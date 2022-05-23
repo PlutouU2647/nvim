@@ -172,7 +172,14 @@ function setKeybinds()
         -- 快捷键循环日记
         map(0, 'n', '<C-[>', '<CMD>VimwikiDiaryPrevDay<CR>', {noremap = false, silent = false })   -- execute cell
         map(0, 'n', '<C-]>', '<CMD>VimwikiDiaryNextDay<CR>', {noremap = false, silent = false })   -- execute cell
-        vim.b.slime_cell_delimiter = '```'
+        --vim.b.slime_cell_delimiter = '```'
+        --vim.b.ipython_cell_tag = {'# %%', '```', '```python', '``` python', '```py'}
+        vim.cmd([[
+        let g:slime_cell_delimiter = "```"
+        let g:ipython_cell_tag = ['# %%', '```', '```python', '``` python', '```py']
+        ]])
+
+
         wkl.register({
             m = {
                 name = "markdown",

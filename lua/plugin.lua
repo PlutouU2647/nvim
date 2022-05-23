@@ -243,7 +243,7 @@ return packer.startup(function(use)
         event = 'TermOpen',
         config = "require('plugins/nv-slime')",
         keys = { '<Plug>SlimeConfig'},
-
+        cmd = {'IPythonCellExecuteCellJump', 'IPythonCellExecuteCell' },
     }
     use {
         'hanschen/vim-ipython-cell',
