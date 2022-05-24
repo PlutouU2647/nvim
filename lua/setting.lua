@@ -61,31 +61,7 @@ vim.o.splitright = true  -- splitright
 --vim.o.spelllang='en_us'
 
 
--- augroup highlightYankedText
 
--- highlightYankedText
-vim.cmd([[
-augroup highlight_yank
-    autocmd!
-    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=160})
-augroup END
-]])
-
-
-
-
-
-
--- 上次的的位置
-vim.cmd([[
-augroup line_return
-    au!
-    au BufReadPost *
-        \ if line("'\"") > 0 && line("'\"") <= line("$") |
-        \	execute 'normal! g`"zvzz' |
-        \ endif
-augroup END
-]])
 
 
 -- 输入法切换

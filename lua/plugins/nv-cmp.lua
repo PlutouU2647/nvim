@@ -151,6 +151,18 @@ cmp.setup {
     ghost_text = false,
     native_menu = false,
   },
+  -- documentation = true,
+  window = {
+    -- documentation = "native",
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+    },
+    completion = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+    }
+    }
 }
 
 

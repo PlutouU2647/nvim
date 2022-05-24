@@ -11,12 +11,10 @@ if not vim.g.vscode then
     require('keymappings')
     require('setting')
     require('colorscheme')
+    require('autocommands')
 
     -- plugins
     require('plugin')
-
-    --vim.cmd("colorscheme duskfox")
-    --require('plugins/theme-nightfox')
 else
     require('vscode')
 end

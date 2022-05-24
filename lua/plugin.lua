@@ -424,11 +424,14 @@ return packer.startup(function(use)
     --use {
         --'plasticboy/vim-markdown'
     --}
-    --use {
-        --'iamcco/markdown-preview.nvim',
-        --ft = "markdown",
-        --run = "cd app && yarn install"
-    --}
+    use {
+        'rcarriga/nvim-notify',
+        config = "require('plugins/nv-notify')"
+    }
+    use {
+        "christianchiarulli/nvim-gps",
+        branch = "text_hl"
+    }
 
 
 
