@@ -430,7 +430,8 @@ return packer.startup(function(use)
     }
     use {
         "christianchiarulli/nvim-gps",
-        branch = "text_hl"
+        branch = "text_hl",
+        config = "require('plugins/nv-gps')"
     }
 
 

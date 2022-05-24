@@ -5,7 +5,7 @@ if not status_gps_ok then
   return
 end
 
-local isempty = require("user.functions").isempty
+local isempty = require("plugins.functions").isempty
 
 M.filename = function()
   local filename = vim.fn.expand "%:t"
@@ -45,7 +45,7 @@ M.gps = function()
     return ""
   end
 
-  local icons = require "user.icons"
+  local icons = require "plugins.nv-icons"
 
   if not gps.is_available() then -- Returns boolean value indicating whether a output can be provided
     return ""
