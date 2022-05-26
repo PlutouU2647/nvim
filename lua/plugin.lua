@@ -244,6 +244,7 @@ return packer.startup(function(use)
         config = "require('plugins/nv-slime')",
         keys = { '<Plug>SlimeConfig'},
         --cmd = {'IPythonCellExecuteCellJump', 'IPythonCellExecuteCell' },
+        after = 'vim-ipython-cell'
     }
     use {
         'hanschen/vim-ipython-cell',
@@ -252,7 +253,7 @@ return packer.startup(function(use)
         event = 'TermOpen',
         cmd = {'IPythonCellExecuteCellJump', 'IPythonCellExecuteCell' },
         config = "require('plugins/nv-ipython-cell')",
-        after = 'vim-slime',
+        --after = 'vim-slime',
     }
     --use {
         --'skywind3000/asyncrun.vim',
