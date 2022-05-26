@@ -6,7 +6,7 @@
 vim.cmd([[
 let wiki_1 = {}
 let wiki_1.index = 'index'
-let wiki_1.path = '/Users/$USER/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/wikipage'
+let wiki_1.path = '~/obsidian/MarkDown/wikipage'
 let wiki_1.ext = '.md'
 let wiki_1.syntax = 'markdown'
 let g:vimwiki_list = [wiki_1]

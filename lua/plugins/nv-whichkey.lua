@@ -152,6 +152,10 @@ function setKeybinds()
             map(0, 'n', '<S-CR>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })   -- execute cell
         elseif os == "Linux" then
             map(0, 'n', '<C-m>', '<CMD>IPythonCellExecuteCellVerboseJump<CR>', {noremap = false, silent = false })
+            --vim.cmd([[
+            --let g:slime_cell_delimiter = "# %%"
+            --let g:ipython_cell_tag = ['# %%', '```', '```python', '``` python', '```py']
+            --]])
         end
 
 
@@ -165,30 +169,30 @@ function setKeybinds()
             --}
         }, optss)
         --vim.api.set
-    elseif fileTy == 'markdown' then
-        --map(0, 'n', '<M-CR>', '<CMD>echo "hello"<CR>', {noremap = false, silent = false })  -- option + enter execute cell and insert below
-        map(0, 'n', '<C-c><C-c>', '<CMD>IPythonCellExecuteCell<CR>', {noremap = false, silent = false })   -- execute cell
+        elseif fileTy == 'markdown' then
+            --map(0, 'n', '<M-CR>', '<CMD>echo "hello"<CR>', {noremap = false, silent = false })  -- option + enter execute cell and insert below
+            map(0, 'n', '<C-c><C-c>', '<CMD>IPythonCellExecuteCell<CR>', {noremap = false, silent = false })   -- execute cell
 
-        -- 快捷键循环日记
-        map(0, 'n', '<C-[>', '<CMD>VimwikiDiaryPrevDay<CR>', {noremap = false, silent = false })   -- execute cell
-        map(0, 'n', '<C-]>', '<CMD>VimwikiDiaryNextDay<CR>', {noremap = false, silent = false })   -- execute cell
-        --vim.b.slime_cell_delimiter = '```'
-        --vim.b.ipython_cell_tag = {'# %%', '```', '```python', '``` python', '```py'}
-        vim.cmd([[
-        let g:slime_cell_delimiter = "```"
-        let g:ipython_cell_tag = ['# %%', '```', '```python', '``` python', '```py']
-        ]])
+            -- 快捷键循环日记
+            map(0, 'n', '<C-[>', '<CMD>VimwikiDiaryPrevDay<CR>', {noremap = false, silent = false })   -- execute cell
+            map(0, 'n', '<C-]>', '<CMD>VimwikiDiaryNextDay<CR>', {noremap = false, silent = false })   -- execute cell
+            vim.b.slime_cell_delimiter = '```'
+            vim.b.ipython_cell_tag = {'# %%', '```', '```python', '``` python', '```py'}
+            vim.cmd([[
+            let g:slime_cell_delimiter = "```"
+            let g:ipython_cell_tag = ['# %%', '```', '```python', '``` python', '```py']
+            ]])
 
 
-        wkl.register({
-            m = {
-                name = "markdown",
-                a = {':MarkdownPreview<CR>', 'Start Preview'},
-                c = {':MarkdownPreviewStop<CR>', 'Stop Preview'},
-                m = {':MarkdownPreview<CR>', 'markdown preview'},
-            }
-        }, optss)
-    end
+            wkl.register({
+                m = {
+                    name = "markdown",
+                    a = {':MarkdownPreview<CR>', 'Start Preview'},
+                    c = {':MarkdownPreviewStop<CR>', 'Stop Preview'},
+                    m = {':MarkdownPreview<CR>', 'markdown preview'},
+                }
+            }, optss)
+        end
 end
 local presets = require("which-key.plugins.presets")
 presets.objects['1'] = nil
