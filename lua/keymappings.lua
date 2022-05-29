@@ -85,10 +85,10 @@ map('v', 'K', ':m \'<-2<CR>gv=gv\'' , opt)
 map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 -- 改变窗口大小
---map('n','<up>', ':res -2<CR>', opt)
---map('n','<down>', ':res +2<CR>', opt)
---map('n','<left>', ':vertical resize -2<CR>', opt)
---map('n','<right>', ':vertical resize +2<CR>', opt)
+map('n','<up>', ':res -2<CR>', opt)
+map('n','<down>', ':res +2<CR>', opt)
+map('n','<left>', ':vertical resize -2<CR>', opt)
+map('n','<right>', ':vertical resize +2<CR>', opt)
 
 
 
