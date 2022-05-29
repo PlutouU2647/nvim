@@ -48,12 +48,7 @@ map('n','<C-l>','<C-w>l', { silent = true })
 -- better edit mode movement
 map('n', 'H', '^', opt)
 map('n', 'L', '$', opt)
-map('v', 'H', '^', opt)
-map('v', 'L', '$', opt)
 
--- better indenting
-map('v', '<', '<gv', opt)
-map('v', '>', '>gv', opt)
 
 -- Tab switch
 --map('n', '<TAB>', ':bnext<CR>', opt)
@@ -74,8 +69,6 @@ map('n', '<leader>5', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
 -- move selected lines
 --map('x', 'K', ':move \'<-2<CR>gv-gv\'' , opt)
 --map('x', 'J', ':move \'>+1<CR>gv-gv\'' , opt)
-map('v', 'J', ':m \'>+1<CR>gv=gv\'' , opt)
-map('v', 'K', ':m \'<-2<CR>gv=gv\'' , opt)
 --map('i', '<c-k>', '<esc>:m .-2<CR>==i' , opt)
 --map('i', '<c-j>', '<esc>:m .+1<CR>==i' , opt)
 --map('n', '<leader>j', ':m .+1<CR>==' , opt)
@@ -83,7 +76,6 @@ map('v', 'K', ':m \'<-2<CR>gv=gv\'' , opt)
 
 -- comment
 map('n','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
-map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 -- 改变窗口大小
 map('n','<up>', ':res -2<CR>', opt)
 map('n','<down>', ':res +2<CR>', opt)
@@ -176,11 +168,9 @@ map('n', '<D-o>', ':Telescope find_files<CR>', opt)
 map('n', '<D-e>', '<Cmd>Telescope oldfiles<CR>', opt)
 map('n', '<D-i>', '<Cmd>Telekasten insert_link<CR>', opt)
 map('i', '<D-i>', '<Cmd>Telekasten insert_link<CR>', opt)
-map('v', ';', "<Cmd>'<,'> Tabularize /:<CR>", opt)
 
 map('i','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('n','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
-map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
 map('n', '<S-D-]>', '<Cmd>BufferLineCycleNext<CR>', opt)
 map('n', '<S-D-[>', '<Cmd>BufferLineCyclePrev<CR>', opt)
 
@@ -228,3 +218,33 @@ vim.cmd([[
   --autocmd FileType markdown  imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
   --autocmd FileType markdown  imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
   --imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+
+
+-- ┌─────────────┐
+-- │ visual mode │
+-- └─────────────┘
+
+-- better edit mode movement
+map('v', 'H', '^', opt)
+map('v', 'L', '$', opt)
+
+-- better indenting
+map('v', '<', '<gv', opt)
+map('v', '>', '>gv', opt)
+
+-- move selected lines
+map('v', 'J', ':m \'>+1<CR>gv=gv\'' , opt)
+map('v', 'K', ':m \'<-2<CR>gv=gv\'' , opt)
+
+-- visual模式粘贴
+map('v', 'p', '"_dP', opt)
+
+-- comment
+map('v','<leader>/', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
+
+
+-- goneovim
+map('v', ';', "<Cmd>'<,'> Tabularize /:<CR>", opt)
+
+map('v','<D-/>', '<plug>NERDCommenterToggle', {noremap = false, silent = true })
+
