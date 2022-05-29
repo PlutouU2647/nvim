@@ -434,6 +434,11 @@ return packer.startup(function(use)
         branch = "text_hl",
         --config = "require('plugins/nv-gps')"
     }
+    use {
+        'tpope/vim-surround',
+        opt = true,
+        event = 'insertEnter'
+    }
 
 
 
