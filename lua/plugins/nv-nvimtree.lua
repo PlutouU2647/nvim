@@ -22,70 +22,82 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 --g.nvim_tree_root_folder_modifier = table.concat { ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??" }
 
 
-g.nvim_tree_show_icons = {
-   folders = 1,
-   files = 1,
-   git = 1,
-}
-
-g.nvim_tree_icons = {
-   default = "",
-   symlink = "",
-   git = {
-      deleted = "",
-      ignored = "◌",
-      renamed = "➜",
-      staged = "✓",
-      unmerged = "",
-      unstaged = "✗",
-      untracked = "U",
-      --untracked = "★",
-   },
-   folder = {
-      default = "",
-      empty = "",
-      empty_open = "",
-      open = "",
-      symlink = "",
-      symlink_open = "",
-   },
-}
 nvim_tree.setup {
-   filters = {
-      dotfiles = false,
-   },
-   disable_netrw = true,
-   hijack_netrw = true,
-   ignore_ft_on_setup = { "dashboard" },
-   --auto_close = true,
-   open_on_tab = false,
-   hijack_cursor = true,
-   update_cwd = true,
-   update_focused_file = {
-      enable = true,
-      update_cwd = true,
-   },
-   git = {
-      ignore = false,
-   },
-     actions = {
-    change_dir = {
-      enable = false,
-      global = false,
+    filters = {
+        dotfiles = false,
     },
-    open_file = {
-      quit_on_open = false,
-      resize_window = false,
-      window_picker = {
+    disable_netrw = true,
+    hijack_netrw = true,
+    ignore_ft_on_setup = { "dashboard" },
+    --auto_close = true,
+    open_on_tab = false,
+    hijack_cursor = true,
+    update_cwd = true,
+    update_focused_file = {
         enable = true,
-        chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
-        exclude = {
-          filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame", },
-          buftype  = { "nofile", "terminal", "help", },
+        update_cwd = true,
+    },
+    git = {
+        ignore = false,
+    },
+    actions = {
+        change_dir = {
+            enable = false,
+            global = false,
+        },
+        open_file = {
+            quit_on_open = false,
+            resize_window = false,
+            window_picker = {
+                enable = true,
+                chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+                exclude = {
+                    filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame", },
+                    buftype  = { "nofile", "terminal", "help", },
+                }
+            }
         }
-      }
+    },
+    renderer = {
+        icons = {
+            webdev_colors = true,
+            git_placement = "before",
+            padding = " ",
+            symlink_arrow = " ➛ ",
+            show = {
+                file = true,
+                folder = true,
+                folder_arrow = true,
+                git = true,
+            },
+            glyphs = {
+                default = "",
+                symlink = "",
+                folder = {
+                    --arrow_closed = "",
+                    --arrow_open = "",
+                    arrow_closed = "",
+                    arrow_open = "",
+                    default = "",
+                    open = "",
+                    empty = "",
+                    empty_open = "",
+                    symlink = "",
+                    symlink_open = "",
+                },
+                git = {
+                    deleted = "",
+                    ignored = "◌",
+                    renamed = "➜",
+                    staged = "✓",
+                    unmerged = "",
+                    unstaged = "✗",
+                    untracked = "U",
+                    --untracked = "★",
+                },
+            }
+        }
     }
-  }
 }
 
 ----------
