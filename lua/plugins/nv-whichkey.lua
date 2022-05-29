@@ -151,7 +151,8 @@ function setKeybinds()
             map(0, 'n', '<CR>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })   -- execute cell
             map(0, 'n', '<S-CR>', '<CMD>IPythonCellExecuteCellJump<CR>', {noremap = false, silent = false })   -- execute cell
         elseif os == "Linux" then
-            map(0, 'n', '<C-m>', '<CMD>IPythonCellExecuteCellVerboseJump<CR>', {noremap = false, silent = false })
+            --map(0, 'n', '<C-m>', '<CMD>IPythonCellExecuteCellVerboseJump<CR>', {noremap = false, silent = false })
+            map(0, 'n', '<CR>', '<CMD>IPythonCellExecuteCellVerboseJump<CR>', {noremap = false, silent = false })
             --vim.cmd([[
             --let g:slime_cell_delimiter = "# %%"
             --let g:ipython_cell_tag = ['# %%', '```', '```python', '``` python', '```py']
