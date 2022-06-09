@@ -340,10 +340,10 @@ snippet plug "Insert a new plugin on my vimrc" w
 Plug '${1:`!v substitute(@+, ' \|\n', '', 'g' )`}'
 endsnippet
 
-# ┌──────┐
-# │ note │
-# └──────┘
 
+# ┌──────┐
+# │ idea │
+# └──────┘
 
 # zettelcasken
 snippet idea` "zettelcasken"
@@ -372,6 +372,9 @@ from #$1
 \`\`\`
 endsnippet
 
+# ┌──────┐
+# │ note │
+# └──────┘
 
 # note
 snippet note "note" b
@@ -382,25 +385,15 @@ Tags: [${1}, ${2}]
 Filename: `!p snip.rv = snip.fn.split('.')[0]`
 ---
 
-\`\`\`button
-name 打开memo浮动窗口
-type command
-action Hover Editor: Open new Hover Editor
-color purple
-\`\`\`
-
-\`\`\`button
-name 打开memo
-type command
-action Obsidian Memos: Open Memos
-color purple
-\`\`\`
-
 # `!p snip.rv = snip.fn.split('.')[0]`
 
 ---
 # Reference
 ${0}
+
+## Note
+
+## Link
 
 \`\`\`ad-tip
 title: Reference
@@ -421,21 +414,6 @@ Filename: `!p snip.rv = snip.fn.split('.')[0]`
 endsnippet
 
 
-# note
-snippet note "note"
----
-date: `!v strftime("%Y-%m-%d %H:%M")`
-Tags: [${1}, ${2}]
----
-
-# `!p snip.rv = snip.fn.split('.')[0]`
-
-
----
-
-# Reference
-${0}
-endsnippet
 
 
 # ┌───────┐
