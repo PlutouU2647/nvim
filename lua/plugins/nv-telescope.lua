@@ -30,18 +30,19 @@ telescope.setup {
 
         mappings = {
             i = {
-                ["<C-n>"] = actions.cycle_history_next,
-                ["<C-p>"] = actions.cycle_history_prev,
+                --["<C-n>"] = actions.cycle_history_next,
+                --["<C-p>"] = actions.cycle_history_prev,
 
                 --["<C-j>"] = actions.move_selection_next,
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
-                --["<C-a>"] = 
+                --["<C-a>"] =
 
                 ["<C-c>"] = actions.close,
                 ["<D-o>"] = actions.close,
                 ["<D-e>"] = actions.close,
                 ["<S-D-F>"] = actions.close,
+                ["<C-p>"] = actions.close,
 
                 ["<Down>"] = actions.move_selection_next,
                 ["<Up>"] = actions.move_selection_previous,

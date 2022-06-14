@@ -154,6 +154,13 @@ map('n', '`c', '<cmd>tabnew %<cr>', opt)
 map('n', '`v', '<cmd>vs<CR>', opt)
 map('n', '`b', '<cmd>sv<CR>', opt)
 
+-- ┌────────┐
+-- │ ctrl-p │
+-- └────────┘
+map('n', '<C-P>', ':Telescope find_files<CR>', opt)
+
+
+
 -- ┌──────────┐
 -- │ goneovim │
 -- └──────────┘
