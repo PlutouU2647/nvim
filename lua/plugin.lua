@@ -427,17 +427,17 @@ return packer.startup(function(use)
     --use {
         --'plasticboy/vim-markdown'
     --}
-    use {
-        'rcarriga/nvim-notify',
-        config = "require('plugins/nv-notify')",
-        opt = true,
-        event = 'insertEnter'
-    }
-    use {
-        "christianchiarulli/nvim-gps",
-        branch = "text_hl",
-        --config = "require('plugins/nv-gps')"
-    }
+    --use {
+        --'rcarriga/nvim-notify',
+        --config = "require('plugins/nv-notify')",
+        --opt = true,
+        --event = 'insertEnter'
+    --}
+    --use {
+        --"christianchiarulli/nvim-gps",
+        --branch = "text_hl",
+        ----config = "require('plugins/nv-gps')"
+    --}
     use {
         'tpope/vim-surround',
         opt = true,
