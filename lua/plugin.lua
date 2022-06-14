@@ -273,13 +273,12 @@ return packer.startup(function(use)
         'neovim/nvim-lspconfig',
         config = "require('plugins/lsp')",
         opt = true,
-        event = "BufReadPre",
-        --event = 'BufWinEnter',
+        event = {"BufReadPre", "BufWinEnter"},
     }
     use {
         'williamboman/nvim-lsp-installer',  -- simple to use language server installer
         opt = true,
-        event = "BufReadPre",
+        event = {"BufReadPre", "BufWinEnter"},
         config = "require('plugins/lsp/lsp-installer')",
     }
     use {
