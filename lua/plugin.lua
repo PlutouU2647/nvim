@@ -102,8 +102,8 @@ return packer.startup(function(use)
     use {
         'nvim-telescope/telescope.nvim',
         opt = true,
-        cmd = 'Telescope',
-        event = {"BufReadPre", "BufNewFile", "BufWinEnter"},
+        cmd = { "Telescope", },
+        event = { "BufReadPre", "BufNewFile", "BufWinEnter" },
         config = "require('plugins/nv-telescope')"
     }
     use {
@@ -228,7 +228,10 @@ return packer.startup(function(use)
         --opt = true,
         ----commit = "47eb231",
         --require = "plugins/nv-copilot",
-
+    --}
+    --use {
+        --"zbirenbaum/copilot-cmp",
+        --module = "copilot_cmp",
     --}
     use {
         'CRAG666/code_runner.nvim',
@@ -427,7 +430,9 @@ return packer.startup(function(use)
     --}
     use {
         'rcarriga/nvim-notify',
-        config = "require('plugins/nv-notify')"
+        config = "require('plugins/nv-notify')",
+        opt = true,
+        event = 'insertEnter'
     }
     use {
         "christianchiarulli/nvim-gps",

@@ -19,4 +19,14 @@ else
     require('vscode')
 end
 
+--vim.notify = require("notify")
+--vim.notify("This is an error message", "error")
+--vim.notify(text, "info", {
+  --title = "My Awesome Plugin",
+  --on_open = function(win)
+    --local buf = vim.api.nvim_win_get_buf(win)
+    --vim.api.nvim_buf_set_option(buf, "filetype", "markdown")
+  --end,
+--})
+
 

@@ -2,38 +2,46 @@ local status_ok, notify = pcall(require, "notify")
 if not status_ok then
   return
 end
+notify.setup({
+})
+
+notify = require("notify")
+--notify("My super important message")
+
 
 --local icons = require "user.icons"
 
 notify.setup {
-  -- Animation style (see below for details)
-  stages = "fade_in_slide_out",
+    background_colour = "#000000",
 
-  -- Function called when a new window is opened, use for changing win settings/config
-  on_open = nil,
+    -- Animation style (see below for details)
+    stages = "fade_in_slide_out",
 
-  -- Function called when a window is closed
-  on_close = nil,
+    -- Function called when a new window is opened, use for changing win settings/config
+    on_open = nil,
 
-  -- Render function for notifications. See notify-render()
-  render = "default",
+    -- Function called when a window is closed
+    on_close = nil,
 
-  -- Default timeout for notifications
-  timeout = 175,
+    -- Render function for notifications. See notify-render()
+    render = "default",
 
-  -- For stages that change opacity this is treated as the highlight behind the window
-  -- Set this to either a highlight group or an RGB hex value e.g. "#000000"
-  background_colour = "Normal",
+    -- Default timeout for notifications
+    timeout = 75,
 
-  -- Minimum width for notification windows
-  minimum_width = 10,
+    -- For stages that change opacity this is treated as the highlight behind the window
+    -- Set this to either a highlight group or an RGB hex value e.g. "#000000"
+    --background_colour = "Normal",
 
-  -- Icons for the different levels
-  --icons = {
+    -- Minimum width for notification windows
+    minimum_width = 10,
+
+    -- Icons for the different levels
+    --icons = {
     --ERROR = icons.diagnostics.Error,
     --WARN = icons.diagnostics.Warning,
     --INFO = icons.diagnostics.Information,
     --DEBUG = icons.ui.Bug,
     --TRACE = icons.ui.Pencil,
-  --},
+    --},
 }
