@@ -18,7 +18,7 @@ end
 -- 在首次配置packer第一次启动不会报错
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  return
+    return
 end
 
 
@@ -32,10 +32,10 @@ packer.init {
 }
 
 vim.cmd [[
-  augroup packer_user_config
-      autocmd!
-      autocmd BufWritePost plugin.lua source <afile> | PackerCompile
-  augroup end
+augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugin.lua source <afile> | PackerCompile
+augroup end
 ]]
 
 --[[

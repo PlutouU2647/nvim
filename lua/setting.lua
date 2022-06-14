@@ -1,40 +1,46 @@
 local settings = {
-    whichwrap='b,s,<,>,[,],h,l',  -- 允许使用上下左右箭头移动光标
+    whichwrap='b,s,<,>,[,],h,l', -- 允许使用上下左右箭头移动光标
     mouse = 'a',
-    cmdheight = 1,  -- Number of screen line
-    termguicolors = true,  -- Terminal color
+    cmdheight = 1,               -- Number of screen line
+    termguicolors = true,        -- Terminal color
     showtabline = 2,
     hidden = true,
     fileencoding = 'utf-8',
-    showmode = false,  -- show vim botton mode
-    backup = false,  -- no backup file
-    writebackup = false,  -- no backup file
-    clipboard = 'unnamedplus',  -- clipboard
+    showmode = false,            -- show vim botton mode
+    backup = false,              -- no backup file
+    writebackup = false,         -- no backup file
+    clipboard = 'unnamedplus',   -- clipboard
     scrolloff = 8,
     sidescrolloff = 8,
-    wrap = true,
+    wrap = true,                 -- 换行
     cursorline = true,
     signcolumn = 'yes',
-
-    -- self
-    wildmenu = true,  -- wildmenu
-    wildignorecase = true,  -- wildignorecase
-    relativenumber = true,  -- relative number
-    incsearch = true,  -- incsearch
-    ignorecase = true,  -- ignorecase also in cmd mode auto complete
-    autoindent = true,  -- autoindent
+    updatetime = 100,            -- 更新时间
 
 
-    -- indent
-    tabstop = 4,  -- tabstop
-    softtabstop = 4,  -- softtabstop
-    expandtab = true,  -- expandtab
-    smarttab = true,  -- smarttab
-    smartindent = true,  -- smartindent
-    shiftwidth = 4,  -- shiftwidth
+    wildmenu = true,             -- wildmenu
+    wildignorecase = true,       -- wildignorecase
+    relativenumber = true,       -- relative number
+    incsearch = true,            -- incsearch
+    ignorecase = true,           -- ignorecase also in cmd mode auto complete
+    autoindent = true,           -- autoindent
+
+
+    -- ┌────────┐
+    -- │ indent │
+    -- └────────┘
+    tabstop = 4,        -- tabstop
+    softtabstop = 4,    -- softtabstop
+    expandtab = true,   -- expandtab
+    smarttab = true,    -- smarttab
+    smartindent = true, -- smartindent
+    shiftwidth = 4,     -- shiftwidth
     fillchars="eob: ",
 
-    -- window
+    -- ┌────────┐
+    -- │ window │
+    -- └────────┘
+    
     splitbelow = true,  -- splitbelow
     splitright = true,  -- splitright
 }
@@ -45,6 +51,11 @@ vim.cmd('filetype on')
 vim.cmd('syntax on')
 vim.g.nocompatible = true
 vim.wo.number=true  -- line number
+
+for k, v in pairs(settings) do
+  vim.opt[k] = v
+end
+
 --self
 
 -- font
@@ -115,9 +126,6 @@ https://blog.csdn.net/lxyoucan/article/details/114365153
 --filetype plugin indent on
 --let maplocalleader = ","
 
-for k, v in pairs(settings) do
-  vim.opt[k] = v
-end
 --vim.cmd('autocmd BufWinEnter,FileType * lua setKeybinds()') --keymapping based on file type
 --syntax enable
 --
