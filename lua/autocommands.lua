@@ -1,9 +1,19 @@
+-- highlight yank
 vim.api.nvim_create_autocmd({"TextYankPost"}, {
     callback = function()
         --vim.highlight.on_yank({higroup= "Visual", timeout= 200})
         vim.highlight.on_yank({higroup= "IncSearch", timeout= 200})
     end
 })
+-- set wrap for markdown
+vim.api.nvim_create_autocmd({ "filetype" }, {
+    pattern = { "markdown", "vimwiki" },
+    callback = function()
+        vim.opt_local.wrap  = true
+        vim.opt_local.spell = true
+    end
+})
+
 
 vim.cmd([[
 autocmd Filetype yaml setlocal et ts=2 sw=2 sts=0
