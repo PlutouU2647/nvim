@@ -1,5 +1,19 @@
 --'~/.local/share/nvim/site/pack/packer'
+-- 在首次配置packer第一次启动不会报错
 local fn = vim.fn
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+    return
+end
+
+-- Have packer use a popup window
+packer.init {
+    display = {
+        open_fn = function()
+          return require("packer.util").float { border = "rounded" }
+        end,
+    },
+}
 
 
 -- Automatically load plugins
@@ -15,21 +29,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
     }
 end
 
--- 在首次配置packer第一次启动不会报错
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-    return
-end
-
-
--- Have packer use a popup window
-packer.init {
-    display = {
-        open_fn = function()
-          return require("packer.util").float { border = "rounded" }
-        end,
-    },
-}
 
 vim.cmd [[
 augroup packer_user_config
@@ -57,12 +56,10 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
-
     use {
         'kyazdani42/nvim-web-devicons',
         opt = false,
     }
-
 
     -- file manager
     use {
@@ -102,7 +99,7 @@ return packer.startup(function(use)
     use {
         'nvim-telescope/telescope.nvim',
         opt = true,
-        cmd = { "Telescope", },
+        --cmd = { "Telescope", },
         event = { "BufReadPre", "BufNewFile", "BufWinEnter" },
         config = "require('plugins/nv-telescope')"
     }
@@ -222,17 +219,45 @@ return packer.startup(function(use)
     --=========================
     -- ide
     --=========================
-    --use {
-        --'github/copilot.vim',
+
+    -- ┌─────────┐
+    -- │ copilot │
+    -- └─────────┘
+
+    use {
+        'github/copilot.vim',
         --event = {"BufReadPre", "BufNewFile"},
         --opt = true,
-        ----commit = "47eb231",
+        --commit = "47eb231",
+        require = "plugins/nv-copilot",
+    }
+    use {
+        'hrsh7th/cmp-copilot'
+    }
+
+    --use {
+        --"gelfand/copilot.vim",
         --require = "plugins/nv-copilot",
+
+    --}
+    --use {
+        --"zbirenbaum/copilot.lua",
+        --event = "InsertEnter",
+        --config = function ()
+            --vim.schedule(function() require("copilot").setup() end)
+        --end,
+    --}
+
+    --use {
+        --"hrsh7th/cmp-copilot"
     --}
     --use {
         --"zbirenbaum/copilot-cmp",
         --module = "copilot_cmp",
+        ----event = {"BufReadPre", "BufNewFile"},
+        ----opt = true,
     --}
+
     use {
         'CRAG666/code_runner.nvim',
         opt = true,
@@ -280,6 +305,13 @@ return packer.startup(function(use)
         opt = true,
         event = {"BufReadPre", "BufWinEnter"},
         config = "require('plugins/lsp/lsp-installer')",
+    }
+    use {
+        "SmiteshP/nvim-navic",
+        requires = "neovim/nvim-lspconfig",
+        opt = true,
+        event = {"BufReadPre", "BufWinEnter"},
+        config = "require('plugins/nv-navic')",
     }
     use {
         'hrsh7th/cmp-nvim-lsp',
@@ -432,11 +464,6 @@ return packer.startup(function(use)
         --config = "require('plugins/nv-notify')",
         --opt = true,
         --event = 'insertEnter'
-    --}
-    --use {
-        --"christianchiarulli/nvim-gps",
-        --branch = "text_hl",
-        ----config = "require('plugins/nv-gps')"
     --}
     use {
         'tpope/vim-surround',

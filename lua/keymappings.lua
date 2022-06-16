@@ -1,11 +1,12 @@
 -- silent true means do not print a message when the key is bound
 -- 保存本地变量
-local map = vim.api.nvim_set_keymap
+--local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local opt = {noremap = true, silent = true }
 -- 之后就可以这样映射按键了
 -- map('模式','按键','映射为XX',opt)
 
--- vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true })
+-- map('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true })
 
 
 --local map = function(mode, key, commandt)
@@ -17,42 +18,59 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 
 -- Normal
+-- ┌───────┐
+-- │ Basic │
+-- └───────┘
+map('n','Q',':q<CR>',opt)
+map('n','S',':w<CR>',opt)
 map('n', '<Bar>', '<CMD>echo "empty key!!"<CR>', {noremap = true, silent = false})
 map('n', '<Bslash>', ':', {noremap = true, silent = false})
-map('n', '<Leader>h', ':nohlsearch<CR>', opt)
 map('n', '<Space>', '<NOP>', opt)
---map('n',"<leader>\",':',opt)
-map('n','S',':w<CR>',opt)
---map('n','S',':up<CR>',{noremap = true, silent = false })
-map('n','Q',':q<CR>',opt)
---map('n', ';', ':', opt)
---map('n', ':', ';', opt)
--- 运行代码
+
+-- ┌──────────┐
+-- │ IDE like │
+-- └──────────┘
 map('n', '<LocalLeader>r', ":RunCode<CR>", opt)
--- explorer
+map('n', '<Leader>h', ':nohlsearch<CR>', opt)
 map('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
 
-
--- Insert
+-- ┌────────┐
+-- │ Insert │
+-- └────────┘
 map('i','jk','<C-[>',opt)
 map('i',';','<C-[>',opt)
 map('i','ï¼<xCSI>','<C-[>',opt)
 
+-- ┌──────┐
+-- │ Edit │
+-- └──────┘
+map('n', 'H', '^', opt)
+map('n', 'L', '$', opt)
 
--- better window movement
+-- ┌───────────────────┐
+-- │ Window Navigation │
+-- └───────────────────┘
 map('n','<C-h>','<C-w>h', { silent = true })
 map('n','<C-j>','<C-w>j', { silent = true })
 map('n','<C-k>','<C-w>k', { silent = true })
 map('n','<C-l>','<C-w>l', { silent = true })
 
--- better edit mode movement
-map('n', 'H', '^', opt)
-map('n', 'L', '$', opt)
+-- ┌─────────────────────────┐
+-- │ Window Split Navigation │
+-- └─────────────────────────┘
+map('n', '`l', '<cmd>tabn<cr>', opt)
+map('n', '`h', '<cmd>tabp<cr>', opt)
+map('n', '`c', '<cmd>tabnew %<cr>', opt)
+map('n', '`v', '<cmd>vs<CR>', opt)
+map('n', '`b', '<cmd>sv<CR>', opt)
 
-
--- Tab switch
+-- ┌────────────────┐
+-- │ Tab Navigation │
+-- └────────────────┘
 --map('n', '<TAB>', ':bnext<CR>', opt)
 map('n', '<S-TAB>', ':bprevious<CR>', opt)
+map('n', '<C-w>', ':bd<CR>', opt)
+map('n', '<D-w>', ':bd<CR>', opt)  -- Go to previous buffer
 --map('n', '<C-w>', ':bd<CR>', opt)
 --map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>', opt)
 map('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', opt)
@@ -145,14 +163,6 @@ map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>",
 --map('n', '<c-p>', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 map('n', '<leader>lf', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 
--- ┌────────┐
--- │ WINDOW │
--- └────────┘
-map('n', '`l', '<cmd>tabn<cr>', opt)
-map('n', '`h', '<cmd>tabp<cr>', opt)
-map('n', '`c', '<cmd>tabnew %<cr>', opt)
-map('n', '`v', '<cmd>vs<CR>', opt)
-map('n', '`b', '<cmd>sv<CR>', opt)
 
 -- ┌────────┐
 -- │ ctrl-p │
@@ -169,8 +179,6 @@ map('i','<D-v>', '<C-r>+', opt)
 map('c','<D-v>', '<C-r>+', opt)
 --EDITOR
 --map('n', '<D-1>', '<Cmd>BufferLineGoToBuffer 5<CR>', opt)
-map('n', '<C-w>', ':bd<CR>', opt)
-map('n', '<D-w>', ':bd<CR>', opt)
 map('n', '<D-o>', ':Telescope find_files<CR>', opt)
 map('n', '<D-e>', '<Cmd>Telescope oldfiles<CR>', opt)
 map('n', '<D-i>', '<Cmd>Telekasten insert_link<CR>', opt)

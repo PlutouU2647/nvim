@@ -86,37 +86,37 @@ cmp.setup {
     ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
 
-    ["<Tab>"] = cmp.mapping(function(fallback)
-          if cmp.get_selected_entry() == nil and vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
-            press("<C-R>=UltiSnips#ExpandSnippet()<CR>")
-          elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-            press("<ESC>:call UltiSnips#JumpForwards()<CR>")
-          elseif cmp.visible() then
-            cmp.select_next_item()
-          elseif has_any_words_before() then
-            press("<Tab>")
-          else
-            fallback()
-          end
-        end, {
-          "i",
-          "s",
-          -- add this line when using cmp-cmdline:
-          -- "c",
-        }),
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-        if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-            press("<ESC>:call UltiSnips#JumpBackwards()<CR>")
-        elseif cmp.visible() then
-            cmp.select_prev_item()
-        else
-            fallback()
-        end
-    end, {
-        "i",
-        "s",
-        "c",  -- add this line when using cmp-cmdline:
-    }),
+    --["<Tab>"] = cmp.mapping(function(fallback)
+          --if cmp.get_selected_entry() == nil and vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
+            --press("<C-R>=UltiSnips#ExpandSnippet()<CR>")
+          --elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+            --press("<ESC>:call UltiSnips#JumpForwards()<CR>")
+          --elseif cmp.visible() then
+            --cmp.select_next_item()
+          --elseif has_any_words_before() then
+            --press("<Tab>")
+          --else
+            --fallback()
+          --end
+        --end, {
+          --"i",
+          --"s",
+          ---- add this line when using cmp-cmdline:
+          ---- "c",
+        --}),
+    --["<S-Tab>"] = cmp.mapping(function(fallback)
+        --if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+            --press("<ESC>:call UltiSnips#JumpBackwards()<CR>")
+        --elseif cmp.visible() then
+            --cmp.select_prev_item()
+        --else
+            --fallback()
+        --end
+    --end, {
+        --"i",
+        --"s",
+        --"c",  -- add this line when using cmp-cmdline:
+    --}),
 
 
     --["<Tab>"] = function(fallback)
@@ -172,12 +172,12 @@ cmp.setup {
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp    = "[LSP]",
+        copilot     = "[GPT]",
         luasnip     = "[Luasnip]",
         buffer      = "[Buf]",
         path        = "[Path]",
         vsnip       = "[Vsnip]",
         cmp_tabnine = "[Ai]",
-        --copilot     = "[GPT]",
         ultisnips   = "[UTsnip]"
       })[entry.source.name]
       return vim_item
@@ -185,13 +185,13 @@ cmp.setup {
   },
   sources = {
       -- 安装好的插件放在这里
-    { name = "nvim_lsp" },
-    --{ name = "copilot" },
-    { name = 'cmp_tabnine' },
-    { name = "luasnip" },
+    { name = "nvim_lsp"},
+    { name = "copilot"},
+    { name = 'cmp_tabnine'},
+    { name = "luasnip"},
     { name = "buffer", keyword_lenth = 5 },
-    { name = "ultisnips" },
-    { name = "path" },
+    { name = "ultisnips"},
+    { name = "path"},
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,

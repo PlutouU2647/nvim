@@ -42,7 +42,6 @@
 --require('lspconfig').server.setup{}
 
 
--- LSP config 
 --local map = vim.api.nvim_set_keymap
 --local opt = {noremap = true, silent = true }
 --map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
