@@ -15,6 +15,15 @@ vim.api.nvim_create_autocmd({ "filetype" }, {
 })
 
 
+-- 修复自动注释
+vim.api.nvim_create_autocmd({ "filetype" }, {
+    pattern = { "lua", "python" },
+    callback = function()
+        vim.cmd "set formatoptions-=cro"
+    end
+})
+
+
 vim.cmd([[
 autocmd Filetype yaml setlocal et ts=2 sw=2 sts=0
 set path+=**
