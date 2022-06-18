@@ -140,6 +140,9 @@ return packer.startup(function(use)
         'EdenEast/nightfox.nvim',  -- colorscheme
          config = "require('plugins/theme-nightfox')",
     }
+    use {
+        'lunarvim/onedarker.nvim'
+    }
     --use {
         --'folke/tokyonight.nvim'
     --}
@@ -297,13 +300,13 @@ return packer.startup(function(use)
     use {
         'neovim/nvim-lspconfig',
         config = "require('plugins/lsp')",
-        opt = true,
-        event = {"BufReadPre", "BufWinEnter"},
+        --opt = true,
+        --event = {"BufReadPre", "BufWinEnter"},
     }
     use {
         'williamboman/nvim-lsp-installer',  -- simple to use language server installer
-        opt = true,
-        event = {"BufReadPre", "BufWinEnter"},
+        --opt = true,
+        --event = {"BufReadPre", "BufWinEnter"},
         config = "require('plugins/lsp/lsp-installer')",
     }
     --use {

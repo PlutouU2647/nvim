@@ -30,7 +30,7 @@ require('nightfox').setup({
   }
 })
 
-vim.cmd('colorscheme duskfox')
+--vim.cmd('colorscheme duskfox')
 
 ---- setup must be called before loading
 --vim.cmd("colorscheme nightfox")
