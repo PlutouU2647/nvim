@@ -4,6 +4,7 @@ local settings = {
     mouse = 'a',
     cmdheight = 1,               -- Number of screen line
     termguicolors = true,        -- Terminal color
+    number = true,               -- Number
     showtabline = 0,
     hidden = true,
     fileencoding = 'utf-8',

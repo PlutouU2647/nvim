@@ -3,7 +3,11 @@ if not status_ok then
     return
 end
 
-local lspconfig = require("lspconfig")
+local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_status_ok then
+  return
+end
+
 local servers = {
     "jsonls",
     "sumneko_lua",
