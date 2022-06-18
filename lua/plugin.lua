@@ -306,13 +306,13 @@ return packer.startup(function(use)
         event = {"BufReadPre", "BufWinEnter"},
         config = "require('plugins/lsp/lsp-installer')",
     }
-    use {
-        "SmiteshP/nvim-navic",
-        requires = "neovim/nvim-lspconfig",
-        opt = true,
-        event = {"BufReadPre", "BufWinEnter"},
-        config = "require('plugins/nv-navic')",
-    }
+    --use {
+        --"SmiteshP/nvim-navic",
+        --requires = "neovim/nvim-lspconfig",
+        --opt = true,
+        --event = {"BufReadPre", "BufWinEnter"},
+        --config = "require('plugins/nv-navic')",
+    --}
     use {
         'hrsh7th/cmp-nvim-lsp',
         --after = 'nvim-cmp'
