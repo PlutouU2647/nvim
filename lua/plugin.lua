@@ -181,7 +181,11 @@ return packer.startup(function(use)
         config = "require('plugins/nv-gitsigns')"
     }
     use {
-        'glepnir/dashboard-nvim', event = 'BufWinEnter', config = "require('plugins/nv-dashboard')"
+        'sigma2647/dashboard-nvim',
+        event = 'BufWinEnter',
+        config = "require('plugins/nv-dashboard')",
+        --commit = '31856d1'
+        commit = '4baae702223b98c5b53920ec9ff5e7df4f079fd6'
     }
     use {
         'folke/which-key.nvim',

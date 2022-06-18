@@ -37,9 +37,9 @@ map('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
 -- ┌────────┐
 -- │ Insert │
 -- └────────┘
-map('i','jk','<C-[>',opt)
+map('i','jk','<ESC>',opt)
 map('i',';','<C-[>',opt)
-map('i','ï¼<xCSI>','<C-[>',opt)
+map('i','jj','<C-[]>',opt)
 
 -- ┌──────┐
 -- │ Edit │
