@@ -19,7 +19,7 @@ install
 
 ## Requirements
 ``` shell
-ape install ripgrep
+apt install ripgrep
 ```
 ``` shell
 sudo apt-get install xclip
@@ -77,6 +77,13 @@ pip install 'python-lsp-server[all]'
 
 
 
+
+## pbcopy
+``` shell
+sudo apt install xsel
+sudo apt install wl-clipboard
+```
+TODO - install xsel
 
 
 ## markdown preview
