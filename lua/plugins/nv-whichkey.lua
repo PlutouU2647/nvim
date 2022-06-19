@@ -47,7 +47,8 @@ local mappings = {
         k = {"<CMD>Telekasten insert_link<cr>","Insert Wiki Link"},
         l = {"<CMD>Telescope ultisnips theme=dropdown<CR>", "Ultisnips"},
         s = {"<CMD>Telescope ultisnips theme=dropdown<CR>", "Ultisnips"},
-        t = {"<CMD>lua require'telescope.builtin'.current_buffer_tags{}<CR>", "Find Tags"}
+        t = {"<CMD>lua require'telescope.builtin'.current_buffer_tags{}<CR>", "Find Tags"},
+        K = {"<CMD>Telescope keymapping<cr>","Find Keymapping"},
     },
     g = {
         name = "Git",

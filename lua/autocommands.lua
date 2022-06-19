@@ -14,6 +14,15 @@ vim.api.nvim_create_autocmd({ "filetype" }, {
     end
 })
 
+--a
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    pattern = { "plugin.lua" },
+    callback = function()
+        vim.cmd "PackerCompile"
+        vim.cmd "PackerSync"
+    end
+})
+    --autocmd BufWritePost plugin.lua source <afile> | PackerSync
 
 -- 修复自动注释
 vim.api.nvim_create_autocmd({ "filetype" }, {
