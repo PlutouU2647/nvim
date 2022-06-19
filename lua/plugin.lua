@@ -220,6 +220,7 @@ return packer.startup(function(use)
         --opt = true,
         --cmd = 'ToggleTerm',
         --event = 'BufRead',
+        commit = '4ebddc6bc8391ead1afe2ce6dff33e93f034ea3c',
         config = "require('plugins/nv-toggleterm')"
     }
 

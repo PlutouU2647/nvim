@@ -46,49 +46,44 @@ end
 --   vim.cmd([[lua require("plugins.lsp.peek").Peek "definition"]])
 -- end
 
--- local _peek = function()
---   require("lvim.lsp.peek").Peek "definition"
--- end
 
 
 local function lsp_keymaps(bufnr)
     local opts = { noremap = true, silent = true }
-    local function buf_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+    --local function buf_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+    local buf_keymap = vim.api.nvim_buf_set_keymap
+     --local _peek = function()
+       ----require("lvim.lsp.peek").Peek "definition"
+       --print('s')
+     --end
 
-    buf_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-    buf_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-    buf_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-    --buf_keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-    --buf_keymap("n", "gp", "<cmd>Lspsaga preview_definition<CR>", opts)
-    buf_keymap("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-    buf_keymap("n", "gp", ":lua require('plugins.lsp.peek').Peek ", opts)
-    --buf_keymap("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
+    buf_keymap(bufnr, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
+    buf_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+    buf_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+    --buf_keymap(bufnr, "n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+    --buf_keymap(bufnr, "n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
+    --buf_keymap(bufnr, "n", "gp", _peek, opts)
     --buf_keymap("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
+    --buf_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+    --buf_keymap("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+    --buf_keymap("n", "gp", ":lua require('plugins.lsp.peek').Peek ", opts)
+    --buf_keymap("n", "gl", '<cmd>Lspsaga show_line_diagnostics<CR>', opts)
+    --buf_keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
+    --buf_keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
+    --buf_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+    --buf_keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", opts)
+    --buf_keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", opts)
+
 
 
     --buf_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
     --buf_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
     -- buf_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-    buf_keymap("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
     -- buf_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     -- buf_keymap("n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
     --buf_keymap("n", "<leader>lff", "<cmd>lua vim.lsp.buf.formatting_sync(nil,100)<CR>", opts)
     --buf_keymap( "n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
-    buf_keymap("n", "gl", '<cmd>Lspsaga show_line_diagnostics<CR>', opts)
-    buf_keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-    buf_keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-    buf_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-    buf_keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", opts)
-    buf_keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", opts)
 end
-
---M.on_attach = function(client, bufnr) if client.name == "tsserver" then
---client.resolved_capabilities.document_formatting = false
---end
---lsp_keymaps(bufnr)
---lsp_highlight_document(client)
---end
---M.on_attach = function(client, bufnr) if client.name == {"pyright", "sumneko_lua"}then
 
 M.on_attach = function(client, bufnr)
     local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
@@ -96,6 +91,10 @@ M.on_attach = function(client, bufnr)
       return
     end
     if client.name == "tsserver" then
+        client.resolved_capabilities.document_formatting = false
+    end
+
+    if client.name == "sumneko_lua" then
         client.resolved_capabilities.document_formatting = false
     end
     M.capabilities = vim.lsp.protocol.make_client_capabilities()

@@ -160,8 +160,6 @@ map('n', "<C-;>", ":silent !open 'obsidian://open?vault=markdown&file=%:r'<CR>",
 -- ┌────────────┐
 -- │ ToggleTerm │
 -- └────────────┘
---map('n', '<c-p>', '<cmd>lua _lfpicker_toggle()<cr>', opt)
-map('n', '<leader>lf', '<cmd>lua _lfpicker_toggle()<cr>', opt)
 
 
 -- ┌────────┐

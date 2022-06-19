@@ -1,9 +1,10 @@
-Terminal = require('toggleterm.terminal').Terminal
-local map = vim.api.nvim_set_keymap
-local opt = {noremap = true, silent = true }
+local status_ok, toggleterm = pcall(require, "toggleterm")
+if not status_ok then
+	return
+end
 
 
-require'toggleterm'.setup{
+toggleterm.setup{
     --size = 13,
     size =  function(term)
         if term.direction == "horizontal" then
@@ -13,6 +14,7 @@ require'toggleterm'.setup{
         end
     end,
     open_mapping = [[<C-\>]],
+    hide_number = true,
     shade_filetype = {},
     shade_terminals = true,
     shading_factor = 1,
@@ -21,50 +23,106 @@ require'toggleterm'.setup{
     --direction = 'horizontal',
     --direction = 'vertical',
     direction = 'float',
+    insert_mappings = true,
+    close_on_exit = true, -- close the terminal window when the process exits
+    shell = vim.o.shell, -- change the default shell
+	float_opts = {
+        border = "curved",
+	},
 }
+
 function _G.set_terminal_keymaps()
-  local opts = {noremap = true}
-  vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
-  --vim.api.nvim_buf_set_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<D-p>', [[<C-\><C-n><C-W>h]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-[>', [[<C-\><C-n>]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<C-b>', "<cmd>echo &channel<cr>", opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '`l', [[<C-\><cmd>tabn<cr>]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '`h', [[<C-\><cmd>tabp<cr>]], opts)
+    local opts = {noremap = true}
+    local buf_keymap = vim.api.nvim_buf_set_keymap
+    buf_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
+    --buf_keymap(0, 't', 'jk', [[<C-\><C-n>]], opts)
+    buf_keymap(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
+    buf_keymap(0, 't', '<D-p>', [[<C-\><C-n><C-W>h]], opts)
+    buf_keymap(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
+    buf_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
+    buf_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
+    buf_keymap(0, 't', '<C-[>', [[<C-\><C-n>]], opts)
+    buf_keymap(0, 't', '<C-b>', "<cmd>echo &channel<cr>", opts)
+    buf_keymap(0, 't', '`l', [[<C-\><cmd>tabn<cr>]], opts)
+    buf_keymap(0, 't', '`h', [[<C-\><cmd>tabp<cr>]], opts)
 end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 
--- ┌────────────────┐
--- │ lf file picker │
--- └────────────────┘
+-- ┌────────────────────┐
+-- │ Flot Term Function │
+-- └────────────────────┘
+
+-- ┌────┐
+-- │ LF │
+-- └────┘
+
 local temp_path = "/tmp/lfpickerpath"
 local Terminal  = require('toggleterm.terminal').Terminal
 
 local lfpicker = Terminal:new({
-  cmd = "lf -selection-path " .. temp_path,
-  direction = "float",
-  on_close = function(term)
-    local file = io.open(temp_path, "r")
-    if file~=nil
-      then
-        vim.cmd("tabe " .. file:read("*a"))
-        file:close()
-        os.remove(temp_path)
-    end
+    --cmd = "lf -selection-path " .. vim.fn.getcwd(),
+    cmd = "lf -selection-path " .. temp_path,
+
+    direction = "float",
+    on_close = function(term)
+        local file = io.open(temp_path, "r")
+        if file~=nil then
+            vim.cmd("tabe " .. file:read("*a"))
+            file:close()
+            os.remove(temp_path)
+        end
   end
 })
 
-function _lfpicker_toggle()
+-- ┌─────────┐
+-- │ Lazygit │
+-- └─────────┘
+function _LFPICKER_TOGGLE()
   lfpicker:toggle()
 end
 
+--function _LFPICKER_TOGGLE()
+    --local lfpicker = Terminal:new({
+        ----current_dir = vim.fn.getcwd(),
+        --cmd = "lf -selection-path " .. vim.fn.getcwd(),
+        ----cmd = "lf -selection-path " .. temp_path,
+        --direction = "float",
+        --on_close = function(term)
+            --local file = io.open(temp_path, "r")
+            --if file~=nil then
+                --vim.cmd("tabe " .. file:read("*a"))
+                --file:close()
+                --os.remove(temp_path)
+            --end
+        --end
+    --})
+    --lfpicker:toggle()
+--end
+
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+
+function _LAZYGIT_TOGGLE()
+	lazygit:toggle()
+end
 
 
+function _TOGGLE_FLOAT()
+    local float = Terminal:new({direction = "float"})
+    return float:toggle()
+end
+
+
+function _TOGGLE_IPYTHON()
+    local ipython = Terminal:new({cmd = "ipython", size = 60, direction= "vertical", dir="%:p:h"})
+    return ipython:toggle()
+end
+
+
+function _TOGGLE_BLOW()
+    local blow = Terminal:new({direction = "horizontal", size = 60})
+    return blow:toggle()
+end
 
 
 --[Get_the_name_of_the_current_file](https://vim.fandom.com/wiki/Get_the_name_of_the_current_file)

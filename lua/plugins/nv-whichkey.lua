@@ -1,24 +1,7 @@
 local wk = require("which-key")
 -- terminal
 local Terminal = require("toggleterm.terminal").Terminal
-local toggle_float = function()
-    local float = Terminal:new({direction = "float"})
-    return float:toggle()
-end
--- lazygit
-local toggle_lazygit = function()
-    local lazygit = Terminal:new({cmd = "lazygit", direction= "float", dir="%:p:h"})
-    return lazygit:toggle()
-end
--- ipython
-local toggle_ipython = function()
-    local ipython = Terminal:new({cmd = "ipython", size = 60, direction= "vertical", dir="%:p:h"})
-    return ipython:toggle()
-end
-local toggle_blow = function()
-    local blow = Terminal:new({direction = "horizontal", size = 60})
-    return blow:toggle()
-end
+
 
 local mappings = {
     --i = {"<Plug>SlimeRegionSend","Slime Run Selected code",mode = "v"},
@@ -47,8 +30,9 @@ local mappings = {
     ["7"] = "which_key_ignore",
     ["8"] = "which_key_ignore",
     ["9"] = "which_key_ignore",
+
     f = {
-        name = "Telescope",
+        name = "Find",
         r = {"<CMD>Telescope oldfiles<cr>", "Recent File"},
         c = {"<CMD>Telescope colorscheme<cr>", "Change Theme"},
         f = {"<CMD>Telescope find_files<cr>", "Find Files"},
@@ -65,17 +49,20 @@ local mappings = {
         s = {"<CMD>Telescope ultisnips theme=dropdown<CR>", "Ultisnips"},
         t = {"<CMD>lua require'telescope.builtin'.current_buffer_tags{}<CR>", "Find Tags"}
     },
+    g = {
+        name = "Git",
+        g = {"<CMD>lua _LAZYGIT_TOGGLE()<cr>",                 "Lazygit"},
+    },
+
     t = {
         name = "Terminal",
         t = {":ToggleTerm dir=%:p:h<cr>",                 "Open Terminal In Current Dir"},
-        f = {toggle_float,                                "Floating Terminal"},
-        g = {toggle_lazygit,                              "LazyGit"},
-        p = {toggle_ipython,                              "Ipython"},
-        l = {"<CMD>lua _lfpicker_toggle()<cr>",           "Lf"},
-        b = {toggle_blow,                                 "Blow"},
-
+        f = {"<CMD>lua _TOGGLE_FLOAT()<cr>",              "Floaterm"},
+        p = {"<CMD>lua _TOGGLE_IPYTHON()<cr>",            "Ipython"},
+        b = {"<CMD>lua _TOGGLE_BLOW()<cr>",               "Blow"},
 
     },
+
     l = {
         name = "LSP",
         i = {"<CMD>LspInfo<cr>",                                                       "LSP INFO"},
@@ -97,7 +84,9 @@ local mappings = {
         a = {"<CMD>Lspsaga code_action<cr>",                                           "Code Action"},
         e = {"<CMD>lua vim.lsp.diagnostic.show_line_diagnostics()<cr>",                "Show Line Diagnostics"},
         n = {"<CMD>lua vim.lsp.diagnostic.go_to_next()<cr>",                           "show line diagnostics"},
+        f = {"<CMD>lua _LFPICKER_TOGGLE('')<cr>",               "Blow"},
     },
+
     p ={
         name = "Ipython",
         --p = {":SlimeSend1 ipython --matplotlib<CR>","Ipython init"},
