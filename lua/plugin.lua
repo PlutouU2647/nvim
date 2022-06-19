@@ -122,13 +122,13 @@ return packer.startup(function(use)
     --use {
         --'kien/ctrlp.vim'
     --}
-    use {
-        'renerocksai/telekasten.nvim',
-        opt = true,
-        ft = {'markdown', 'wiki' },
-        config = "require('plugins/nv-telekasten')"
+    --use {
+        --'renerocksai/telekasten.nvim',
+        --opt = true,
+        --ft = {'markdown', 'wiki' },
+        --config = "require('plugins/nv-telekasten')"
 
-    }
+    --}
     -- colorscheme
     --use {
         --"sonph/onehalf",
@@ -311,7 +311,7 @@ return packer.startup(function(use)
         'williamboman/nvim-lsp-installer',  -- simple to use language server installer
         --opt = true,
         --event = {"BufReadPre", "BufWinEnter"},
-        config = "require('plugins/lsp/lsp-installer')",
+        --config = "require('plugins/lsp/lsp-installer')",
     }
     --use {
         --"SmiteshP/nvim-navic",
