@@ -1,4 +1,4 @@
-local home = vim.fn.expand("~/Library/Mobile Documents/iCloud~md~obsidian/Documents/MarkDown/wikipage")
+local home = vim.fn.expand("~/obsidian/markdown/wikipage")
 -- NOTE for Windows users:
 -- - don't use Windows
 -- - try WSL2 on Windows and pretend you're on Linux
