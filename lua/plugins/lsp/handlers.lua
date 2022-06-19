@@ -2,35 +2,35 @@ local M = {}
 
 -- TODO: backfill this to template
 M.setup = function()
-    -- 设置图标
+  -- 设置图标
 
-    local config = {
-        -- disable virtual text
-        virtual_text = false,
-        -- show signs
-        --signs = {
-          --active = signs,
-        --},
-        update_in_insert = true,
-        underline = true,
-        severity_sort = true,
-        float = {
-            focusable = false,
-            style = "minimal",
-            border = "rounded",
-            source = "always",
-            header = "",
-            prefix = "",
-        },
-    }
-    vim.diagnostic.config(config)
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = "rounded",
-    })
+  local config = {
+    -- disable virtual text
+    virtual_text = false,
+    -- show signs
+    --signs = {
+    --active = signs,
+    --},
+    update_in_insert = true,
+    underline = true,
+    severity_sort = true,
+    float = {
+      focusable = false,
+      style = "minimal",
+      border = "rounded",
+      source = "always",
+      header = "",
+      prefix = "",
+    },
+  }
+  vim.diagnostic.config(config)
+  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    border = "rounded",
+  })
 
-    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = "rounded",
-    })
+  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+    border = "rounded",
+  })
 end
 
 local function lsp_highlight_document(client)
@@ -48,10 +48,23 @@ local function lsp_highlight_document(client)
   end
 end
 
+--require("plugins.lsp.peek").Peek "definition"
+-- local peek = require("plugins.lsp.peek").Peek --"definition"
+
+-- local _peek = function()
+--   vim.cmd([[lua require("plugins.lsp.peek").Peek "definition"]])
+-- end
+
+-- local _peek = function()
+--   require("lvim.lsp.peek").Peek "definition"
+-- end
+
+
 local function lsp_keymaps(bufnr)
   local opts = { noremap = true, silent = true }
   --local buf_keymap = vim.api.nvim_buf_set_keymap
   local function buf_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
   buf_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 
   buf_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
@@ -59,8 +72,9 @@ local function lsp_keymaps(bufnr)
   buf_keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
   --buf_keymap("n", "gp", "<cmd>Lspsaga preview_definition<CR>", opts)
   buf_keymap("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-  buf_keymap("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
-  buf_keymap("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
+  buf_keymap("n", "gp", ":lua require('plugins.lsp.peek').Peek ", opts)
+  --buf_keymap("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
+  --buf_keymap("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
 
 
   --buf_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
@@ -71,7 +85,7 @@ local function lsp_keymaps(bufnr)
   -- buf_keymap("n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   --buf_keymap("n", "<leader>lff", "<cmd>lua vim.lsp.buf.formatting_sync(nil,100)<CR>", opts)
   --buf_keymap( "n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
-  buf_keymap( "n", "gl", '<cmd>Lspsaga show_line_diagnostics<CR>', opts)
+  buf_keymap("n", "gl", '<cmd>Lspsaga show_line_diagnostics<CR>', opts)
   buf_keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   buf_keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
   buf_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
@@ -81,19 +95,19 @@ local function lsp_keymaps(bufnr)
 end
 
 --M.on_attach = function(client, bufnr) if client.name == "tsserver" then
-    --client.resolved_capabilities.document_formatting = false
-  --end
-  --lsp_keymaps(bufnr)
-  --lsp_highlight_document(client)
+--client.resolved_capabilities.document_formatting = false
+--end
+--lsp_keymaps(bufnr)
+--lsp_highlight_document(client)
 --end
 --M.on_attach = function(client, bufnr) if client.name == {"pyright", "sumneko_lua"}then
 M.on_attach = function(client, bufnr)
-    if client.name == "tsserver" then
-        client.resolved_capabilities.document_formatting = false
-        --client.resolved_capabilities.document_formatting = true
-    end
-    lsp_keymaps(bufnr)
-    lsp_highlight_document(client)
+  if client.name == "tsserver" then
+    client.resolved_capabilities.document_formatting = false
+    --client.resolved_capabilities.document_formatting = true
+  end
+  lsp_keymaps(bufnr)
+  lsp_highlight_document(client)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
