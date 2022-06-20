@@ -48,7 +48,7 @@ local mappings = {
         l = {"<CMD>Telescope ultisnips theme=dropdown<CR>", "Ultisnips"},
         s = {"<CMD>Telescope ultisnips theme=dropdown<CR>", "Ultisnips"},
         t = {"<CMD>lua require'telescope.builtin'.current_buffer_tags{}<CR>", "Find Tags"},
-        K = {"<CMD>Telescope keymapping<cr>","Find Keymapping"},
+        K = {"<CMD>Telescope keymaps<cr>","Find Keymapping"},
     },
     g = {
         name = "Git",
