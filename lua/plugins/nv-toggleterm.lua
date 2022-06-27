@@ -60,50 +60,31 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 local temp_path = "/tmp/lfpickerpath"
 local Terminal  = require('toggleterm.terminal').Terminal
 
-local lfpicker = Terminal:new({
-    --cmd = "lf -selection-path " .. vim.fn.getcwd(),
-    cmd = "lf -selection-path " .. temp_path,
-
-    direction = "float",
-    on_close = function(term)
-        local file = io.open(temp_path, "r")
-        if file~=nil then
-            vim.cmd("tabe " .. file:read("*a"))
-            file:close()
-            os.remove(temp_path)
-        end
-  end
-})
 
 -- ┌─────────┐
 -- │ Lazygit │
 -- └─────────┘
 function _LFPICKER_TOGGLE()
-  lfpicker:toggle()
+    local lfpicker = Terminal:new({
+        --cmd = "lf -selection-path " .. vim.fn.getcwd(),
+        cmd = "lf -selection-path " .. temp_path,
+
+        direction = "float",
+        on_close = function(term)
+            local file = io.open(temp_path, "r")
+            if file~=nil then
+                vim.cmd("tabe " .. file:read("*a"))
+                file:close()
+                os.remove(temp_path)
+            end
+    end
+    })
+    lfpicker:toggle()
 end
 
---function _LFPICKER_TOGGLE()
-    --local lfpicker = Terminal:new({
-        ----current_dir = vim.fn.getcwd(),
-        --cmd = "lf -selection-path " .. vim.fn.getcwd(),
-        ----cmd = "lf -selection-path " .. temp_path,
-        --direction = "float",
-        --on_close = function(term)
-            --local file = io.open(temp_path, "r")
-            --if file~=nil then
-                --vim.cmd("tabe " .. file:read("*a"))
-                --file:close()
-                --os.remove(temp_path)
-            --end
-        --end
-    --})
-    --lfpicker:toggle()
---end
-
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-
 function _LAZYGIT_TOGGLE()
-	lazygit:toggle()
+    local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+    lazygit:toggle()
 end
 
 
